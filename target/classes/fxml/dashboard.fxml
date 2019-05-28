@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.Dashboard">
+   <children>
+      <BorderPane fx:id="borderPane" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+         <left>
+            <VBox alignment="CENTER" prefHeight="403.0" prefWidth="112.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openZlecenia" prefHeight="92.0" prefWidth="112.0" styleClass="style.css" text="Zlecenia">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="200.0" mnemonicParsing="false" onAction="#openFaktury" prefHeight="88.0" prefWidth="112.0" styleClass="style.css"  text="Faktury">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="220.0" mnemonicParsing="false" onAction="#openAdministracja" prefHeight="100.0" prefWidth="112.0" styleClass="style.css" text="Administracja">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="241.0" mnemonicParsing="false" onAction="#openMagazyn" prefHeight="105.0" prefWidth="112.0" styleClass="style.css"  text="Magazyn">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <top>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="System Zarządzania Serwisem" wrappingWidth="466.681640625" BorderPane.alignment="TOP_CENTER">
+               <font>
+                  <Font name="Verdana" size="30.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+            </Text>
+         </top>
+         <center>
+            <Pane prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #dee0e2;" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="1.0" left="10.0" right="1.0" top="1.0" />
+               </BorderPane.margin>
+            </Pane>
+         </center>
+         <opaqueInsets>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </opaqueInsets>
+      </BorderPane>
+   </children>
+</AnchorPane>
