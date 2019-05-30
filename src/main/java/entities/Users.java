@@ -10,6 +10,14 @@ public class Users {
     private String stanowisko;
     private String haslo;
 
+    public Users() {
+    }
+    public Users(String s){
+        this.stanowisko= s;
+
+    }
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id", unique = true)
@@ -61,8 +69,13 @@ public class Users {
         this.haslo = haslo;
     }
 
-    public Users(){
 
+    public Users(int id, String imie, String nazwisko, String stanowisko, String haslo) {
+        this.id = id;
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.stanowisko = stanowisko;
+        this.haslo = haslo;
     }
 
     public Users(String imie, String nazwisko, String stanowisko, String haslo) {
@@ -77,13 +90,7 @@ public class Users {
 
     }
 
-    public Users(int id, String imie, String nazwisko, String stanowisko, String haslo) {
-        this.id = id;
-        this.imie = imie;
-        this.nazwisko = nazwisko;
-        this.stanowisko = stanowisko;
-        this.haslo = haslo;
-    }
+
 @Override
 public String toString(){
         return imie +" "+nazwisko;

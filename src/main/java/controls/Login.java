@@ -33,7 +33,6 @@ public class Login implements Initializable {
     public TextField tfUser;
     @FXML
     public PasswordField pfPassword;
-    private Window primaryStage;
 
 
     public void login(ActionEvent event) throws IOException {

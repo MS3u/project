@@ -10,7 +10,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.cStorage">
    <children>
-      <TableView fx:id="table" prefHeight="201.0" prefWidth="600.0" AnchorPane.bottomAnchor="249.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TableView fx:id="table" onMouseClicked="#tableClick" prefHeight="201.0" prefWidth="600.0" AnchorPane.bottomAnchor="249.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columns>
           <TableColumn fx:id="colId" prefWidth="30.0" text="Id" />
           <TableColumn fx:id="colNazwa" prefWidth="330.0" text="Nazwa" />
@@ -19,12 +19,13 @@
             <TableColumn fx:id="colStan" minWidth="0.0" prefWidth="74.0" text="Stan" />
         </columns>
       </TableView>
-      <TextField fx:id="tfCenaN" layoutX="14.0" layoutY="273.0" prefHeight="25.0" prefWidth="149.0" promptText="Cena Netto" />
-      <TextField fx:id="tfNazwa" layoutX="14.0" layoutY="239.0" promptText="Nazwa" />
-      <TextField fx:id="tfCenaB" layoutX="14.0" layoutY="311.0" promptText="Cena Brutto" />
-      <Text layoutX="55.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dodaj Towar" />
-      <TextField fx:id="tfStan" layoutX="14.0" layoutY="344.0" promptText="Stan" />
-      <Button fx:id="addItem" layoutX="65.0" layoutY="383.0" mnemonicParsing="false" onAction="#addItem" text="Dodaj" />
-      <Button layoutX="242.0" layoutY="383.0" mnemonicParsing="false" text="Zmień" />
+      <TextField fx:id="tfCenaN" layoutX="226.0" layoutY="286.0" prefHeight="25.0" prefWidth="149.0" promptText="Cena Netto" />
+      <TextField fx:id="tfNazwa" layoutX="226.0" layoutY="248.0" promptText="Nazwa" />
+      <TextField fx:id="tfCenaB" layoutX="226.0" layoutY="319.0" promptText="Cena Brutto" />
+      <Text layoutX="226.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dodawanie,Edycja,Usuwanie" />
+      <TextField fx:id="tfStan" layoutX="226.0" layoutY="358.0" promptText="Stan" />
+      <Button fx:id="addItem" layoutX="202.0" layoutY="396.0" mnemonicParsing="false" onAction="#addItem" text="Dodaj" />
+      <Button fx:id="btnChange" layoutX="275.0" layoutY="396.0" mnemonicParsing="false" onAction="#changeItem" text="Zmień" />
+      <Button fx:id="btnDelete" layoutX="350.0" layoutY="396.0" mnemonicParsing="false" onAction="#deleteItem" prefHeight="25.0" prefWidth="50.0" text="Usuń" />
    </children>
 </AnchorPane>

@@ -8,8 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.BorderPane;
-import org.hibernate.SharedSessionContract;
-import org.hibernate.Transaction;
+
 
 import java.io.IOException;
 import java.net.URL;
@@ -27,8 +26,8 @@ public class Dashboard implements Initializable {
     private Object Users;
 
     public void openZlecenia(ActionEvent event) throws IOException {
-                    Parent noweOkno = FXMLLoader.load(getClass().getResource("/fxml/orders.fxml"));
-            borderPane.setCenter(noweOkno);
+        Parent noweOkno = FXMLLoader.load(getClass().getResource("/fxml/orders.fxml"));
+        borderPane.setCenter(noweOkno);
     }
 
     public void openFaktury(ActionEvent event) {
@@ -36,28 +35,39 @@ public class Dashboard implements Initializable {
 
     public void openAdministracja(ActionEvent event) throws IOException {
 
-            Parent noweOkno = FXMLLoader.load(getClass().getResource("/fxml/administration.fxml"));
+        TextInputDialog dialog = new TextInputDialog("walter");
+        dialog.setTitle("Text Input Dialog");
+        dialog.setHeaderText("Look, a Text Input Dialog");
+        dialog.setContentText("Please enter your name:");
+
+// Traditional way to get the response value.
+        Optional<String> result = dialog.showAndWait();
+        if (result.isPresent()) {
+            Users userAuth = new Users(result.get());
+
+            List<Users> serAuth = users.stream()
+                    .filter(u -> u.getStanowisko().equals(userAuth.getStanowisko()))
+                    .collect(Collectors.toList());
+            if (!serAuth.isEmpty()) {
+                Parent noweOkno = FXMLLoader.load(getClass().getResource("/fxml/administration.fxml"));
+                borderPane.setCenter(noweOkno);
+            }else {
+                Parent noweOkno = FXMLLoader.load(getClass().getResource("/fxml/info.fxml"));
+                borderPane.setCenter(noweOkno);
+            }
+
+        }
+    }
+
+        public void openMagazyn (ActionEvent event) throws IOException {
+            Parent noweOkno = FXMLLoader.load(getClass().getResource("/fxml/storage.fxml"));
             borderPane.setCenter(noweOkno);
-
-
-
         }
 
 
-
-
-
-
-
-    public void openMagazyn(ActionEvent event) throws IOException{
-        Parent noweOkno = FXMLLoader.load(getClass().getResource("/fxml/storage.fxml"));
-        borderPane.setCenter(noweOkno);
+        @Override
+        public void initialize (URL location, ResourceBundle resources){
+            methodController.initDb();
+            users = methodController.getUsers();
+        }
     }
-
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        methodController.initDb();
-        users = methodController.getUsers();
-    }
-}

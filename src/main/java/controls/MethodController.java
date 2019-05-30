@@ -1,4 +1,5 @@
 package controls;
+
 import entities.Storage;
 import entities.Users;
 
@@ -32,7 +33,6 @@ public class MethodController {
         configuration.addAnnotatedClass(Storage.class);
 
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
-
         this.sessionFactory = configuration.buildSessionFactory(serviceRegistry);
         this.session = sessionFactory.openSession();
 
@@ -40,21 +40,38 @@ public class MethodController {
     }
 
 
-
-
-    List<Users> getUsers(){
+    List<Users> getUsers() {
         List<Users> users = session.createQuery("from Users").getResultList();
         System.out.println(users);
         return users;
     }
-    public void saveData(Object object){
-        Transaction transaction =session.beginTransaction();
-        session.save(object);
+    List<Orders> getOrders() {
+        List<Orders> orders = session.createQuery("from Orders ").getResultList();
+        System.out.println(orders);
+        return orders;
+    }
+
+    public void transactionStart() {
+        Transaction transaction = session.beginTransaction();
         transaction.commit();
+    }
+
+    public void saveData(Object object) {
+        transactionStart();
+        session.save(object);
 
     }
 
+    public void update(Object object) {
+        transactionStart();
+        session.merge(object);
+    }
 
+    public void deleteFromDb(Object object) {
+        transactionStart();
+        session.delete(object);
+
+    }
 
 
 }

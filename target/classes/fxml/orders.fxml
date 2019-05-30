@@ -6,24 +6,44 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane style="-fx-background-color: #dee0e2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.Order">
+<AnchorPane prefHeight="565.0" prefWidth="851.0" style="-fx-background-color: #dee0e2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.Order">
     <children>
-        <Separator layoutX="17.0" layoutY="252.0" prefHeight="3.0" prefWidth="600.0" />
-        <Button fx:id="addOrder" layoutX="432.0" layoutY="414.0" mnemonicParsing="false" onAction="#addOrder" text="Dodaj zlecenie" />
-        <TextArea fx:id="tfOpis" layoutX="113.0" layoutY="276.0" prefHeight="123.0" prefWidth="413.0" promptText="krótka informacja na temat usterki,wymiany,naprawy" />
-        <Text layoutX="24.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opis zlecenia:" />
+        <Separator layoutX="10.0" layoutY="165.0" prefHeight="3.0" prefWidth="600.0" />
+        <Button fx:id="addOrder" layoutX="159.0" layoutY="526.0" mnemonicParsing="false" onAction="#addOrder" text="Dodaj zlecenie" />
+        <Text layoutX="17.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opis zlecenia:" />
         <TextField fx:id="tfNip" layoutX="84.0" layoutY="131.0" prefHeight="25.0" prefWidth="149.0" promptText="NIP" />
         <Separator layoutX="10.0" layoutY="51.0" prefHeight="3.0" prefWidth="600.0" />
         <Text layoutX="24.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klient:" />
-        <TextField fx:id="tfNrZlecenia" layoutX="84.0" layoutY="18.0" minWidth="-Infinity" prefHeight="25.0" prefWidth="82.0" promptText="nr zlecenia" />
+        <TextField fx:id="tfNrZlecenia" layoutX="84.0" layoutY="18.0" minWidth="-Infinity" prefHeight="25.0" prefWidth="149.0" promptText="nr zlecenia" />
         <Text layoutX="24.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zlecenie " wrappingWidth="58.13671875" />
         <TextField fx:id="tfImie" layoutX="84.0" layoutY="59.0" prefHeight="25.0" prefWidth="149.0" promptText="Imię" />
         <TextField fx:id="tfNazwisko" layoutX="245.0" layoutY="59.0" prefHeight="25.0" prefWidth="174.0" promptText="Nazwisko" />
         <TextField fx:id="tfUlica" layoutX="245.0" layoutY="94.0" prefHeight="25.0" prefWidth="174.0" promptText="Ulica" />
         <TextField fx:id="tfNrDomu" layoutX="425.0" layoutY="94.0" prefHeight="25.0" prefWidth="72.0" promptText="nr domu" />
         <TextField fx:id="tfMiasto" layoutX="84.0" layoutY="94.0" prefHeight="25.0" prefWidth="149.0" promptText="Miasto" />
+        <TextField fx:id="tfOpis" layoutX="104.0" layoutY="173.0" prefHeight="25.0" prefWidth="549.0" />
         <TextField fx:id="tfNrLokalu" layoutX="505.0" layoutY="94.0" prefHeight="25.0" prefWidth="72.0" promptText="nr lokalu" />
-        <TextField fx:id="dataPrzyjecia" layoutX="245.0" layoutY="18.0" promptText="dd/mm/rrrr" />
+        <TextField fx:id="dataPrzyjecia" layoutX="245.0" layoutY="18.0" prefHeight="25.0" prefWidth="174.0" promptText="dd/mm/rrrr" />
+      <TextField fx:id="tfSerwisant" layoutX="431.0" layoutY="18.0" promptText="Serwisant" />
+      <TableView fx:id="tableOrders" layoutX="9.0" layoutY="211.0" onMouseClicked="#tableClick" prefHeight="307.0" prefWidth="824.0">
+        <columns>
+          <TableColumn fx:id="tNr" prefWidth="42.0" text="Nr" />
+          <TableColumn fx:id="tData" prefWidth="61.0" text="Data" />
+            <TableColumn fx:id="tImie" prefWidth="62.0" text="Imie" />
+            <TableColumn fx:id="tNazwisko" prefWidth="75.0" text="Nazwisko" />
+            <TableColumn fx:id="tMiasto" prefWidth="75.0" text="Miasto" />
+            <TableColumn fx:id="tUlica" prefWidth="75.0" text="Ulica" />
+            <TableColumn fx:id="tnDomu" prefWidth="75.0" text="nr Domu" />
+            <TableColumn fx:id="tNLokalu" prefWidth="75.0" text="nr Lokalu" />
+            <TableColumn fx:id="tNip" prefWidth="75.0" text="NIP" />
+            <TableColumn fx:id="tOpis" prefWidth="75.0" text="Opis" />
+            <TableColumn fx:id="tSerwisant" prefWidth="75.0" text="Serwisant" />
+            <TableColumn fx:id="id" prefWidth="75.0" text="Id" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnDeleteOrder" layoutX="431.0" layoutY="526.0" mnemonicParsing="false" onAction="#deleteOrder" text="Usuń" />
+      <Button fx:id="btnEdit" layoutX="299.0" layoutY="526.0" mnemonicParsing="false" onAction="#editOrder" text="Edycja Zlecenia" />
+
     </children>
     <padding>
         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />

@@ -16,8 +16,11 @@ public class Orders {
     private String nrLokalu;
     private String nip;
     private String opis;
+    private String serwisant;
 
-    public Orders(String dataPrzyjecia, String nrZlecenia, String imie, String nazwisko, String miasto, String ulica, String nrDomu, String nrLokalu, String nip, String opis) {
+
+
+    public Orders(String dataPrzyjecia, String nrZlecenia, String imie, String nazwisko, String miasto, String ulica, String nrDomu, String nrLokalu, String nip, String opis, String serwisant) {
         this.dataPrzyjecia = dataPrzyjecia;
         this.nrZlecenia = nrZlecenia;
         this.imie = imie;
@@ -28,6 +31,24 @@ public class Orders {
         this.nrLokalu = nrLokalu;
         this.nip = nip;
         this.opis = opis;
+        this.serwisant = serwisant;
+    }
+
+
+
+    public Orders(int id, String dataPrzyjeciaText, String nrZleceniaText, String imieText, String nazwiskoTextskoT, String miastoTexttoT, String ulicaTextcaT, String nrDomuText, String nrLokauText, String nipText, String opiStext, String serwisantText) {
+        this.id =id;
+        this.dataPrzyjecia = dataPrzyjeciaText;
+        this.nrZlecenia = nrZleceniaText;
+        this.imie = imieText;
+        this.nazwisko = nazwiskoTextskoT;
+        this.miasto = miastoTexttoT;
+        this.ulica = ulicaTextcaT;
+        this.nrDomu = nrDomuText;
+        this.nrLokalu = nrLokauText;
+        this.nip = nipText;
+        this.opis = opiStext;
+        this.serwisant = serwisantText;
     }
 
     public Orders() {
@@ -45,7 +66,7 @@ public class Orders {
         this.id = id;
     }
 
-    @Basic
+
     @Column(name = "nrZlecenia", nullable = false, length = 30)
     public String getNrZlecenia() {
         return nrZlecenia;
@@ -55,7 +76,7 @@ public class Orders {
         this.nrZlecenia = nrZlecenia;
     }
 
-    @Basic
+
     @Column(name = "dataPrzyjecia")
     public String getDataPrzyjecia() {
         return dataPrzyjecia;
@@ -65,7 +86,7 @@ public class Orders {
         this.dataPrzyjecia = dataPrzyjecia;
     }
 
-    @Basic
+
     @Column(name = "imie", length = 30)
     public String getImie() {
         return imie;
@@ -75,7 +96,7 @@ public class Orders {
         this.imie = imie;
     }
 
-    @Basic
+
     @Column(name = "nazwisko", nullable = true, length = 30)
     public String getNazwisko() {
         return nazwisko;
@@ -85,7 +106,7 @@ public class Orders {
         this.nazwisko = nazwisko;
     }
 
-    @Basic
+
     @Column(name = "miasto", nullable = true, length = 30)
     public String getMiasto() {
         return miasto;
@@ -95,7 +116,7 @@ public class Orders {
         this.miasto = miasto;
     }
 
-    @Basic
+
     @Column(name = "ulica", nullable = true, length = 30)
     public String getUlica() {
         return ulica;
@@ -105,7 +126,7 @@ public class Orders {
         this.ulica = ulica;
     }
 
-    @Basic
+
     @Column(name = "nrDomu", nullable = true, length = 30)
     public String getNrDomu() {
         return nrDomu;
@@ -115,7 +136,7 @@ public class Orders {
         this.nrDomu = nrDomu;
     }
 
-    @Basic
+
     @Column(name = "nrLokalu", nullable = true, length = 30)
     public String getNrLokalu() {
         return nrLokalu;
@@ -125,7 +146,7 @@ public class Orders {
         this.nrLokalu = nrLokalu;
     }
 
-    @Basic
+
     @Column(name = "NIP", nullable = true, length = 30)
     public String getNip() {
         return nip;
@@ -135,36 +156,25 @@ public class Orders {
         this.nip = nip;
     }
 
-    @Basic
-    @Column(name = "Opis", nullable = true, length = 200)
+
+    @Column(name = "opis")
     public String getOpis() {
         return opis;
     }
-
     public void setOpis(String opis) {
         this.opis = opis;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Orders orders = (Orders) o;
-        return id == orders.id &&
-                Objects.equals(nrZlecenia, orders.nrZlecenia) &&
-                Objects.equals(dataPrzyjecia, orders.dataPrzyjecia) &&
-                Objects.equals(imie, orders.imie) &&
-                Objects.equals(nazwisko, orders.nazwisko) &&
-                Objects.equals(miasto, orders.miasto) &&
-                Objects.equals(ulica, orders.ulica) &&
-                Objects.equals(nrDomu, orders.nrDomu) &&
-                Objects.equals(nrLokalu, orders.nrLokalu) &&
-                Objects.equals(nip, orders.nip) &&
-                Objects.equals(opis, orders.opis);
+
+    @Column(name = "serwisant")
+    public String getSerwisant() {
+        return serwisant;
+    }
+    public void setSerwisant(String serwisant) {
+        this.opis = serwisant;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, nrZlecenia, dataPrzyjecia, imie, nazwisko, miasto, ulica, nrDomu, nrLokalu, nip, opis);
-    }
+
+
+
 }

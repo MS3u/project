@@ -11,7 +11,12 @@ public class Storage {
     private int cenaBrutto;
     private int stan;
 
-    public Storage(String text, String text1, String text2, String text3) {
+
+    public Storage(String nazwa, int cenaNetto, int cenaBrutto, int stan) {
+        this.nazwa = nazwa;
+        this.cenaNetto = cenaNetto;
+        this.cenaBrutto = cenaBrutto;
+        this.stan = stan;
     }
 
     public Storage(int id, String nazwa, int cenaNetto, int cenaBrutto, int stan) {
@@ -21,6 +26,7 @@ public class Storage {
         this.cenaBrutto = cenaBrutto;
         this.stan = stan;
     }
+
 
     public Storage() {
     }

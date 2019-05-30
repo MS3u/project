@@ -1019,78 +1019,83 @@
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="242" name="Opis">
+    <column id="255" parent="242" name="opis">
       <Position>11</Position>
-      <DataType>varchar(200)|0s</DataType>
+      <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="256" parent="242" name="PRIMARY">
+    <column id="256" parent="242" name="serwisant">
+      <Position>12</Position>
+      <DataType>varchar(35)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="257" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="257" parent="243" name="Id">
+    <column id="258" parent="243" name="Id">
       <Position>1</Position>
       <DataType>int(200)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="243" name="Nazwa">
+    <column id="259" parent="243" name="Nazwa">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="243" name="CenaNetto">
+    <column id="260" parent="243" name="CenaNetto">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="243" name="CenaBrutto">
+    <column id="261" parent="243" name="CenaBrutto">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="243" name="Stan">
+    <column id="262" parent="243" name="Stan">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="262" parent="243" name="PRIMARY">
+    <key id="263" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="263" parent="244" name="Id">
+    <column id="264" parent="244" name="Id">
       <Position>1</Position>
       <DataType>int(250)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="244" name="Imie">
+    <column id="265" parent="244" name="Imie">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="244" name="Nazwisko">
+    <column id="266" parent="244" name="Nazwisko">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="244" name="Stanowisko">
+    <column id="267" parent="244" name="Stanowisko">
       <Position>4</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="244" name="Haslo">
+    <column id="268" parent="244" name="Haslo">
       <Position>5</Position>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="268" parent="244" name="PRIMARY">
+    <key id="269" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
