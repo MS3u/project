@@ -19,6 +19,7 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 
 
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -31,38 +32,76 @@ public class Login implements Initializable {
     private List<Users> users;
     @FXML
     public TextField tfUser;
+
     @FXML
     public PasswordField pfPassword;
+
+    boolean b=false;
+
+    String stanowisko = "";
+    String magazyn = "[magazyn]";
+    String zlecenia = "[zlecenia]";
+    String admin = "[admin]";
+    String ksiegowa = "[ksiegowa]";
+    String upr = "";
 
 
     public void login(ActionEvent event) throws IOException {
 
-        Users userAuth = new Users(tfUser.getText(), pfPassword.getText());
+        Users userAuth = new Users(tfUser.getText(), pfPassword.getText()) ;
 
         List<Users> serAuth = users.stream()
                 .filter(u -> u.getNazwisko().equals(userAuth.getNazwisko()))
                 .filter(u -> u.getHaslo().equals(userAuth.getHaslo()))
-                .collect(Collectors.toList());
-        if (!serAuth.isEmpty()) {
 
+                .collect(Collectors.toList());
+
+
+        if (!serAuth.isEmpty()) {
+            b = true;
+            stanowisko = methodController.getStanowisko(tfUser.getText(), pfPassword.getText());
+            System.out.println(stanowisko);
+            log(b, event);
+        }
+
+    }
+
+
+    public void log(boolean b, ActionEvent event ) {
+        if (b) {
             Parent root = null;
             try {
-                root = FXMLLoader.load(getClass().getResource("../fxml/dashboard.fxml"));
+                root = FXMLLoader.load(getClass().getResource(uprawnienia(stanowisko).toString()));
+                Node node = (Node) event.getSource();
+                Stage stage = (Stage) node.getScene().getWindow();
+                stage.setScene(new Scene(root));
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            Node node = (Node) event.getSource();
-            Stage stage = (Stage) node.getScene().getWindow();
-            stage.setScene(new Scene(root));
 
-        }else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error Dialog");
-            alert.setHeaderText("Zobacz co źle zrobiłeś");
-            alert.setContentText("Złe dane logowania");
+        } else alert();
+    }
 
-            alert.showAndWait();
-        }
+
+
+    public String uprawnienia(String stanowisko) {
+
+        if (stanowisko.equals(magazyn)) upr = "../fxml/storage.fxml";
+        else if (stanowisko.equals(zlecenia)) upr = "../fxml/orders.fxml";
+        else if (stanowisko.equals(admin)) upr = "../fxml/dashboard.fxml";
+        else if (stanowisko.equals(ksiegowa)) upr = "../fxml/fVat.fxml";
+        else upr = "../MavenHibernate/Main.fxml";
+
+        return upr;
+    }
+
+    public void alert(){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error Dialog");
+        alert.setHeaderText("Zobacz co źle zrobiłeś");
+        alert.setContentText("Złe dane logowania");
+        alert.showAndWait();
     }
 
     public void register(ActionEvent event) throws IOException {
@@ -71,6 +110,7 @@ public class Login implements Initializable {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();
+
     }
 
     @Override

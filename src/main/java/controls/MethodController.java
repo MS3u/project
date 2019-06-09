@@ -9,6 +9,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 import org.hibernate.service.ServiceRegistry;
 
 import java.util.List;
@@ -45,6 +46,24 @@ public class MethodController {
         System.out.println(users);
         return users;
     }
+    public String getStanowisko(String login, String haslo){
+
+        String stanowisko="";
+        String nazwisko = login;
+        String imie="";
+        String hql = "SELECT stanowisko FROM Users WHERE nazwisko = :login AND haslo = :haslo";
+        Query query = session.createQuery(hql);
+        query.setParameter("login", login.toString());
+        query.setParameter("haslo", haslo.toString());
+        List results = query.list();
+        stanowisko=results.toString();
+//        for(results[] : results){
+//            stanowisko = results[0].toString();
+//            imie = results[1].toString();
+//        }
+        return stanowisko;
+    }
+
     List<Orders> getOrders() {
         List<Orders> orders = session.createQuery("from Orders ").getResultList();
         System.out.println(orders);
@@ -65,6 +84,51 @@ public class MethodController {
     public void update(Object object) {
         transactionStart();
         session.merge(object);
+    }
+public void updateOder(int id,
+                       String dataPrzyjeciaText,
+                       String nrZleceniaText,
+                       String imieText,
+                       String nazwiskoTextskoT,
+                       String miastoTexttoT,
+                       String ulicaTextcaT,
+                       String nrDomuText,
+                       String nrLokauText,
+                       String nipText,
+                       String serwisantText,
+                       String opiStext) {
+    Transaction tx=session.beginTransaction();
+
+
+    Query q=session.createQuery("UPDATE Orders SET " +
+            "dataPrzyjecia=:dp, " +
+            "nrZlecenia=:nz, " +
+            "imie=:i, " +
+            "nazwisko=:n, " +
+            "miasto=:m, " +
+            "ulica=:u, " +
+            "nrDomu=:nd, " +
+            "nrLokalu=:nl,  " +
+            "nip=:nip, " +
+            "opis=:o, " +
+            "serwisant=:s" +
+            " WHERE id=:Id");
+    q.setParameter("dp",dataPrzyjeciaText);
+    q.setParameter("nz",nrZleceniaText);
+    q.setParameter("i",imieText);
+    q.setParameter("n",nazwiskoTextskoT);
+    q.setParameter("m",miastoTexttoT);
+    q.setParameter("u",ulicaTextcaT);
+    q.setParameter("nd",nrDomuText);
+    q.setParameter("nl",nrLokauText);
+    q.setParameter("nip",nipText);
+    q.setParameter("o",opiStext);
+    q.setParameter("s",serwisantText);
+    q.setParameter("Id",id);
+
+    int status=q.executeUpdate();
+    System.out.println(status);
+    tx.commit();
     }
 
     public void deleteFromDb(Object object) {

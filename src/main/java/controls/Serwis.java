@@ -17,7 +17,7 @@ import java.util.ResourceBundle;
 import entities.Orders;
 
 
-public class Order implements Initializable {
+public class Serwis implements Initializable {
     @FXML
     public TableColumn<Orders, String> id;
     @FXML
@@ -106,42 +106,7 @@ public class Order implements Initializable {
     private MethodController methodController = new MethodController();
     public ObservableList<Orders> ObservableListItems;
 
-    public void addOrder() {
-        String dataPrzyjeciaText = dataPrzyjecia.getText();
-        String nrZleceniaText = tfNrZlecenia.getText();
-        String imieText = tfImie.getText();
-        String nazwiskoTextskoT = tfNazwisko.getText();
-        String nipText = tfNip.getText();
-        String miastoTexttoT = tfMiasto.getText();
-        String ulicaTextcaT = tfUlica.getText();
-        String nrDomuText = tfNrDomu.getText();
-        String nrLokauText = tfNrLokalu.getText();
-        String opiStext = tfOpis.getText();
-        String serwisantText = tfSerwisant.getText();
 
-        Orders order = new Orders(dataPrzyjeciaText, nrZleceniaText,
-                imieText, nazwiskoTextskoT, miastoTexttoT, ulicaTextcaT, nrDomuText, nrLokauText, nipText, serwisantText, opiStext);
-
-
-        methodController.saveData(order);
-        clearData();
-        refreshItemsList();
-
-    }
-    @FXML
-    private void clearData() {
-        dataPrzyjecia.clear();
-        tfImie.clear();
-        tfNazwisko.clear();
-        tfMiasto.clear();
-        tfNrDomu.clear();
-        tfNrLokalu.clear();
-        tfOpis.clear();
-        tfNrZlecenia.clear();
-        tfUlica.clear();
-        tfNip.clear();
-        tfSerwisant.clear();
-    }
 
     @FXML
     private void refreshItemsList() {
@@ -197,12 +162,7 @@ public class Order implements Initializable {
 //    }
 
 
-    public void deleteOrder(javafx.event.ActionEvent event) {
-        Orders orders = tableOrders.getSelectionModel().getSelectedItem();
-        methodController.deleteFromDb(orders);
-        clearData();
-        refreshItemsList();
-    }
+
     public void update(javafx.event.ActionEvent event){
         String dataPrzyjeciaText = dataPrzyjecia.getText();
         String nrZleceniaText = tfNrZlecenia.getText();
@@ -240,7 +200,7 @@ public class Order implements Initializable {
             tfNrDomu.setText(orders.getNrDomu());
             tfNrLokalu.setText(orders.getNrLokalu());
             tfOpis.setText(orders.getOpis());
-//            tfSerwisant.setText(orders.getSerwisant());
+            tfSerwisant.setText(orders.getSerwisant());
         }else {
             btnEdit.setText("Edycja Zlecenia");
 
@@ -259,7 +219,7 @@ public class Order implements Initializable {
             methodController.updateOder(id, dataPrzyjeciaText, nrZleceniaText,
                     imieText, nazwiskoTextskoT, miastoTexttoT, ulicaTextcaT, nrDomuText, nrLokauText, nipText, serwisantText, opiStext);
 
-           // methodController.update(updateOrders);
+            // methodController.update(updateOrders);
             refreshItemsList();
         }
     }

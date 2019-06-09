@@ -8,8 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.BorderPane;
-
-
+import javafx.scene.control.Label;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -18,6 +17,8 @@ import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
 public class Dashboard implements Initializable {
+    @FXML
+    Label lblZalogowany;
     @FXML
     private MethodController methodController = new MethodController();
     private List<Users> users;
@@ -30,7 +31,15 @@ public class Dashboard implements Initializable {
         borderPane.setCenter(noweOkno);
     }
 
+    public void openSerwis(ActionEvent event) throws IOException {
+        Parent noweOkno = FXMLLoader.load(getClass().getResource("/fxml/serwis.fxml"));
+        borderPane.setCenter(noweOkno);
+    }
+
     public void openFaktury(ActionEvent event) {
+    }
+    public void setUser(String stanowisko){
+        lblZalogowany.setText("Zalogowany: "+stanowisko);
     }
 
     public void openAdministracja(ActionEvent event) throws IOException {

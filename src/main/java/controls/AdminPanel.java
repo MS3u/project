@@ -61,9 +61,8 @@ public class AdminPanel implements Initializable {
         tHaslo.setCellValueFactory(new PropertyValueFactory<>("Haslo"));
         ObservableList itemlist = FXCollections.observableArrayList(items);
         tableUsers.setItems(itemlist);
-
-
     }
+
 
     public void addUser(javafx.event.ActionEvent event) {
         Users user = new Users(
