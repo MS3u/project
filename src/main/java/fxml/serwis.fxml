@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.Serwis">
+<AnchorPane fx:id="btnPrzypisz" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.Serwis">
 
     <children>
        
-        <TableView fx:id="tableOrders" layoutX="9.0" layoutY="8.0" prefHeight="266.0" prefWidth="858.0">
+        <TableView fx:id="tableOrders" layoutX="9.0" layoutY="8.0" onMouseClicked="#tableClick" prefHeight="266.0" prefWidth="858.0">
             <columns>
                 <TableColumn fx:id="tNr" prefWidth="34.0" text="Nr" />
                 <TableColumn fx:id="tData" prefWidth="69.0" text="Data" />
@@ -25,6 +27,15 @@
                 <TableColumn fx:id="id" prefWidth="62.0" text="Id" />
             </columns>
         </TableView>
+      <Label fx:id="lblOpis" layoutX="14.0" layoutY="274.0" prefHeight="17.0" prefWidth="852.0" text="Label" />
+      <TableView layoutX="17.0" layoutY="308.0" prefHeight="140.0" prefWidth="373.0">
+        <columns>
+          <TableColumn fx:id="tableItems" prefWidth="263.99998474121094" text="Nazwa" />
+          <TableColumn prefWidth="107.0" text="Ilość" />
+        </columns>
+      </TableView>
+      <Button layoutX="744.0" layoutY="317.0" mnemonicParsing="false" text="Przypisz do zlecenia" />
+      <Button fx:id="btnDodaj" layoutX="395.0" layoutY="317.0" mnemonicParsing="false" text="Dodaj część" />
 
     </children>
     <padding>

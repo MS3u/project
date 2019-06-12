@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 
 
-
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -35,6 +35,10 @@ public class Login implements Initializable {
 
     @FXML
     public PasswordField pfPassword;
+
+    @FXML
+    public Label lbZalogowany;
+
 
     boolean b=false;
 
@@ -60,8 +64,26 @@ public class Login implements Initializable {
         if (!serAuth.isEmpty()) {
             b = true;
             stanowisko = methodController.getStanowisko(tfUser.getText(), pfPassword.getText());
-            System.out.println(stanowisko);
+            String temp="";
+
+            temp =methodController.getRodo(tfUser.getText(), pfPassword.getText());
+            System.out.println(temp);
+            System.out.println(tfUser.getText());
+
+
+            //blad przy zapisie stringa do label moze import?
+            //-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+         //   lbZalogowany.setText("Zalogowany: ");       // zakomentowane dla odpalenia!
+            System.out.println(lbZalogowany);
+
+
+          //  lbZalogowany.setText(temp);                // zakomentowane dla odpalenia!
+          //  Dashboard.class.(methodController.getRodo(tfUser.getText(), pfPassword.getText()));
+            System.out.println(stanowisko+"   "+lbZalogowany);
             log(b, event);
+
         }
 
     }

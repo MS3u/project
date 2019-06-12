@@ -11,10 +11,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.hibernate.Transaction;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseEvent;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 import entities.Orders;
+
+
 
 
 public class Order implements Initializable {
@@ -67,13 +70,14 @@ public class Order implements Initializable {
     public TextField tfUlica;
     @FXML
     public Button addOrder;
-    @FXML
     public TextField tfSerwisant;
     @FXML
     public Button btnClear;
     @FXML
     public Button btnEdit;
     public Button btnDeleteOrder;
+
+
 
 
     @FXML
@@ -117,10 +121,11 @@ public class Order implements Initializable {
         String nrDomuText = tfNrDomu.getText();
         String nrLokauText = tfNrLokalu.getText();
         String opiStext = tfOpis.getText();
-        String serwisantText = tfSerwisant.getText();
+       // String serwisantText = tfSerwisant.getText();
+        String serwisantText = "";
 
         Orders order = new Orders(dataPrzyjeciaText, nrZleceniaText,
-                imieText, nazwiskoTextskoT, miastoTexttoT, ulicaTextcaT, nrDomuText, nrLokauText, nipText, serwisantText, opiStext);
+                imieText, nazwiskoTextskoT, miastoTexttoT, ulicaTextcaT, nrDomuText, nrLokauText, nipText, opiStext, serwisantText);
 
 
         methodController.saveData(order);
@@ -140,7 +145,7 @@ public class Order implements Initializable {
         tfNrZlecenia.clear();
         tfUlica.clear();
         tfNip.clear();
-        tfSerwisant.clear();
+       // tfSerwisant.clear();
     }
 
     @FXML
@@ -195,7 +200,10 @@ public class Order implements Initializable {
 //        tfOpis.setText(clicked.getOpis());
 //        tfSerwisant.setText(clicked.getSerwisant());
 //    }
-
+//    @FXML
+//    public void tableClick(javafx.event.ActionEvent event) {
+//        editOrder(event);
+//    }
 
     public void deleteOrder(javafx.event.ActionEvent event) {
         Orders orders = tableOrders.getSelectionModel().getSelectedItem();
@@ -240,6 +248,7 @@ public class Order implements Initializable {
             tfNrDomu.setText(orders.getNrDomu());
             tfNrLokalu.setText(orders.getNrLokalu());
             tfOpis.setText(orders.getOpis());
+
 //            tfSerwisant.setText(orders.getSerwisant());
         }else {
             btnEdit.setText("Edycja Zlecenia");
@@ -254,7 +263,7 @@ public class Order implements Initializable {
             String nrDomuText = tfNrDomu.getText();
             String nrLokauText = tfNrLokalu.getText();
             String opiStext = tfOpis.getText();
-            String serwisantText = "aaa";
+            String serwisantText = "";
             int id = tableOrders.getSelectionModel().getSelectedItem().getId();
             methodController.updateOder(id, dataPrzyjeciaText, nrZleceniaText,
                     imieText, nazwiskoTextskoT, miastoTexttoT, ulicaTextcaT, nrDomuText, nrLokauText, nipText, serwisantText, opiStext);

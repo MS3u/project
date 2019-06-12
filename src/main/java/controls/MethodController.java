@@ -64,6 +64,20 @@ public class MethodController {
         return stanowisko;
     }
 
+    public String getRodo(String login, String haslo){
+        String nazwisko = login;
+        String imie="";
+
+        String hql = "SELECT imie FROM Users WHERE nazwisko = :login AND haslo = :haslo";
+        Query query = session.createQuery(hql);
+        query.setParameter("login", login.toString());
+        query.setParameter("haslo", haslo.toString());
+        List results = query.list();
+        imie= results.toString();
+        System.out.println(imie);
+        return imie+nazwisko;
+    }
+
     List<Orders> getOrders() {
         List<Orders> orders = session.createQuery("from Orders ").getResultList();
         System.out.println(orders);

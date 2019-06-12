@@ -4,13 +4,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.hibernate.Transaction;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseEvent;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -73,14 +71,15 @@ public class Serwis implements Initializable {
     public Button btnClear;
     @FXML
     public Button btnEdit;
-    public Button btnDeleteOrder;
+    @FXML
+    public Label lblOpis;
 
 
     @FXML
     private void loadDataToTable(ActionEvent event) {
+        PropertyValueFactory temp ;
         Transaction transaction = methodController.session.beginTransaction();
         List orders = methodController.session.createCriteria(Orders.class).list();
-        transaction.commit();
 
         id.setCellValueFactory(new PropertyValueFactory<>("Id"));
         tNr.setCellValueFactory(new PropertyValueFactory<>("nrZlecenia"));
@@ -93,13 +92,21 @@ public class Serwis implements Initializable {
         tNLokalu.setCellValueFactory(new PropertyValueFactory<>("nrLokalu"));
         tNip.setCellValueFactory(new PropertyValueFactory<>("nip"));
         tOpis.setCellValueFactory(new PropertyValueFactory<>("opis"));
-        tSerwisant.setCellValueFactory(new PropertyValueFactory<>("Serwisant"));
 
+        tSerwisant.setCellValueFactory(new PropertyValueFactory<>("Serwisant"));
 
         tableOrders.setItems(ObservableListItems);
         ObservableList orderList = FXCollections.observableArrayList(orders);
         tableOrders.setItems(orderList);
 
+        transaction.commit();
+
+
+
+    }
+    public void setLblOpis(javafx.scene.input.MouseEvent mouseEvent){
+       Orders orders = tableOrders.getSelectionModel().getSelectedItem();
+       lblOpis.setText(orders.getOpis());
 
     }
 
@@ -145,21 +152,7 @@ public class Serwis implements Initializable {
     }
 
 
-//    @FXML
-//    public void tableClick(MouseEvent mouseEvent) {
-//        Orders clicked = tableOrders.getSelectionModel().getSelectedItem();
-//        tfNrZlecenia.setText(clicked.getNrZlecenia());
-//        dataPrzyjecia.setText(clicked.getDataPrzyjecia());
-//        tfImie.setText(clicked.getImie());
-//        tfNazwisko.setText(clicked.getNazwisko());
-//        tfNip.setText(clicked.getNip());
-//        tfMiasto.setText(clicked.getMiasto());
-//        tfUlica.setText(clicked.getUlica());
-//        tfNrDomu.setText(clicked.getNrDomu());
-//        tfNrLokalu.setText(clicked.getNrLokalu());
-//        tfOpis.setText(clicked.getOpis());
-//        tfSerwisant.setText(clicked.getSerwisant());
-//    }
+
 
 
 
@@ -225,5 +218,11 @@ public class Serwis implements Initializable {
     }
 
 
+    public void tableClick(javafx.scene.input.MouseEvent mouseEvent) {
+
+            Orders clicked = tableOrders.getSelectionModel().getSelectedItem();
+            setLblOpis(mouseEvent);
+
+    }
 }
 
