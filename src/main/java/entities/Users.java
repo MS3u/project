@@ -24,7 +24,6 @@ public class Users {
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
@@ -34,7 +33,6 @@ public class Users {
     public String getImie() {
         return imie;
     }
-
     public void setImie(String imie) {
         this.imie = imie;
     }
@@ -44,7 +42,6 @@ public class Users {
     public String getNazwisko() {
         return nazwisko;
     }
-
     public void setNazwisko(String nazwisko) {
         this.nazwisko = nazwisko;
     }
@@ -54,7 +51,6 @@ public class Users {
     public String getStanowisko() {
         return stanowisko;
     }
-
     public void setStanowisko(String stanowisko) {
         this.stanowisko = stanowisko;
     }
@@ -64,7 +60,6 @@ public class Users {
     public String getHaslo() {
         return haslo;
     }
-
     public void setHaslo(String haslo) {
         this.haslo = haslo;
     }

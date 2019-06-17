@@ -30,6 +30,10 @@ public class Login implements Initializable {
     @FXML
     private MethodController methodController = new MethodController();
     private List<Users> users;
+
+    @FXML
+    private Dashboard dashboard ;
+
     @FXML
     public TextField tfUser;
 
@@ -37,17 +41,14 @@ public class Login implements Initializable {
     public PasswordField pfPassword;
 
     @FXML
-    public Label lbZalogowany;
+    public String lbZalogowany;
 
 
     boolean b=false;
 
-    String stanowisko = "";
-    String magazyn = "[magazyn]";
-    String zlecenia = "[zlecenia]";
-    String admin = "[admin]";
-    String ksiegowa = "[ksiegowa]";
-    String upr = "";
+    public static String stanowisko = "";
+    public static String lbzalogowany = "";
+
 
 
     public void login(ActionEvent event) throws IOException {
@@ -57,46 +58,43 @@ public class Login implements Initializable {
         List<Users> serAuth = users.stream()
                 .filter(u -> u.getNazwisko().equals(userAuth.getNazwisko()))
                 .filter(u -> u.getHaslo().equals(userAuth.getHaslo()))
-
                 .collect(Collectors.toList());
+
 
 
         if (!serAuth.isEmpty()) {
             b = true;
             stanowisko = methodController.getStanowisko(tfUser.getText(), pfPassword.getText());
-            String temp="";
+            String imie="";
+            System.out.println(stanowisko);
+            imie =methodController.getRodo(tfUser.getText(), pfPassword.getText());
+            System.out.println("imie: "+imie);
+            System.out.println("login: "+tfUser.getText());
+            lbZalogowany=(imie+" "+tfUser.getText());
+            System.out.println("lblzalogowany: "+lbZalogowany);
 
-            temp =methodController.getRodo(tfUser.getText(), pfPassword.getText());
-            System.out.println(temp);
-            System.out.println(tfUser.getText());
+            //dashboard.uprawnienia(stanowisko,lbZalogowany);
 
-
-            //blad przy zapisie stringa do label moze import?
-            //-----------------------------------------------------------------------------------------------------------------------------------------
-
-
-         //   lbZalogowany.setText("Zalogowany: ");       // zakomentowane dla odpalenia!
-            System.out.println(lbZalogowany);
-
-
-          //  lbZalogowany.setText(temp);                // zakomentowane dla odpalenia!
-          //  Dashboard.class.(methodController.getRodo(tfUser.getText(), pfPassword.getText()));
             System.out.println(stanowisko+"   "+lbZalogowany);
-            log(b, event);
+            log(b, event, lbZalogowany);
 
         }
 
     }
 
 
-    public void log(boolean b, ActionEvent event ) {
+
+    public void log(boolean b, ActionEvent event,String lbZalogowany ) {
         if (b) {
             Parent root = null;
             try {
-                root = FXMLLoader.load(getClass().getResource(uprawnienia(stanowisko).toString()));
+                root = FXMLLoader.load(getClass().getResource("../fxml/dashboard.fxml"));
                 Node node = (Node) event.getSource();
                 Stage stage = (Stage) node.getScene().getWindow();
                 stage.setScene(new Scene(root));
+
+              //  dashboard.uprawnienia(stanowisko, lbZalogowany);
+
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -107,16 +105,7 @@ public class Login implements Initializable {
 
 
 
-    public String uprawnienia(String stanowisko) {
 
-        if (stanowisko.equals(magazyn)) upr = "../fxml/storage.fxml";
-        else if (stanowisko.equals(zlecenia)) upr = "../fxml/orders.fxml";
-        else if (stanowisko.equals(admin)) upr = "../fxml/dashboard.fxml";
-        else if (stanowisko.equals(ksiegowa)) upr = "../fxml/fVat.fxml";
-        else upr = "../MavenHibernate/Main.fxml";
-
-        return upr;
-    }
 
     public void alert(){
         Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -132,6 +121,7 @@ public class Login implements Initializable {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();
+
 
     }
 

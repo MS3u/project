@@ -1,5 +1,6 @@
 package controls;
 
+import entities.Orders;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -7,18 +8,21 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.hibernate.Transaction;
+
 import java.awt.event.ActionEvent;
-import java.awt.event.MouseEvent;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-import entities.Orders;
 
 
-public class Serwis implements Initializable {
+
+
+
+public class Raport implements Initializable {
     @FXML
     public TableColumn<Orders, String> id;
     @FXML
+
     public TableColumn<Orders, String> tNr;
     @FXML
     public TableColumn<Orders, String> tData;
@@ -104,8 +108,8 @@ public class Serwis implements Initializable {
 
     }
     public void setLblOpis(javafx.scene.input.MouseEvent mouseEvent){
-       Orders orders = tableOrders.getSelectionModel().getSelectedItem();
-       lblOpis.setText(orders.getOpis());
+        Orders orders = tableOrders.getSelectionModel().getSelectedItem();
+        lblOpis.setText(orders.getOpis());
 
     }
 
@@ -219,9 +223,10 @@ public class Serwis implements Initializable {
 
     public void tableClick(javafx.scene.input.MouseEvent mouseEvent) {
 
-            Orders clicked = tableOrders.getSelectionModel().getSelectedItem();
-            setLblOpis(mouseEvent);
+        Orders clicked = tableOrders.getSelectionModel().getSelectedItem();
+        setLblOpis(mouseEvent);
 
     }
 }
+
 

@@ -2,17 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f5ca1d0-4760-4de3-ba1e-47c5e0348ff8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controls/Raport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/TempserwisEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/tempSerwis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fb1658c2-c00f-4513-b990-259ee8cd4370.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fb1658c2-c00f-4513-b990-259ee8cd4370.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controls/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controls/Dashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controls/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controls/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controls/MethodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controls/MethodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controls/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controls/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controls/Serwis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controls/Serwis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controls/cStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controls/cStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Storage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fxml/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fxml/dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fxml/fVat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fxml/fVat.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fxml/serwis.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fxml/serwis.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fxml/storage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fxml/storage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controls/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controls/Dashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controls/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controls/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controls/MethodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controls/MethodController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controls/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controls/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controls/cStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controls/cStorage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Storage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Storage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/fVat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/fVat.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/storage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/storage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,31 +59,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="projekt@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="projekt@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="projekt@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="projekt: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="projekt@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="projekt: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-        <item name="orders: table" type="dbc44a63:MariaImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="projekt@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="projekt: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-        <item name="storage: table" type="dbc44a63:MariaImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -80,92 +71,51 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/fxml/serwis.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="85" lean-forward="true" selection-start-line="13" selection-start-column="85" selection-end-line="13" selection-end-column="85" />
+        <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controls/Serwis.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="108" column="31" lean-forward="true" selection-start-line="108" selection-start-column="31" selection-end-line="108" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/src/main/java/fxml/fVat.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controls/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controls/MethodController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
-              <caret line="76" column="33" lean-forward="true" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#0#10#1" expanded="true" />
-                <element signature="e#0#71#1" expanded="true" />
-                <element signature="e#0#71#1" expanded="true" />
-                <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#0#167#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controls/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="844">
-              <caret line="240" column="57" lean-forward="true" selection-start-line="239" selection-start-column="11" selection-end-line="240" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Orders.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="96" column="60" lean-forward="true" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/fxml/dashboard.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="37" column="147" selection-start-line="37" selection-start-column="124" selection-end-line="37" selection-end-column="147" />
+            <state relative-caret-position="1309">
+              <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controls/Serwis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2006">
+              <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controls/Dashboard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="1377">
+              <caret line="101" selection-start-line="101" selection-end-line="101" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -174,23 +124,35 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/fxml/storage.fxml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fxml/serwis.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
           <provider editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+              <caret line="13" column="85" selection-end-line="48" />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/fxml/orders.fxml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MavenHibernate/main.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-221">
-              <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+            <state relative-caret-position="578">
+              <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MavenHibernate/HibernateUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -211,6 +173,7 @@
       <find>open</find>
       <find>getst</find>
       <find>ser</find>
+      <find>get</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -235,27 +198,30 @@
         <option value="$PROJECT_DIR$/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/entities/eStorage.java" />
         <option value="$PROJECT_DIR$/src/main/java/controls/Storage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fxml/fVat.fxml" />
-        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Storage.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/main/java/fxml/administration.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Users.java" />
         <option value="$PROJECT_DIR$/src/main/java/fxml/info.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/controls/AdminPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/Orders.java" />
         <option value="$PROJECT_DIR$/src/main/java/controls/cStorage.java" />
         <option value="$PROJECT_DIR$/src/main/java/fxml/storage.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/fxml/dashboard.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/MavenHibernate/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/fxml/orders.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/controls/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controls/MethodController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Users.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Storage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/tempSerwis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controls/Login.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controls/Dashboard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controls/Raport.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fxml/fVat.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/TempserwisEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/fxml/dashboard.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/controls/Serwis.java" />
         <option value="$PROJECT_DIR$/src/main/java/fxml/serwis.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/controls/Dashboard.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controls/MethodController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controls/Login.java" />
       </list>
     </option>
   </component>
@@ -291,80 +257,13 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1616" />
-    <option name="height" value="886" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="META-INF" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="controls" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="entities" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="fxml" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="MavenHibernate" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -438,6 +337,73 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="META-INF" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="controls" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="entities" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="fxml" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="project1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="project1" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="MavenHibernate" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -454,17 +420,17 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/generatePdf" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4269006" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Toyo\IdeaProjects\project\src\main\java\fxml" />
       <recent name="C:\Users\Toyo\IdeaProjects\project\src\main\java\controls" />
     </key>
@@ -473,7 +439,7 @@
       <recent name="" />
       <recent name="dB" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Toyo\IdeaProjects\project\src\main\java\fxml" />
       <recent name="C:\Users\Toyo\IdeaProjects\project\src\main\java\controls" />
     </key>
@@ -492,6 +458,8 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="MavenHibernate.Main" />
       <module name="project1" />
       <extension name="coverage">
@@ -529,7 +497,16 @@
       <workItem from="1559998479515" duration="22704000" />
       <workItem from="1560055667680" duration="15481000" />
       <workItem from="1560097099822" duration="1939000" />
-      <workItem from="1560365657657" duration="12849000" />
+      <workItem from="1560365657657" duration="12910000" />
+      <workItem from="1560378865518" duration="409000" />
+      <workItem from="1560453273487" duration="11959000" />
+      <workItem from="1560506598106" duration="715000" />
+      <workItem from="1560517362489" duration="2539000" />
+      <workItem from="1560580451415" duration="7260000" />
+      <workItem from="1560588143497" duration="2149000" />
+      <workItem from="1560674283131" duration="1585000" />
+      <workItem from="1560756038191" duration="183000" />
+      <workItem from="1560799638853" duration="604000" />
     </task>
     <task id="LOCAL-00001" summary="trzeba podpiac karte serwis do przycisku&#10;dodac w dashboard pole zalogowany : uzytkownik, stanowisko">
       <created>1560099017222</created>
@@ -538,11 +515,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560099017222</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="label zaloguj do zrobienia i faktury">
+      <created>1560378584009</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560378584009</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161765000" />
+    <option name="totallyTimeSpent" value="189869000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -564,12 +548,12 @@
       <window_info id="Favorites" order="4" sideWeight="0.37346712" side_tool="true" weight="0.24040511" />
       <window_info id="Web" order="5" sideWeight="0.09598604" side_tool="true" weight="0.24040511" />
       <window_info id="Learn" order="6" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.85391766" visible="true" weight="0.15938303" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.85391766" visible="true" weight="0.16131106" />
       <window_info id="Structure" order="8" sideWeight="0.14608234" side_tool="true" weight="0.24357326" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32552955" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8880597" visible="true" weight="0.34528553" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39910814" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8880597" weight="0.247765" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3984064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998884" />
@@ -577,22 +561,22 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32998884" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.1119403" side_tool="true" weight="0.29501915" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49573562" weight="0.2616202" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49573562" weight="0.25925925" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32998884" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32998884" />
       <window_info anchor="bottom" id="Duplicate detector" order="15" weight="0.32998884" />
       <window_info anchor="bottom" id="SQL Generator" order="16" weight="0.32998884" />
       <window_info anchor="bottom" id="Inspection Results" order="17" weight="0.32950193" />
-      <window_info anchor="right" id="Maven" order="0" weight="0.32995737" />
+      <window_info anchor="right" id="Maven" order="0" weight="0.32969153" />
       <window_info anchor="right" id="Palette" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Database" order="3" sideWeight="0.4991274" weight="0.19023137" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+      <window_info anchor="right" id="Database" order="8" sideWeight="0.4991274" weight="0.16773778" />
       <window_info anchor="right" x="1277" y="369" width="388" height="249" id="Persistence" order="9" sideWeight="0.15640599" type="SLIDING" weight="0.20682302" />
       <window_info anchor="right" id="Coverage" order="10" sideWeight="0.5008726" side_tool="true" weight="0.19509594" />
     </layout>
@@ -608,8 +592,8 @@
       <window_info id="Structure" order="8" sideWeight="0.14608234" side_tool="true" weight="0.24357326" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32552955" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8880597" visible="true" weight="0.34528553" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39910814" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8880597" visible="true" weight="0.24833998" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3984064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998884" />
@@ -617,22 +601,22 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32998884" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.1119403" side_tool="true" weight="0.29501915" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49573562" weight="0.2616202" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49573562" weight="0.26029217" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32998884" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32998884" />
       <window_info anchor="bottom" id="Duplicate detector" order="15" weight="0.32998884" />
       <window_info anchor="bottom" id="SQL Generator" order="16" weight="0.32998884" />
       <window_info anchor="bottom" id="Inspection Results" order="17" weight="0.32950193" />
-      <window_info anchor="right" id="Maven" order="0" weight="0.32995737" />
+      <window_info anchor="right" id="Maven" order="0" weight="0.32969153" />
       <window_info anchor="right" id="Palette" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Database" order="3" sideWeight="0.4991274" weight="0.19023137" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+      <window_info anchor="right" id="Database" order="8" sideWeight="0.4991274" visible="true" weight="0.16773778" />
       <window_info anchor="right" x="1277" y="369" width="388" height="249" id="Persistence" order="9" sideWeight="0.15640599" type="SLIDING" weight="0.20682302" />
       <window_info anchor="right" id="Coverage" order="10" sideWeight="0.5008726" side_tool="true" weight="0.19509594" />
     </layout-to-restore>
@@ -642,7 +626,29 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="trzeba podpiac karte serwis do przycisku&#10;dodac w dashboard pole zalogowany : uzytkownik, stanowisko" />
-    <option name="LAST_COMMIT_MESSAGE" value="trzeba podpiac karte serwis do przycisku&#10;dodac w dashboard pole zalogowany : uzytkownik, stanowisko" />
+    <MESSAGE value="label zaloguj do zrobienia i faktury" />
+    <option name="LAST_COMMIT_MESSAGE" value="label zaloguj do zrobienia i faktury" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controls/Login.java</url>
+          <line>78</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="dashboard" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/MavenHibernate/HomePage.html" />
@@ -653,21 +659,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fb1658c2-c00f-4513-b990-259ee8cd4370/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/MavenHibernate/HibernateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69" />
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/function/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -676,12 +668,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fxml/registration.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="36" column="75" selection-start-line="36" selection-start-column="75" selection-end-line="36" selection-end-column="75" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -716,48 +708,19 @@
     <entry file="das://fb1658c2-c00f-4513-b990-259ee8cd4370/schema/projekt/table/orders.sql" />
     <entry file="das://fb1658c2-c00f-4513-b990-259ee8cd4370/schema/projekt/table/orders" />
     <entry file="file://$PROJECT_DIR$/src/main/java/fxml/administration.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="11" column="86" selection-start-line="11" selection-start-column="86" selection-end-line="11" selection-end-column="86" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="das://fb1658c2-c00f-4513-b990-259ee8cd4370/schema/projekt/table/users" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Storage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fxml/fVat.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fxml/info.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -765,13 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -802,14 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MavenHibernate/main.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controls/Registration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -822,46 +770,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MavenHibernate/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fxml/orders.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fxml/storage.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controls/Dashboard.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/fxml/orders.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="272">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controls/MethodController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1109">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#0#10#1" expanded="true" />
+            <element signature="e#0#71#1" expanded="true" />
+            <element signature="e#0#65#1" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#167#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controls/Serwis.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controls/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="108" column="31" lean-forward="true" selection-start-line="108" selection-start-column="31" selection-end-line="108" selection-end-column="31" />
+        <state relative-caret-position="816">
+          <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -870,59 +813,153 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controls/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="844">
-          <caret line="240" column="57" lean-forward="true" selection-start-line="239" selection-start-column="11" selection-end-line="240" selection-end-column="57" />
+        <state relative-caret-position="3808">
+          <caret line="239" column="18" selection-start-line="239" selection-start-column="18" selection-end-line="239" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controls/MethodController.java">
+    <entry file="uml://DATABASE/fb1658c2-c00f-4513-b990-259ee8cd4370.SCHEMA:projekt">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>fb1658c2-c00f-4513-b990-259ee8cd4370.SCHEMA:projekt</OriginalElement>
+          <nodes>
+            <node x="413.0" y="0.0">fb1658c2-c00f-4513-b990-259ee8cd4370.TABLE:projekt.storage</node>
+            <node x="211.0" y="0.0">fb1658c2-c00f-4513-b990-259ee8cd4370.TABLE:projekt.users</node>
+            <node x="0.0" y="337.0">fb1658c2-c00f-4513-b990-259ee8cd4370.TABLE:projekt.tempserwis</node>
+            <node x="0.0" y="0.0">fb1658c2-c00f-4513-b990-259ee8cd4370.TABLE:projekt.orders</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8495575221238938" x="273.0" y="216.0" />
+          <SelectedNodes>
+            <node>fb1658c2-c00f-4513-b990-259ee8cd4370.TABLE:projekt.users</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/tempSerwis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="76" column="33" lean-forward="true" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#10#1" expanded="true" />
-            <element signature="e#0#71#1" expanded="true" />
-            <element signature="e#0#71#1" expanded="true" />
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#0#167#1" expanded="true" />
-          </folding>
+        <state relative-caret-position="425">
+          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/TempserwisEntity.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/entities/Orders.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="96" column="60" lean-forward="true" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Storage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MavenHibernate/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controls/Raport.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/controls/pdf.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fxml/fVat.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controls/Serwis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2006">
+          <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controls/Dashboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fxml/serwis.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" column="85" lean-forward="true" selection-start-line="13" selection-start-column="85" selection-end-line="13" selection-end-column="85" />
+          <caret line="13" column="85" selection-end-line="48" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fxml/dashboard.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="37" column="147" selection-start-line="37" selection-start-column="124" selection-end-line="37" selection-end-column="147" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controls/Login.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/MavenHibernate/main.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+        <state relative-caret-position="578">
+          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MavenHibernate/HibernateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fxml/dashboard.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -960,7 +997,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.4269006" />
               </list>
             </option>
           </splitter-proportions>
@@ -972,7 +1009,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.4269006" />
               </list>
             </option>
           </splitter-proportions>
@@ -980,11 +1017,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>project1</last-edited>
+          <last-edited>project</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.4269006" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

@@ -28,7 +28,7 @@
             </columns>
         </TableView>
       <Label fx:id="lblOpis" layoutX="14.0" layoutY="274.0" prefHeight="17.0" prefWidth="852.0" text="Label" />
-      <TableView layoutX="17.0" layoutY="308.0" prefHeight="140.0" prefWidth="373.0">
+      <TableView fx:id="tableItems" layoutX="17.0" layoutY="308.0" prefHeight="140.0" prefWidth="373.0">
         <columns>
           <TableColumn fx:id="tableItems" prefWidth="263.99998474121094" text="Nazwa" />
           <TableColumn prefWidth="107.0" text="Ilość" />

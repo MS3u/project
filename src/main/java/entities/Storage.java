@@ -46,7 +46,6 @@ public class Storage {
     public String getNazwa() {
         return nazwa;
     }
-
     public void setNazwa(String nazwa) {
         this.nazwa = nazwa;
     }
@@ -56,7 +55,6 @@ public class Storage {
     public int getCenaNetto() {
         return cenaNetto;
     }
-
     public void setCenaNetto(int cenaNetto) {
         this.cenaNetto = cenaNetto;
     }
@@ -66,7 +64,6 @@ public class Storage {
     public int getCenaBrutto() {
         return cenaBrutto;
     }
-
     public void setCenaBrutto(int cenaBrutto) {
         this.cenaBrutto = cenaBrutto;
     }
@@ -76,7 +73,6 @@ public class Storage {
     public int getStan() {
         return stan;
     }
-
     public void setStan(int stan) {
         this.stan = stan;
     }

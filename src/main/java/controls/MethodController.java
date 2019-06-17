@@ -56,7 +56,7 @@ public class MethodController {
         query.setParameter("login", login.toString());
         query.setParameter("haslo", haslo.toString());
         List results = query.list();
-        stanowisko=results.toString();
+        stanowisko=results.toString().replace("[","").replace("]","");
 //        for(results[] : results){
 //            stanowisko = results[0].toString();
 //            imie = results[1].toString();
@@ -65,7 +65,7 @@ public class MethodController {
     }
 
     public String getRodo(String login, String haslo){
-        String nazwisko = login;
+       // String nazwisko = login;
         String imie="";
 
         String hql = "SELECT imie FROM Users WHERE nazwisko = :login AND haslo = :haslo";
@@ -73,9 +73,8 @@ public class MethodController {
         query.setParameter("login", login.toString());
         query.setParameter("haslo", haslo.toString());
         List results = query.list();
-        imie= results.toString();
-        System.out.println(imie);
-        return imie+nazwisko;
+        imie= results.toString().replace("[","").replace("]","");
+        return imie;
     }
 
     List<Orders> getOrders() {
