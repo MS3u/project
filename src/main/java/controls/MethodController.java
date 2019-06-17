@@ -12,6 +12,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 import org.hibernate.service.ServiceRegistry;
 
+import java.sql.ResultSet;
 import java.util.List;
 
 
@@ -98,6 +99,28 @@ public class MethodController {
         transactionStart();
         session.merge(object);
     }
+
+    private void loadItems(int id){
+    List rs = null;
+        Transaction tx=session.beginTransaction();
+        Query q = session.createQuery("select Nazwa, ilosc from storage, orders, tempserwis"+
+                "where tempserwis.orderId=orders.Id"+       // BRAK ZMAPOWANIA TABEL WIELE DO WIELE DLA TABELI LACZACEJ
+                "and tempserwis.storageId=storage.Id"+
+                "and orders.Id=:qid");
+        q.setParameter("qid", id);
+
+      rs =q.getResultList();
+//    while(rs.next()){
+//        String name = rs.getString("Name)";
+//        String ilosc = rs.getString("ilosc");
+//    }
+
+
+
+        tx.commit();
+
+    }
+
 public void updateOder(int id,
                        String dataPrzyjeciaText,
                        String nrZleceniaText,

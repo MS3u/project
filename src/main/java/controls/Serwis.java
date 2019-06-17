@@ -99,10 +99,10 @@ public class Serwis implements Initializable {
         tableOrders.setItems(orderList);
 
         transaction.commit();
-
-
-
     }
+
+
+
     public void setLblOpis(javafx.scene.input.MouseEvent mouseEvent){
        Orders orders = tableOrders.getSelectionModel().getSelectedItem();
        lblOpis.setText(orders.getOpis());
