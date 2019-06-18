@@ -6,6 +6,8 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="Orders")
+
+
 public class Orders {
     private int Id;
     private String nrZlecenia;
@@ -19,9 +21,11 @@ public class Orders {
     private String nip;
     private String opis;
     private String serwisant;
+    private Orders orders;
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id", unique = true)
+
     public int getId() {
         return Id;
     }

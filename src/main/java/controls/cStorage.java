@@ -9,7 +9,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 import org.hibernate.Transaction;
 import java.awt.event.ActionEvent;
 import java.net.URL;
@@ -113,16 +112,18 @@ public class cStorage implements Initializable {
         tfStan.clear();
     }
 
- public void tableClick(MouseEvent mouseEvent) {
-    Storage clicked = table.getSelectionModel().getSelectedItem();
-          String cenaB = String.valueOf(clicked.getCenaBrutto());
-      String cenaN = String.valueOf(clicked.getCenaNetto());
-      String stan = String.valueOf(clicked.getStan());
-          tfNazwa.setText(clicked.getNazwa());
-          tfCenaB.setText(cenaB);tfCenaN.setText(cenaN);
-          tfStan.setText(stan);
-
-  }
+//    public void tableClick(MouseEvent mouseEvent) {
+//       Storage clicked = table.getSelectionModel().getSelectedItem();
+//            String cenaB = String.valueOf(clicked.getCenaBrutto());
+//        String cenaN = String.valueOf(clicked.getCenaNetto());
+//        String stan = String.valueOf(clicked.getStan());
+//
+//            tfNazwa.setText(clicked.getNazwa());
+//            tfCenaB.setText(cenaB);
+//            tfCenaN.setText(cenaN);
+//            tfStan.setText(stan);
+//
+//    }
 
 
     public void changeItem(javafx.event.ActionEvent event) {

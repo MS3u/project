@@ -1,5 +1,7 @@
 package controls;
 
+import entities.Storage;
+import entities.Tempserwis;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -74,10 +76,21 @@ public class Serwis implements Initializable {
 
 
     @FXML
+    private TableColumn<Storage, String> tbNazwa;
+
+    @FXML
+    private TableColumn<Tempserwis, String> tbIlosc;
+
+    public TableView<Serwis> tableItems;
+
+
+
+    @FXML
     private void loadDataToTable(ActionEvent event) {
-        PropertyValueFactory temp ;
+
         Transaction transaction = methodController.session.beginTransaction();
         List orders = methodController.session.createCriteria(Orders.class).list();
+        List d = methodController.session.createCriteria(Storage.class).list();
 
         id.setCellValueFactory(new PropertyValueFactory<>("Id"));
         tNr.setCellValueFactory(new PropertyValueFactory<>("nrZlecenia"));
@@ -90,8 +103,15 @@ public class Serwis implements Initializable {
         tNLokalu.setCellValueFactory(new PropertyValueFactory<>("nrLokalu"));
         tNip.setCellValueFactory(new PropertyValueFactory<>("nip"));
         tOpis.setCellValueFactory(new PropertyValueFactory<>("opis"));
-
         tSerwisant.setCellValueFactory(new PropertyValueFactory<>("Serwisant"));
+
+        tbNazwa.setCellValueFactory(new PropertyValueFactory<>("nazwa"));
+        tbIlosc.setCellValueFactory(new PropertyValueFactory<>("ilosc"));
+
+        tableItems.setItems(ObservableList1);
+        ObservableList newlis = FXCollections.observableArrayList(d);
+        tableItems.setItems(newlis);
+
 
         tableOrders.setItems(ObservableListItems);
         ObservableList orderList = FXCollections.observableArrayList(orders);
@@ -110,6 +130,7 @@ public class Serwis implements Initializable {
 
     private MethodController methodController = new MethodController();
     public ObservableList<Orders> ObservableListItems;
+    public ObservableList<Serwis> ObservableList1;
 
 
 
@@ -126,19 +147,19 @@ public class Serwis implements Initializable {
     }
 
 
-//    public void clearData(javafx.event.ActionEvent event) {
-//        dataPrzyjecia.clear();
-//        tfImie.clear();
-//        tfNazwisko.clear();
-//        tfMiasto.clear();
-//        tfNrDomu.clear();
-//        tfNrLokalu.clear();
-//        tfOpis.clear();
-//        tfNrZlecenia.clear();
-//        tfUlica.clear();
-//        tfNip.clear();
-//        tfSerwisant.clear();
-//    }
+/**    public void clearData(javafx.event.ActionEvent event) {
+       dataPrzyjecia.clear();
+       tfImie.clear();
+       tfNazwisko.clear();
+       tfMiasto.clear();
+       tfNrDomu.clear();  tfNrLokalu.clear();
+       tfOpis.clear();
+      tfNrZlecenia.clear();
+       tfUlica.clear();
+       tfNip.clear();
+       tfSerwisant.clear();
+ }
+**/
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

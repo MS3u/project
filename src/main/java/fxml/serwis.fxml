@@ -30,12 +30,12 @@
       <Label fx:id="lblOpis" layoutX="14.0" layoutY="274.0" prefHeight="17.0" prefWidth="852.0" text="Label" />
       <TableView fx:id="tableItems" layoutX="17.0" layoutY="308.0" prefHeight="140.0" prefWidth="373.0">
         <columns>
-          <TableColumn fx:id="tableItems" prefWidth="263.99998474121094" text="Nazwa" />
-          <TableColumn prefWidth="107.0" text="Ilość" />
+          <TableColumn fx:id="tbNazwa" prefWidth="263.99998474121094" text="Nazwa" />
+          <TableColumn fx:id="tbIlosc" prefWidth="107.0" text="Ilość" />
         </columns>
       </TableView>
       <Button layoutX="744.0" layoutY="317.0" mnemonicParsing="false" text="Przypisz do zlecenia" />
-      <Button fx:id="btnDodaj" layoutX="395.0" layoutY="317.0" mnemonicParsing="false" text="Dodaj część" />
+      <Button fx:id="btnDodaj" layoutX="427.0" layoutY="317.0" mnemonicParsing="false" text="Dodaj część" />
 
     </children>
     <padding>

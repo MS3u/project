@@ -33,7 +33,7 @@ D:/UCZELNIA/III rok/InteliJProjects/project1/src/main/resources/hibernate.cfg.xm
         <property name="tinyInt1isBit" value="false" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="projekt1@localhost" uuid="2a984c5d-a6d1-4cb8-8216-fb4c67c6177a">
+    <data-source source="LOCAL" name="projekt1@localhost" uuid="9f99cdd5-c94c-4916-a11b-da7da4879d81">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>

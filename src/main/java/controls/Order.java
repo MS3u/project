@@ -1,5 +1,7 @@
 package controls;
 
+import PDF.GeneratePdf;
+import com.itextpdf.text.DocumentException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -9,10 +11,13 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import org.hibernate.Transaction;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
+import java.io.FileNotFoundException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 import entities.Orders;
@@ -76,8 +81,7 @@ public class Order implements Initializable {
     @FXML
     public Button btnEdit;
     public Button btnDeleteOrder;
-
-
+    private Stage stage;
 
 
     @FXML
@@ -127,7 +131,7 @@ public class Order implements Initializable {
         Orders order = new Orders(dataPrzyjeciaText, nrZleceniaText,
                 imieText, nazwiskoTextskoT, miastoTexttoT, ulicaTextcaT, nrDomuText, nrLokauText, nipText, opiStext, serwisantText);
 
-        refreshItemsList();
+
         methodController.saveData(order);
         clearData();
         refreshItemsList();
@@ -248,7 +252,7 @@ public class Order implements Initializable {
             tfNrDomu.setText(orders.getNrDomu());
             tfNrLokalu.setText(orders.getNrLokalu());
             tfOpis.setText(orders.getOpis());
-            refreshItemsList();
+
 //            tfSerwisant.setText(orders.getSerwisant());
         }else {
             btnEdit.setText("Edycja Zlecenia");
@@ -274,5 +278,11 @@ public class Order implements Initializable {
     }
 
 
+    public void generateRaport(javafx.event.ActionEvent event) throws FileNotFoundException, DocumentException, SQLException {
+
+        GeneratePdf generatePdf = new GeneratePdf();
+        generatePdf.generateRaport(event, stage);
+
+    }
 }
 
