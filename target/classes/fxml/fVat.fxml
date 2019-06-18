@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="btnPrzypisz" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.Raport">
+
+    <children>
+
+        <TableView fx:id="tableOrders" layoutX="9.0" layoutY="8.0" onMouseClicked="#tableClick" prefHeight="266.0" prefWidth="858.0">
+            <columns>
+                <TableColumn fx:id="tNr" prefWidth="34.0" text="Nr" />
+                <TableColumn fx:id="tData" prefWidth="69.0" text="Data" />
+                <TableColumn fx:id="tImie" prefWidth="62.0" text="Imie" />
+                <TableColumn fx:id="tNazwisko" prefWidth="75.0" text="Nazwisko" />
+                <TableColumn fx:id="tMiasto" prefWidth="75.0" text="Miasto" />
+                <TableColumn fx:id="tUlica" prefWidth="75.0" text="Ulica" />
+                <TableColumn fx:id="tnDomu" prefWidth="58.0" text="nr Domu" />
+                <TableColumn fx:id="tNLokalu" prefWidth="61.0" text="nr Lokalu" />
+                <TableColumn fx:id="tNip" prefWidth="112.0" text="NIP" />
+                <TableColumn fx:id="tOpis" prefWidth="102.0" text="Opis" />
+                <TableColumn fx:id="tSerwisant" prefWidth="67.0" text="Serwisant" />
+                <TableColumn fx:id="id" prefWidth="62.0" text="Id" />
+            </columns>
+        </TableView>
+        <Label fx:id="lblOpis" layoutX="14.0" layoutY="274.0" prefHeight="17.0" prefWidth="852.0" text="Label" />
+        <TableView layoutX="17.0" layoutY="308.0" prefHeight="140.0" prefWidth="373.0">
+            <columns>
+                <TableColumn fx:id="tableItems" prefWidth="263.99998474121094" text="Nazwa" />
+                <TableColumn prefWidth="107.0" text="Ilość" />
+            </columns>
+        </TableView>
+        <Button layoutX="695.0" layoutY="296.0" mnemonicParsing="false" text="Generuj Raport Całościowy" />
+      <Button layoutX="688.0" layoutY="331.0" mnemonicParsing="false" text="Generuj Raport Jednostkowy" />
+
+    </children>
+    <padding>
+        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+    </padding>
+    <opaqueInsets>
+        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+    </opaqueInsets>
+
+</AnchorPane>

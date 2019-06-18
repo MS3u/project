@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="jdbc-drivers">
+    <ANNOTATIONS>
+      <root url="file://$APPLICATION_CONFIG_DIR$/jdbc-drivers" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$APPLICATION_CONFIG_DIR$/jdbc-drivers" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$APPLICATION_CONFIG_DIR$/jdbc-drivers" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file://$APPLICATION_CONFIG_DIR$/jdbc-drivers" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file://$APPLICATION_CONFIG_DIR$/jdbc-drivers" />
+    </SOURCES>
+    <jarDirectory url="file://$APPLICATION_CONFIG_DIR$/jdbc-drivers" recursive="false" />
+    <jarDirectory url="file://$APPLICATION_CONFIG_DIR$/jdbc-drivers" recursive="false" type="SOURCES" />
+  </library>
+</component>

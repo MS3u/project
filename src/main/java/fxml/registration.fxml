@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.Registration">
+   <children>
+      <VBox alignment="CENTER" layoutX="175.0" layoutY="21.0" prefHeight="346.0" prefWidth="251.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <TextField fx:id="tfimie" promptText="Imię">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfnazwisko" promptText="Nazwisko">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfstanowisko" promptText="Stanowisko">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </TextField>
+            <PasswordField fx:id="tfhaslo" promptText="Hasło">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </PasswordField>
+            <Button fx:id="btnRegistration" alignment="CENTER" mnemonicParsing="false" onAction="#registerUser" prefHeight="25.0" prefWidth="110.0" text="Rejestracja">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnBack" mnemonicParsing="false" onAction="#backToLogin" prefHeight="25.0" prefWidth="109.0" text="Powrót">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
