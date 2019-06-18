@@ -167,7 +167,6 @@ public class Serwis implements Initializable {
         loadDataToTable(null);
         refreshItemsList();
 
-
     }
 
 
@@ -175,66 +174,9 @@ public class Serwis implements Initializable {
 
 
 
-    public void update(javafx.event.ActionEvent event){
-        String dataPrzyjeciaText = dataPrzyjecia.getText();
-        String nrZleceniaText = tfNrZlecenia.getText();
-        String imieText = tfImie.getText();
-        String nazwiskoTextskoT = tfNazwisko.getText();
-        String nipText = tfNip.getText();
-        String miastoTexttoT = tfMiasto.getText();
-        String ulicaTextcaT = tfUlica.getText();
-        String nrDomuText = tfNrDomu.getText();
-        String nrLokauText = tfNrLokalu.getText();
-        String opiStext = tfOpis.getText();
-        String serwisantText = tfSerwisant.getText();
-        int id = tableOrders.getSelectionModel().getSelectedItem().getId();
-        Orders updateOrders = new Orders(id,dataPrzyjeciaText, nrZleceniaText,
-                imieText, nazwiskoTextskoT, miastoTexttoT, ulicaTextcaT, nrDomuText, nrLokauText, nipText, opiStext, serwisantText);
 
-        //methodController.update(updateOrders);
-        refreshItemsList();
-    }
 
-    public void editOrder(javafx.event.ActionEvent event) {
 
-        if(btnEdit.getText().equals("Edycja Zlecenia")) {
-
-            btnEdit.setText("Zapisz");
-
-            Orders orders = tableOrders.getSelectionModel().getSelectedItem();
-            tfNrZlecenia.setText(orders.getNrZlecenia());
-            dataPrzyjecia.setText(orders.getDataPrzyjecia());
-            tfImie.setText(orders.getImie());
-            tfNazwisko.setText(orders.getNazwisko());
-            tfNip.setText(orders.getNip());
-            tfMiasto.setText(orders.getMiasto());
-            tfUlica.setText(orders.getUlica());
-            tfNrDomu.setText(orders.getNrDomu());
-            tfNrLokalu.setText(orders.getNrLokalu());
-            tfOpis.setText(orders.getOpis());
-            tfSerwisant.setText(orders.getSerwisant());
-        }else {
-            btnEdit.setText("Edycja Zlecenia");
-
-            String dataPrzyjeciaText = dataPrzyjecia.getText();
-            String nrZleceniaText = tfNrZlecenia.getText();
-            String imieText = tfImie.getText();
-            String nazwiskoTextskoT = tfNazwisko.getText();
-            String nipText = tfNip.getText();
-            String miastoTexttoT = tfMiasto.getText();
-            String ulicaTextcaT = tfUlica.getText();
-            String nrDomuText = tfNrDomu.getText();
-            String nrLokauText = tfNrLokalu.getText();
-            String opiStext = tfOpis.getText();
-            String serwisantText = "aaa";
-            int id = tableOrders.getSelectionModel().getSelectedItem().getId();
-            methodController.updateOder(id, dataPrzyjeciaText, nrZleceniaText,
-                    imieText, nazwiskoTextskoT, miastoTexttoT, ulicaTextcaT, nrDomuText, nrLokauText, nipText, serwisantText, opiStext);
-
-            // methodController.update(updateOrders);
-            refreshItemsList();
-        }
-    }
 
 
     public void tableClick(javafx.scene.input.MouseEvent mouseEvent) {
