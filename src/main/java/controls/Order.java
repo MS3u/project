@@ -127,7 +127,7 @@ public class Order implements Initializable {
         Orders order = new Orders(dataPrzyjeciaText, nrZleceniaText,
                 imieText, nazwiskoTextskoT, miastoTexttoT, ulicaTextcaT, nrDomuText, nrLokauText, nipText, opiStext, serwisantText);
 
-
+        refreshItemsList();
         methodController.saveData(order);
         clearData();
         refreshItemsList();
@@ -248,7 +248,7 @@ public class Order implements Initializable {
             tfNrDomu.setText(orders.getNrDomu());
             tfNrLokalu.setText(orders.getNrLokalu());
             tfOpis.setText(orders.getOpis());
-
+            refreshItemsList();
 //            tfSerwisant.setText(orders.getSerwisant());
         }else {
             btnEdit.setText("Edycja Zlecenia");
