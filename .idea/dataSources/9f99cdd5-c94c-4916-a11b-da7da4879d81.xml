@@ -1059,123 +1059,128 @@
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="265" parent="245" name="PRIMARY">
+    <column id="265" parent="245" name="serwisant">
+      <Position>4</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="266" parent="245" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="266" parent="246" name="Id">
+    <column id="267" parent="246" name="Id">
       <Position>1</Position>
       <DataType>int(200)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="246" name="Nazwa">
+    <column id="268" parent="246" name="Nazwa">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="246" name="CenaNetto">
+    <column id="269" parent="246" name="CenaNetto">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="246" name="CenaBrutto">
+    <column id="270" parent="246" name="CenaBrutto">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="246" name="Stan">
+    <column id="271" parent="246" name="Stan">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="271" parent="246" name="PRIMARY">
+    <key id="272" parent="246" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="272" parent="247" name="Id">
+    <column id="273" parent="247" name="Id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="247" name="orderId">
+    <column id="274" parent="247" name="orderId">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="247" name="storageId">
+    <column id="275" parent="247" name="storageId">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="247" name="ilosc">
+    <column id="276" parent="247" name="ilosc">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="276" parent="247" name="orderId">
+    <index id="277" parent="247" name="orderId">
       <ColNames>orderId</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="277" parent="247" name="storageId">
+    <index id="278" parent="247" name="storageId">
       <ColNames>storageId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="278" parent="247" name="PRIMARY">
+    <key id="279" parent="247" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="279" parent="247" name="tempserwis_ibfk_1">
+    <foreign-key id="280" parent="247" name="tempserwis_ibfk_1">
       <ColNames>orderId</ColNames>
       <RefSchemaName>projekt1</RefSchemaName>
       <RefTableName>orders</RefTableName>
       <RefColNames>Id</RefColNames>
     </foreign-key>
-    <foreign-key id="280" parent="247" name="tempserwis_ibfk_2">
+    <foreign-key id="281" parent="247" name="tempserwis_ibfk_2">
       <ColNames>storageId</ColNames>
       <RefSchemaName>projekt1</RefSchemaName>
       <RefTableName>storage</RefTableName>
       <RefColNames>Id</RefColNames>
     </foreign-key>
-    <column id="281" parent="248" name="Id">
+    <column id="282" parent="248" name="Id">
       <Position>1</Position>
       <DataType>int(250)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="248" name="Imie">
+    <column id="283" parent="248" name="Imie">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="248" name="Nazwisko">
+    <column id="284" parent="248" name="Nazwisko">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="248" name="Stanowisko">
+    <column id="285" parent="248" name="Stanowisko">
       <Position>4</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="248" name="Haslo">
+    <column id="286" parent="248" name="Haslo">
       <Position>5</Position>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="286" parent="248" name="PRIMARY">
+    <key id="287" parent="248" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Id</ColNames>
       <Primary>1</Primary>

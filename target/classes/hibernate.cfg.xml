@@ -16,7 +16,7 @@
       <mapping class="entities.Storage"/>
       <mapping class="entities.TempserwisEntity"/>
       <mapping class="entities.Tempserwis"/>
-
+    <mapping class="entities.eSerwis"/>
 
   </session-factory>
 </hibernate-configuration>

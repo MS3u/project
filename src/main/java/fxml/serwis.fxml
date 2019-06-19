@@ -32,8 +32,17 @@
             </columns>
         </TableView>
       <Label fx:id="lblOpis" layoutX="12.0" layoutY="160.0" prefHeight="17.0" prefWidth="852.0" text="Label" />
-      <Button layoutX="648.0" layoutY="279.0" mnemonicParsing="false" text="Przypisz do zlecenia" />
-      <Button fx:id="btnDodaj" layoutX="691.0" layoutY="314.0" mnemonicParsing="false" text="Dodaj część" />
+      <Button layoutX="284.0" layoutY="320.0" mnemonicParsing="false" onAction="#addStatus" text="Przyjmij zlecenie" />
+      <TableView fx:id="serwisTable" layoutX="30.0" layoutY="179.0" prefHeight="200.0" prefWidth="226.0">
+        <columns>
+          <TableColumn fx:id="tNrZlecenia" prefWidth="85.0" text="Nr Zlecenia" />
+          <TableColumn fx:id="tStatus" prefWidth="65.0" text="Status" />
+            <TableColumn fx:id="tSerwisant" prefWidth="75.0" text="Serwisant" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tfNr" layoutX="261.0" layoutY="179.0" />
+      <TextField fx:id="tfStatus" layoutX="261.0" layoutY="223.0" />
+      <TextField fx:id="tfSerwisant" layoutX="261.0" layoutY="267.0" />
 
     </children>
     <padding>

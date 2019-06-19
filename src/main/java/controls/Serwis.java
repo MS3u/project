@@ -2,6 +2,7 @@ package controls;
 
 import entities.Storage;
 import entities.Tempserwis;
+import entities.eSerwis;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -37,40 +38,24 @@ public class Serwis implements Initializable {
     public TableColumn<Orders, String> tnDomu;
     @FXML
     public TableColumn<Orders, String> tNLokalu;
-
     @FXML
     public TableView<Orders> tableOrders;
-    @FXML
-    public TextField dataPrzyjecia;
-    @FXML
-    public TextField tfImie;
-    @FXML
-    public TextField tfNip;
-    @FXML
-    public TextField tfNazwisko;
-    @FXML
-    public TextField tfNrLokalu;
-    @FXML
-    public TextField tfMiasto;
-    @FXML
-    public TextField tfOpis;
-    @FXML
-    public TextField tfNrZlecenia;
-    @FXML
-    public TextField tfNrDomu;
-    @FXML
-    public TextField tfUlica;
-    @FXML
-    public Button addOrder;
-    @FXML
-    public TextField tfSerwisant;
-    @FXML
-    public Button btnClear;
-    @FXML
-    public Button btnEdit;
-    @FXML
+        @FXML
     public Label lblOpis;
+        @FXML
+        public TableView<eSerwis>  serwisTable;
+        @FXML
+        public  TableColumn<eSerwis, String> tNrZlecenia;
+        @FXML
+        public  TableColumn<eSerwis, String> tStatus;
+    @FXML
+    public  TableColumn<eSerwis, String> tSerwisant;
 
+        @FXML
+        public TextField tfNr;
+        @FXML
+        public TextField tfStatus;
+        @FXML TextField  tfSerwisant;
 
 
 
@@ -81,7 +66,6 @@ public class Serwis implements Initializable {
 
         Transaction transaction = methodController.session.beginTransaction();
         List orders = methodController.session.createCriteria(Orders.class).list();
-
 
         id.setCellValueFactory(new PropertyValueFactory<>("Id"));
         tNr.setCellValueFactory(new PropertyValueFactory<>("nrZlecenia"));
@@ -95,14 +79,25 @@ public class Serwis implements Initializable {
         tNip.setCellValueFactory(new PropertyValueFactory<>("nip"));
 
 
-
-            tableOrders.setItems(ObservableListItems);
+        tableOrders.setItems(ObservableListItems);
         ObservableList orderList = FXCollections.observableArrayList(orders);
         tableOrders.setItems(orderList);
-
         transaction.commit();
     }
+@FXML
+private void loadToSerwis(ActionEvent event){
+    Transaction transaction = methodController.session.beginTransaction();
+    List eSerwis = methodController.session.createCriteria(eSerwis.class).list();
+    tNrZlecenia.setCellValueFactory(new PropertyValueFactory<>("nrZlecenia"));
+    tStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+    tSerwisant.setCellValueFactory(new PropertyValueFactory<>("serwisant"));
+    serwisTable.setItems(serwisObservableList);
+    ObservableList serwisList = FXCollections.observableArrayList(eSerwis);
+    serwisTable.setItems(serwisList);
+    transaction.commit();
 
+
+}
 
 
     public void setLblOpis(javafx.scene.input.MouseEvent mouseEvent){
@@ -113,7 +108,7 @@ public class Serwis implements Initializable {
 
     private MethodController methodController = new MethodController();
     public ObservableList<Orders> ObservableListItems;
-    public ObservableList<Serwis> ObservableList1;
+    public ObservableList<eSerwis> serwisObservableList;
 
 
 
@@ -148,6 +143,7 @@ public class Serwis implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         methodController.initDb();
         loadDataToTable(null);
+        loadToSerwis(null);
         refreshItemsList();
 
     }
@@ -167,6 +163,15 @@ public class Serwis implements Initializable {
             Orders clicked = tableOrders.getSelectionModel().getSelectedItem();
             setLblOpis(mouseEvent);
 
+    }
+
+    public void addStatus(javafx.event.ActionEvent event) {
+        String  tfNrText= tfNr.getText();
+        String statusText = tfStatus.getText();
+        String serwisantText = tfSerwisant.getText();
+
+        eSerwis eSerwis = new eSerwis(tfNrText,statusText,serwisantText);
+        methodController.saveData(eSerwis);
     }
 }
 

@@ -2,8 +2,8 @@ package controls;
 
 import entities.Storage;
 import entities.Users;
-
 import entities.Orders;
+import entities.eSerwis;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -33,6 +33,7 @@ public class MethodController {
         configuration.addAnnotatedClass(Users.class);
         configuration.addAnnotatedClass(Orders.class);
         configuration.addAnnotatedClass(Storage.class);
+        configuration.addAnnotatedClass(eSerwis.class);
 
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
         this.sessionFactory = configuration.buildSessionFactory(serviceRegistry);
