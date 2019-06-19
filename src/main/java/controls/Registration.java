@@ -49,9 +49,6 @@ private MethodController methodController = new MethodController();
        clearData();
     }
 
-
-
-
 public void clearData(){
         tfimie.clear();
         tfnazwisko.clear();

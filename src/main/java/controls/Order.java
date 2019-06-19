@@ -49,8 +49,8 @@ public class Order implements Initializable {
     public TableColumn<Orders, String> tNLokalu;
     @FXML
     public TableColumn<Orders, String> tOpis;
-    @FXML
-    public TableColumn<Orders, String> tSerwisant;
+   // @FXML
+   // public TableColumn<Orders, String> tSerwisant;
     @FXML
     public TableView<Orders> tableOrders;
     @FXML
@@ -101,7 +101,7 @@ public class Order implements Initializable {
         tNLokalu.setCellValueFactory(new PropertyValueFactory<>("nrLokalu"));
         tNip.setCellValueFactory(new PropertyValueFactory<>("nip"));
         tOpis.setCellValueFactory(new PropertyValueFactory<>("opis"));
-        tSerwisant.setCellValueFactory(new PropertyValueFactory<>("Serwisant"));
+       // tSerwisant.setCellValueFactory(new PropertyValueFactory<>("Serwisant"));
 
 
         tableOrders.setItems(ObservableListItems);

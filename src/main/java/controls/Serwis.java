@@ -37,10 +37,7 @@ public class Serwis implements Initializable {
     public TableColumn<Orders, String> tnDomu;
     @FXML
     public TableColumn<Orders, String> tNLokalu;
-    @FXML
-    public TableColumn<Orders, String> tOpis;
-    @FXML
-    public TableColumn<Orders, String> tSerwisant;
+
     @FXML
     public TableView<Orders> tableOrders;
     @FXML
@@ -75,13 +72,7 @@ public class Serwis implements Initializable {
     public Label lblOpis;
 
 
-    @FXML
-    private TableColumn<Storage, String> tbNazwa;
 
-    @FXML
-    private TableColumn<Tempserwis, String> tbIlosc;
-
-    public TableView<Serwis> tableItems;
 
 
 
@@ -90,7 +81,7 @@ public class Serwis implements Initializable {
 
         Transaction transaction = methodController.session.beginTransaction();
         List orders = methodController.session.createCriteria(Orders.class).list();
-        List d = methodController.session.createCriteria(Storage.class).list();
+
 
         id.setCellValueFactory(new PropertyValueFactory<>("Id"));
         tNr.setCellValueFactory(new PropertyValueFactory<>("nrZlecenia"));
@@ -102,18 +93,10 @@ public class Serwis implements Initializable {
         tnDomu.setCellValueFactory(new PropertyValueFactory<>("nrDomu"));
         tNLokalu.setCellValueFactory(new PropertyValueFactory<>("nrLokalu"));
         tNip.setCellValueFactory(new PropertyValueFactory<>("nip"));
-        tOpis.setCellValueFactory(new PropertyValueFactory<>("opis"));
-        tSerwisant.setCellValueFactory(new PropertyValueFactory<>("Serwisant"));
-
-        tbNazwa.setCellValueFactory(new PropertyValueFactory<>("nazwa"));
-        tbIlosc.setCellValueFactory(new PropertyValueFactory<>("ilosc"));
-
-        tableItems.setItems(ObservableList1);
-        ObservableList newlis = FXCollections.observableArrayList(d);
-        tableItems.setItems(newlis);
 
 
-        tableOrders.setItems(ObservableListItems);
+
+            tableOrders.setItems(ObservableListItems);
         ObservableList orderList = FXCollections.observableArrayList(orders);
         tableOrders.setItems(orderList);
 
