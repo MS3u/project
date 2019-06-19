@@ -15,10 +15,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
-public class Registration<field> implements Initializable {
+public class Registration implements Initializable {
 
 
 private MethodController methodController = new MethodController();
@@ -40,13 +39,15 @@ private MethodController methodController = new MethodController();
 
 
     public void registerUser(ActionEvent event) {
-        Users user = new Users(
-       tfimie.getText(),
-       tfnazwisko.getText(),
-       tfstanowisko.getText(),
-       tfhaslo.getText());
-        methodController.saveData(user);
-       clearData();
+
+        String imie= tfimie.getText();
+       String nazwisko = tfnazwisko.getText();
+       String stanowisko =tfstanowisko.getText();
+       String haslo =tfhaslo.getText();
+       Users users = new Users(imie,nazwisko,stanowisko,haslo);
+        methodController.saveData(users);
+       //clearData();
+        System.out.println("zapisano"+ tfhaslo+tfstanowisko);
     }
 
 public void clearData(){

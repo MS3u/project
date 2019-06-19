@@ -61,7 +61,6 @@ public class Login implements Initializable {
                 .collect(Collectors.toList());
 
 
-
         if (!serAuth.isEmpty()) {
             b = true;
             stanowisko = methodController.getStanowisko(tfUser.getText(), pfPassword.getText());
@@ -78,7 +77,10 @@ public class Login implements Initializable {
             System.out.println(stanowisko+"   "+lbZalogowany);
             log(b, event, lbZalogowany);
 
+        }else{
+            alert();
         }
+
 
     }
 

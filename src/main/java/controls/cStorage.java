@@ -10,6 +10,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.hibernate.Transaction;
+
 import java.awt.event.ActionEvent;
 import java.net.URL;
 import java.util.List;
@@ -129,19 +130,20 @@ public class cStorage implements Initializable {
     public void changeItem(javafx.event.ActionEvent event) {
 
 
-            String nazwa = tfNazwa.getText();
-            float cenaN = Float.parseFloat(tfCenaN.getText());
-            float cenaB = Float.parseFloat(tfCenaB.getText());
-            int stan = Integer.parseInt(tfStan.getText());
-            int id = table.getSelectionModel().getSelectedItem().getId();
+        String nazwa = tfNazwa.getText();
+        float cenaN = Float.parseFloat(tfCenaN.getText());
+        float cenaB = Float.parseFloat(tfCenaB.getText());
+        int stan = Integer.parseInt(tfStan.getText());
+        int id = table.getSelectionModel().getSelectedItem().getId();
 
-            Storage updateStorage = new Storage(id,nazwa, cenaN, cenaB, stan);
-            methodController.update(updateStorage);
-            refreshItemsList();
-            clearItemForm();
+        Storage updateStorage = new Storage(id, nazwa, cenaN, cenaB, stan);
+        methodController.update(updateStorage);
+        refreshItemsList();
+        clearItemForm();
 
 
     }
+
     public void deleteItem(javafx.event.ActionEvent event) {
         Storage storage = table.getSelectionModel().getSelectedItem();
         methodController.deleteFromDb(storage);

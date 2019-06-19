@@ -1,6 +1,5 @@
 package controls;
 
-import entities.Storage;
 import entities.Users;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -48,7 +47,6 @@ public class AdminPanel implements Initializable {
     private TableColumn<Users, String> tHaslo;
 
     public MethodController methodController = new MethodController();
-    public ObservableList<Users> ObservableListItems;
 
     private void loadDataToTable(ActionEvent event) {
         Transaction transaction = methodController.session.beginTransaction();
@@ -86,15 +84,16 @@ public class AdminPanel implements Initializable {
 
     public void editUser(ActionEvent event) {
         int id = tableUsers.getSelectionModel().getSelectedItem().getId();
-        String imie =tfImie.getText();
-        String nazwisko =tfNazwisko.getText();
-       String stanowisko= tfStanowisko.getText();
-        String haslo =   tfHaslo.getText();
-        Users updateUser = new Users(id,imie, nazwisko, stanowisko, haslo);
+        String imie = tfImie.getText();
+        String nazwisko = tfNazwisko.getText();
+        String stanowisko = tfStanowisko.getText();
+        String haslo = tfHaslo.getText();
+        Users updateUser = new Users(id, imie, nazwisko, stanowisko, haslo);
         methodController.update(updateUser);
         refreshItemsList();
     }
-    public void clear(){
+
+    public void clear() {
         tfStanowisko.clear();
         tfNazwisko.clear();
         tfImie.clear();
@@ -119,10 +118,10 @@ public class AdminPanel implements Initializable {
 
     private void refreshItemsList() {
         Transaction transaction = methodController.session.beginTransaction();
-        List items = methodController.session.createCriteria(Users.class).list();
+        List userList = methodController.session.createCriteria(Users.class).list();
         transaction.commit();
-        ObservableList itemlist = FXCollections.observableArrayList(items);
-        tableUsers.setItems(itemlist);
+        ObservableList itemlistUsers = FXCollections.observableArrayList(userList);
+        tableUsers.setItems(itemlistUsers);
         tableUsers.refresh();
         clear();
     }
