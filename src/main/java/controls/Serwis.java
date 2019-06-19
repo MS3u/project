@@ -9,10 +9,12 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import org.hibernate.Transaction;
+
 import java.awt.event.ActionEvent;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
+
 import entities.Orders;
 
 
@@ -41,25 +43,23 @@ public class Serwis implements Initializable {
 
     @FXML
     public TableView<Orders> tableOrders;
-        @FXML
-    public Label lblOpis;
-        @FXML
-        public TableView<eSerwis>  serwisTable;
-        @FXML
-        public  TableColumn<eSerwis, String> tNrZlecenia;
-        @FXML
-        public  TableColumn<eSerwis, String> tStatus;
     @FXML
-    public  TableColumn<eSerwis, String> tSerwisant;
+    public Label lblOpis;
+    @FXML
+    public TableView<eSerwis> serwisTable;
+    @FXML
+    public TableColumn<eSerwis, String> tNrZlecenia;
+    @FXML
+    public TableColumn<eSerwis, String> tStatus;
+    @FXML
+    public TableColumn<eSerwis, String> tSerwisant;
 
-        @FXML
-        public TextField tfNr;
-        @FXML
-        public TextField tfStatus;
-        @FXML TextField  tfSerwisant;
-
-
-
+    @FXML
+    public TextField tfNr;
+    @FXML
+    public TextField tfStatus;
+    @FXML
+    TextField tfSerwisant;
 
 
     @FXML
@@ -88,32 +88,32 @@ public class Serwis implements Initializable {
 
 
     }
-@FXML
-private void loadToSerwis(ActionEvent event){
-    Transaction transaction = methodController.session.beginTransaction();
-    List eSerwis = methodController.session.createCriteria(eSerwis.class).list();
-    tNrZlecenia.setCellValueFactory(new PropertyValueFactory<>("nrZlecenia"));
-    tStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
-    tSerwisant.setCellValueFactory(new PropertyValueFactory<>("serwisant"));
-    serwisTable.setItems(serwisObservableList);
-    ObservableList serwisList = FXCollections.observableArrayList(eSerwis);
-    serwisTable.setItems(serwisList);
-    transaction.commit();
+
+    @FXML
+    private void loadToSerwis(ActionEvent event) {
+        Transaction transaction = methodController.session.beginTransaction();
+        List eSerwis = methodController.session.createCriteria(eSerwis.class).list();
+        tNrZlecenia.setCellValueFactory(new PropertyValueFactory<>("nrZlecenia"));
+        tStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+        tSerwisant.setCellValueFactory(new PropertyValueFactory<>("serwisant"));
+        serwisTable.setItems(serwisObservableList);
+        ObservableList serwisList = FXCollections.observableArrayList(eSerwis);
+        serwisTable.setItems(serwisList);
+        transaction.commit();
 
 
-}
+    }
 
 
-    public void setLblOpis(javafx.scene.input.MouseEvent mouseEvent){
-       Orders orders = tableOrders.getSelectionModel().getSelectedItem();
-       lblOpis.setText(orders.getOpis());
+    public void setLblOpis(javafx.scene.input.MouseEvent mouseEvent) {
+        Orders orders = tableOrders.getSelectionModel().getSelectedItem();
+        lblOpis.setText(orders.getOpis());
 
     }
 
     private MethodController methodController = new MethodController();
     public ObservableList<Orders> ObservableListItems;
     public ObservableList<eSerwis> serwisObservableList;
-
 
 
     @FXML
@@ -134,19 +134,14 @@ private void loadToSerwis(ActionEvent event){
     }
 
 
-/**    public void clearData(javafx.event.ActionEvent event) {
-       dataPrzyjecia.clear();
-       tfImie.clear();
-       tfNazwisko.clear();
-       tfMiasto.clear();
-       tfNrDomu.clear();  tfNrLokalu.clear();
-       tfOpis.clear();
-      tfNrZlecenia.clear();
-       tfUlica.clear();
-       tfNip.clear();
-       tfSerwisant.clear();
- }
-**/
+
+      private void clearData() {
+        tfSerwisant.clear();
+        tfStatus.clear();
+        tfNr.clear();
+      }
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -158,29 +153,23 @@ private void loadToSerwis(ActionEvent event){
     }
 
 
-
-
-
-
-
-
-
-
-
     public void tableClick(javafx.scene.input.MouseEvent mouseEvent) {
 
-            Orders clicked = tableOrders.getSelectionModel().getSelectedItem();
-            setLblOpis(mouseEvent);
+        Orders clicked = tableOrders.getSelectionModel().getSelectedItem();
+        setLblOpis(mouseEvent);
 
     }
 
     public void addStatus(javafx.event.ActionEvent event) {
-        String  tfNrText= tfNr.getText();
+        String tfNrText = tfNr.getText();
         String statusText = tfStatus.getText();
         String serwisantText = tfSerwisant.getText();
-        eSerwis eSerwis = new eSerwis(tfNrText,statusText,serwisantText);
+        eSerwis eSerwis = new eSerwis(tfNrText, statusText, serwisantText);
         methodController.saveData(eSerwis);
         refreshItemsList();
+        clearData();
+
+
     }
 
     public void editStatus(javafx.event.ActionEvent event) {
@@ -188,18 +177,20 @@ private void loadToSerwis(ActionEvent event){
         String newNr = tfNr.getText();
         String newSerwisant = tfSerwisant.getText();
         int id = serwisTable.getSelectionModel().getSelectedItem().getId();
-        eSerwis updateSerwis = new eSerwis(id,newNr,newStatus,newSerwisant);
+        eSerwis updateSerwis = new eSerwis(id, newNr, newStatus, newSerwisant);
 
 
         methodController.update(updateSerwis);
-    refreshItemsList();
+        refreshItemsList();
+        clearData();
+
     }
 
     public void tableSerwisClicked(MouseEvent mouseEvent) {
         eSerwis clicked = serwisTable.getSelectionModel().getSelectedItem();
-    tfNr.setText(clicked.getNrZlecenia());
-       tfStatus.setText(clicked.getStatus());
-       tfSerwisant.setText(clicked.getSerwisant());
+        tfNr.setText(clicked.getNrZlecenia());
+        tfStatus.setText(clicked.getStatus());
+        tfSerwisant.setText(clicked.getSerwisant());
     }
 }
 

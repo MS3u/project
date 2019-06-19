@@ -138,6 +138,7 @@ public class cStorage implements Initializable {
             Storage updateStorage = new Storage(id,nazwa, cenaN, cenaB, stan);
             methodController.update(updateStorage);
             refreshItemsList();
+            clearItemForm();
 
 
     }
