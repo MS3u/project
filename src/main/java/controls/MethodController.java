@@ -84,7 +84,11 @@ public class MethodController {
         System.out.println(orders);
         return orders;
     }
-
+    List<eSerwis> getSerwis() {
+        List<eSerwis> sewis = session.createQuery("from eSerwis ").getResultList();
+        System.out.println(sewis);
+        return sewis;
+    }
     public void transactionStart() {
         Transaction transaction = session.beginTransaction();
         transaction.commit();
