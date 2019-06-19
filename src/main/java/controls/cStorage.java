@@ -94,8 +94,8 @@ public class cStorage implements Initializable {
     public void addItem(javafx.event.ActionEvent event) {
 
         String nazwa = tfNazwa.getText();
-        int cenN = Integer.parseInt(tfCenaN.getText());
-        int cenaB = Integer.parseInt(tfCenaB.getText());
+        float cenN = Float.parseFloat(tfCenaN.getText());
+        float cenaB = Float.parseFloat(tfCenaB.getText());
         int stan = Integer.parseInt(tfStan.getText());
 
         Storage storage = new Storage(nazwa, cenN, cenaB, stan);
@@ -130,8 +130,8 @@ public class cStorage implements Initializable {
 
 
             String nazwa = tfNazwa.getText();
-            int cenaN = Integer.parseInt(tfCenaN.getText());
-            int cenaB = Integer.parseInt(tfCenaB.getText());
+            float cenaN = Float.parseFloat(tfCenaN.getText());
+            float cenaB = Float.parseFloat(tfCenaB.getText());
             int stan = Integer.parseInt(tfStan.getText());
             int id = table.getSelectionModel().getSelectedItem().getId();
 

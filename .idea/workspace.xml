@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f5ca1d0-4760-4de3-ba1e-47c5e0348ff8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/generatePdf.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/itextpdf_5_4_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controls/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controls/Info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controls/Serwis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controls/Serwis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controls/Info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controls/Info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controls/cStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controls/cStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Storage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controls/cStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controls/cStorage.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,6 +54,13 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="projekt1@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="projekt1: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="storage: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="projekt@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
     </expand>
@@ -66,19 +75,38 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../generatePdf/src/main/java/PDF/GeneratePdf.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/fxml/dashboard.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="554">
+              <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controls/Serwis.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Storage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="169" column="20" lean-forward="true" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="20" />
+            <state relative-caret-position="431">
+              <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://9f99cdd5-c94c-4916-a11b-da7da4879d81/schema/projekt1/table/storage">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controls/MethodController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1581">
+              <caret line="88" column="34" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,13 +115,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controls/Order.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controls/AdminPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="140" column="22" lean-forward="true" selection-start-line="140" selection-start-column="22" selection-end-line="140" selection-end-column="22" />
+            <state relative-caret-position="368">
+              <caret line="73" column="40" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controls/cStorage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="133" column="43" selection-start-line="133" selection-start-column="43" selection-end-line="133" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controls/Login.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://9f99cdd5-c94c-4916-a11b-da7da4879d81/schema/projekt1/table/users">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -147,15 +208,12 @@
         <option value="$PROJECT_DIR$/src/main/java/fxml/storage.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/MavenHibernate/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/Users.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Storage.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/tempSerwis.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controls/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/controls/Dashboard.java" />
         <option value="$PROJECT_DIR$/src/main/java/controls/Raport.java" />
         <option value="$PROJECT_DIR$/src/main/java/fxml/fVat.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/entities/TempserwisEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/fxml/dashboard.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/controls/cStorage.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/fxml/orders.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/controls/Registration.java" />
@@ -165,10 +223,13 @@
         <option value="$PROJECT_DIR$/src/main/java/fxml/serwis.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/controls/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/eSerwis.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/src/main/java/controls/MethodController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controls/Info.java" />
         <option value="$PROJECT_DIR$/src/main/java/controls/Serwis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controls/MethodController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controls/Login.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/src/main/java/controls/cStorage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Storage.java" />
       </list>
     </option>
   </component>
@@ -312,16 +373,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="PDF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-Bartek" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="project-Bartek" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="itextpdf-5.4.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -340,7 +392,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560943794582" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560945764946" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
@@ -432,7 +484,7 @@
       <workItem from="1560756038191" duration="183000" />
       <workItem from="1560799638853" duration="4030000" />
       <workItem from="1560846329915" duration="4458000" />
-      <workItem from="1560869517173" duration="17350000" />
+      <workItem from="1560869517173" duration="19273000" />
     </task>
     <task id="LOCAL-00001" summary="trzeba podpiac karte serwis do przycisku&#10;dodac w dashboard pole zalogowany : uzytkownik, stanowisko">
       <created>1560099017222</created>
@@ -459,7 +511,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215103000" />
+    <option name="totallyTimeSpent" value="217026000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -658,14 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fxml/dashboard.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1771">
-          <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MavenHibernate/HibernateUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -777,38 +821,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controls/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="58" column="42" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controls/cStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1558">
-          <caret line="109" column="24" lean-forward="true" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fxml/registration.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="36" column="75" selection-start-line="36" selection-start-column="75" selection-end-line="36" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9f99cdd5-c94c-4916-a11b-da7da4879d81/schema/projekt1/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -823,30 +840,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9f99cdd5-c94c-4916-a11b-da7da4879d81/schema/projekt1/table/storage">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controls/AdminPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="73" column="40" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Storage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="52" column="10" lean-forward="true" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -895,16 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="592">
           <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controls/MethodController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="88" column="34" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -958,13 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../generatePdf/src/main/java/PDF/GeneratePdf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controls/Order.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
@@ -977,8 +953,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controls/Serwis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="169" column="20" lean-forward="true" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="20" />
+        <state relative-caret-position="391">
+          <caret line="184" column="20" selection-start-line="184" selection-start-column="20" selection-end-line="184" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../generatePdf/src/main/java/PDF/GeneratePdf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controls/AdminPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="73" column="40" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controls/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9f99cdd5-c94c-4916-a11b-da7da4879d81/schema/projekt1/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fxml/dashboard.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9f99cdd5-c94c-4916-a11b-da7da4879d81/schema/projekt1/table/storage">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Storage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controls/MethodController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="88" column="34" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controls/cStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="133" column="43" selection-start-line="133" selection-start-column="43" selection-end-line="133" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -7,19 +7,19 @@ import java.util.Objects;
 public class Storage {
     private int id;
     private String nazwa;
-    private int cenaNetto;
-    private int cenaBrutto;
+    private float cenaNetto;
+    private float cenaBrutto;
     private int stan;
 
 
-    public Storage(String nazwa, int cenaNetto, int cenaBrutto, int stan) {
+    public Storage(String nazwa, float cenaNetto, float cenaBrutto, int stan) {
         this.nazwa = nazwa;
         this.cenaNetto = cenaNetto;
         this.cenaBrutto = cenaBrutto;
         this.stan = stan;
     }
 
-    public Storage(int id, String nazwa, int cenaNetto, int cenaBrutto, int stan) {
+    public Storage(int id, String nazwa, float cenaNetto, float cenaBrutto, int stan) {
         this.id = id;
         this.nazwa = nazwa;
         this.cenaNetto = cenaNetto;
@@ -52,19 +52,19 @@ public class Storage {
 
     @Basic
     @Column(name = "CenaNetto", nullable = true)
-    public int getCenaNetto() {
+    public float getCenaNetto() {
         return cenaNetto;
     }
-    public void setCenaNetto(int cenaNetto) {
+    public void setCenaNetto(float cenaNetto) {
         this.cenaNetto = cenaNetto;
     }
 
     @Basic
     @Column(name = "CenaBrutto", nullable = true)
-    public int getCenaBrutto() {
+    public float getCenaBrutto() {
         return cenaBrutto;
     }
-    public void setCenaBrutto(int cenaBrutto) {
+    public void setCenaBrutto(float cenaBrutto) {
         this.cenaBrutto = cenaBrutto;
     }
 
