@@ -99,6 +99,8 @@ public class cStorage implements Initializable {
         float cenaB = Float.parseFloat(tfCenaB.getText());
         int stan = Integer.parseInt(tfStan.getText());
 
+
+
         Storage storage = new Storage(nazwa, cenN, cenaB, stan);
         methodController.saveData(storage);
         clearItemForm();
