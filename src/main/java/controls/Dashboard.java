@@ -1,6 +1,5 @@
 package controls;
 
-import MavenHibernate.Main;
 import entities.Users;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,10 +10,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import controls.Login;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -118,8 +115,13 @@ public class Dashboard implements Initializable {
             borderPane.setCenter(noweOkno);
 
     }
+
+    /**
+     * @param event
+     * @throws IOException
+     */
     public void openAdministracja(ActionEvent event) throws IOException {
-            TextInputDialog dialog = new TextInputDialog("walter");
+            TextInputDialog dialog = new TextInputDialog("");
             dialog.setTitle("Text Input Dialog");
             dialog.setHeaderText("Look, a Text Input Dialog");
             dialog.setContentText("Please enter your name:");

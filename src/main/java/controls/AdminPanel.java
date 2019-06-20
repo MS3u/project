@@ -18,6 +18,9 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 
+/**
+ * Panel do administracji uzytkownikami
+ */
 public class AdminPanel implements Initializable {
     @FXML
     private TextField tfNazwisko;

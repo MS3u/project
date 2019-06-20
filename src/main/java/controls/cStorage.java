@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -92,17 +93,31 @@ public class cStorage implements Initializable {
     }
 
 
+    /**
+     * @param event
+     */
     public void addItem(javafx.event.ActionEvent event) {
 
-        String nazwa = tfNazwa.getText();
-        float cenN = Float.parseFloat(tfCenaN.getText());
-        float cenaB = Float.parseFloat(tfCenaB.getText());
-        int stan = Integer.parseInt(tfStan.getText());
+
+
+        try{
+            String nazwa = tfNazwa.getText();
+            float cenN = Float.parseFloat(tfCenaN.getText());
+            float cenaB = Float.parseFloat(tfCenaB.getText());
+            int stan = Integer.parseInt(tfStan.getText());
+            Storage storage = new Storage(nazwa, cenN, cenaB, stan);
+            methodController.saveData(storage);
+        }catch (NumberFormatException e){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Information Dialog");
+            alert.setHeaderText("Look, an Information Dialog");
+            alert.setContentText("I have a great message for you!");
+
+            alert.showAndWait();
+        }
 
 
 
-        Storage storage = new Storage(nazwa, cenN, cenaB, stan);
-        methodController.saveData(storage);
         clearItemForm();
         refreshItemsList();
 

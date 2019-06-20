@@ -1,4 +1,3 @@
-import entities.Storage;
 import entities.Users;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -51,7 +50,7 @@ public class test {
     }
     @Test
     public void passwordIsEmpty() {
-        Users user = new Users("Łukasz", "Kowalczyk", "admin", "");
+        Users user = new Users("lukasz", "Kowalczyk", "admin", "");
 
         Set<ConstraintViolation<Users>> constraintViolations = validator.validate(user);
 
