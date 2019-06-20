@@ -61,5 +61,16 @@ Autorzy:
 Program do obługi serwisu komputerowego. 
 Pierwsze okno to ekran logowania, wpisujemu tutaj odpowiednie dane według opisu pol tekstowych, domyslny użytkownik to admin i haslo admin,
 posiada on uprawnienia do przegladania całości
-![Logowanie](https://github.com/mateusz-siwiec/Library-managament---Inf-III-zaoczne-2019/blob/master/images/logowanie.PNG)
+![Logowanie](https://github.com/MS3u/project/blob/master/src/main/PodrecznikPNG/login.png)
+
+W przypadku nowego użytkownika możemy zarejestrować się, administrator weryfikuje daną osobe.
+
+![Rejestracja](https://github.com/MS3u/project/blob/master/src/main/PodrecznikPNG/rejestracja.png)
+
+Zalogowany użytkownik widzi panel główny programu, po weryfikacji dostępne jest boczne menu z wyborem odpowiedznich zakladek aministrator ma dostęp do wszystkich zasobów.
+Poszczególne panele dostępne są dla pracowników z odpowidenim poziomem dostępu.
+
+![Panel Główny]()
+
+
 
