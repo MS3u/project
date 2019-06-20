@@ -1,6 +1,10 @@
 package entities;
 
+import org.hibernate.validator.constraints.Range;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Objects;
 
 @Entity
@@ -27,6 +31,9 @@ public class Storage {
         this.stan = stan;
     }
 
+    public Storage(int stan) {
+        this.stan = stan;
+    }
 
     public Storage() {
     }
@@ -70,6 +77,8 @@ public class Storage {
 
     @Basic
     @Column(name = "Stan", nullable = true)
+    @NotNull(message = "wymagane")
+    @Range(min = 1, max=100)
     public int getStan() {
         return stan;
     }

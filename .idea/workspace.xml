@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f5ca1d0-4760-4de3-ba1e-47c5e0348ff8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controls/AdminPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controls/AdminPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controls/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controls/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controls/cStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controls/cStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controls/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controls/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Storage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -87,10 +85,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controls/cStorage.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+            <state relative-caret-position="391">
+              <caret line="74" column="42" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,32 +97,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/libraries/pdf.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controls/Order.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Storage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2179">
-              <caret line="140" column="22" lean-forward="true" selection-start-line="140" selection-start-column="22" selection-end-line="140" selection-end-column="22" />
+            <state relative-caret-position="322">
+              <caret line="80" column="10" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#765#766#0" expanded="true" />
+                <element signature="e#797#798#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/libraries/generatePdf.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Users.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-98">
+              <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controls/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            <state relative-caret-position="-621">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controls/cStorage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2691">
+              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -192,18 +203,18 @@
         <option value="$PROJECT_DIR$/src/main/java/controls/Info.java" />
         <option value="$PROJECT_DIR$/src/main/java/controls/Serwis.java" />
         <option value="$PROJECT_DIR$/src/main/java/controls/MethodController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Storage.java" />
         <option value="$PROJECT_DIR$/src/main/java/controls/Registration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controls/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/fxml/orders.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/entities/eSerwis.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Users.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/main/java/controls/AdminPanel.java" />
-        <option value="$PROJECT_DIR$/src/test/java/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/controls/Dashboard.java" />
         <option value="$PROJECT_DIR$/src/main/java/controls/cStorage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Users.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controls/Login.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Storage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/test.java" />
       </list>
     </option>
   </component>
@@ -354,6 +365,19 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="entities" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="project-Bartek" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-Bartek" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-Bartek" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-Bartek" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -371,7 +395,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561029167294" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561031558857" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
@@ -428,31 +452,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test.hasloMniejniz5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="test" />
-      <option name="METHOD_NAME" value="hasloMniejniz5" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test.loginIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="test.isStanInt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="test" />
-      <option name="METHOD_NAME" value="loginIsNull" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test.nazwiskoNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="test" />
-      <option name="METHOD_NAME" value="nazwiskoNull" />
+      <option name="METHOD_NAME" value="isStanInt" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -468,13 +481,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test.stanmniejszy0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <option name="METHOD_NAME" value="stanmniejszy0" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.test.stanmniejszy0" />
+        <item itemvalue="JUnit.test" />
+        <item itemvalue="JUnit.test.isStanInt" />
         <item itemvalue="JUnit.test.passwordIsEmpty" />
-        <item itemvalue="JUnit.test.nazwiskoNull" />
-        <item itemvalue="JUnit.test.hasloMniejniz5" />
-        <item itemvalue="JUnit.test.loginIsNull" />
       </list>
     </recent_temporary>
   </component>
@@ -508,7 +531,7 @@
       <workItem from="1560756038191" duration="183000" />
       <workItem from="1560799638853" duration="4030000" />
       <workItem from="1560846329915" duration="4458000" />
-      <workItem from="1560869517173" duration="34290000" />
+      <workItem from="1560869517173" duration="36481000" />
     </task>
     <task id="LOCAL-00001" summary="trzeba podpiac karte serwis do przycisku&#10;dodac w dashboard pole zalogowany : uzytkownik, stanowisko">
       <created>1560099017222</created>
@@ -535,39 +558,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_loginIsNull - 2019.06.20 at 12h 02m 11s.xml">
-      <configuration name="test.loginIsNull" configurationId="JUnit" />
+    <history-entry file="test_pusteHaslo - 2019.06.20 at 13h 37m 53s.xml">
+      <configuration name="test.pusteHaslo" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_loginIsNull - 2019.06.20 at 12h 03m 28s.xml">
-      <configuration name="test.loginIsNull" configurationId="JUnit" />
+    <history-entry file="test_pusteHaslo - 2019.06.20 at 13h 38m 03s.xml">
+      <configuration name="test.pusteHaslo" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_loginIsNull - 2019.06.20 at 12h 04m 03s.xml">
-      <configuration name="test.loginIsNull" configurationId="JUnit" />
+    <history-entry file="test_isStanInt - 2019.06.20 at 13h 38m 12s.xml">
+      <configuration name="test.isStanInt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_loginIsNull - 2019.06.20 at 12h 06m 00s.xml">
-      <configuration name="test.loginIsNull" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_hasloMniejniz5 - 2019.06.20 at 12h 08m 40s.xml">
-      <configuration name="test.hasloMniejniz5" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_hasloMniejniz5 - 2019.06.20 at 12h 09m 22s.xml">
-      <configuration name="test.hasloMniejniz5" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_hasloMniejniz5 - 2019.06.20 at 12h 09m 37s.xml">
-      <configuration name="test.hasloMniejniz5" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_nazwiskoNull - 2019.06.20 at 12h 10m 21s.xml">
-      <configuration name="test.nazwiskoNull" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_passwordIsEmpty - 2019.06.20 at 12h 12m 49s.xml">
+    <history-entry file="test_passwordIsEmpty - 2019.06.20 at 13h 45m 13s.xml">
       <configuration name="test.passwordIsEmpty" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_passwordIsEmpty - 2019.06.20 at 12h 13m 17s.xml">
-      <configuration name="test.passwordIsEmpty" configurationId="JUnit" />
+    <history-entry file="test_isStanInt - 2019.06.20 at 13h 45m 38s.xml">
+      <configuration name="test.isStanInt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_stanmniejszy0 - 2019.06.20 at 13h 46m 52s.xml">
+      <configuration name="test.stanmniejszy0" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test - 2019.06.20 at 13h 47m 19s.xml">
+      <configuration name="test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test - 2019.06.20 at 13h 48m 16s.xml">
+      <configuration name="test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_stanmniejszy0 - 2019.06.20 at 13h 48m 36s.xml">
+      <configuration name="test.stanmniejszy0" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_stanmniejszy0 - 2019.06.20 at 13h 48m 48s.xml">
+      <configuration name="test.stanmniejszy0" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232043000" />
+    <option name="totallyTimeSpent" value="234234000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -931,16 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controls/Serwis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="150" column="13" selection-start-line="150" selection-start-column="13" selection-end-line="150" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fxml/dashboard.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
@@ -1018,52 +1031,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Storage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="46" column="12" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/libraries/pdf.xml">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controls/Raport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/libraries/generatePdf.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controls/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controls/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2179">
+        <state relative-caret-position="454">
           <caret line="140" column="22" lean-forward="true" selection-start-line="140" selection-start-column="22" selection-end-line="140" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1071,10 +1054,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controls/Raport.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controls/Serwis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="385">
+          <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controls/cStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2691">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controls/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-621">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -1088,10 +1091,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controls/cStorage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Users.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+        <state relative-caret-position="-98">
+          <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Storage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="80" column="10" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="74" column="42" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

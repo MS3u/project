@@ -1,5 +1,6 @@
 package entities;
 
+import javax.validation.constraints.DecimalMax;
 import javax.validation.constraints.NotNull;
 
 import javax.persistence.*;
@@ -35,6 +36,7 @@ public class Users {
     @Column(name = "Imie")
     @NotNull(message ="wymagane")
     @Size(min = 2, max= 20)
+
     public String getImie() {
         return imie;
     }

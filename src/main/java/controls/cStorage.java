@@ -109,9 +109,9 @@ public class cStorage implements Initializable {
             methodController.saveData(storage);
         }catch (NumberFormatException e){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Information Dialog");
-            alert.setHeaderText("Look, an Information Dialog");
-            alert.setContentText("I have a great message for you!");
+            alert.setTitle("Błąd");
+            alert.setHeaderText("Zobacz co źle zrobileś");
+            alert.setContentText("Złe wypełnienie pól teksotwych");
 
             alert.showAndWait();
         }

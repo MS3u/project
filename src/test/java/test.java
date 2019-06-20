@@ -1,3 +1,4 @@
+import entities.Storage;
 import entities.Users;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -24,12 +25,13 @@ public class test {
     @Test
     public void contextLoads() {
     }
+
     @Test
-    public void nazwiskoNull(){
-        Users user = new Users("Bartek", null, "admin","admin" );
+    public void nazwiskoNull() {
+        Users user = new Users("Bartek", null, "admin", "admin");
 
         Set<ConstraintViolation<Users>> constraintViolations = validator.validate(user);
-        Assert.assertEquals( 1, constraintViolations.size() );
+        Assert.assertEquals(1, constraintViolations.size());
         Assert.assertEquals(
                 "wymagane",
                 constraintViolations.iterator().next().getMessage()
@@ -37,41 +39,43 @@ public class test {
     }
 
     @Test
-    public void hasloMniejniz5(){
-        Users user = new Users("Mateusz","Szuwarowski","magazynier","admi");
+    public void hasloMniejniz5() {
+        Users user = new Users("Mateusz", "Szuwarowski", "magazynier", "adm");
 
         Set<ConstraintViolation<Users>> constraintViolations = validator.validate(user);
 
-        Assert.assertEquals( 1, constraintViolations.size() );
+        Assert.assertEquals(1, constraintViolations.size());
         Assert.assertEquals(
-                "dlugosc hasla miedzy 5 a 255",
+                "size must be between 5 and 255",
                 constraintViolations.iterator().next().getMessage()
         );
     }
+
     @Test
-    public void passwordIsEmpty() {
+    public void pusteHaslo() {
         Users user = new Users("lukasz", "Kowalczyk", "admin", "");
 
         Set<ConstraintViolation<Users>> constraintViolations = validator.validate(user);
 
         Assert.assertEquals(1, constraintViolations.size());
         Assert.assertEquals(
-                "dlugosc hasla miedzy 5 a 255",
+                "size must be between 5 and 255",
                 constraintViolations.iterator().next().getMessage()
         );
 
+    }
+    @Test
+    public void stanmniejszy0() {
+       Storage storage = new Storage(-1);
+
+        Set<ConstraintViolation<Storage>> constraintViolations = validator.validate(storage);
+
+        Assert.assertEquals(1, constraintViolations.size());
+        Assert.assertEquals(
+                "must be between 1 and 100",
+                constraintViolations.iterator().next().getMessage()
+        );
 
     }
-
-
-
-
-
-
-
-
-
-
-
 
 }
