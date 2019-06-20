@@ -20,6 +20,9 @@ Moduły z rozbiciem na funkcjonalności:
     Aktualizacja danych użytkownika
     Zmiana hasła użytkownika
     Zmiana uprawnień użytkownika
+    
+ 4. Serwis
+    Przypisywanie serwisnata do zlecenia
 
 Grupy uprawnień:
 
@@ -37,9 +40,14 @@ Narzędzia i technologie:
     Trello
 
 Diagramy:
-
-    Brak
-
+   * Diagram Aktywności
+    ![diagram aktywnosci](https://github.com/MS3u/project/blob/master/UML/Activity%20Diagram1.jpg)
+    * Diagram Klas
+    ![diagram klas](https://github.com/MS3u/project/blob/master/UML/Class%20Diagram1.jpg)
+    * Diagram Sekwencji
+    ![diagram sekwecnji](https://github.com/MS3u/project/blob/master/UML/Diagram%20Sekwencji.jpg)
+    * Diagram Przypadków Użycia
+    ![diagram przypadków użycia](https://github.com/MS3u/project/blob/master/UML/useCaseDiagram.jpg)
 Autorzy:
 
     Bartłomiej Kołodziej
