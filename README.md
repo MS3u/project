@@ -59,18 +59,52 @@ Autorzy:
 ## Omówienie aplikacji
 
 Program do obługi serwisu komputerowego. 
+
+* Logowanie
 Pierwsze okno to ekran logowania, wpisujemu tutaj odpowiednie dane według opisu pol tekstowych, domyslny użytkownik to admin i haslo admin,
 posiada on uprawnienia do przegladania całości
+
 ![Logowanie](https://github.com/MS3u/project/blob/master/src/main/PodrecznikPNG/login.png)
 
+* Rejestracja
 W przypadku nowego użytkownika możemy zarejestrować się, administrator weryfikuje daną osobe.
+
 
 ![Rejestracja](https://github.com/MS3u/project/blob/master/src/main/PodrecznikPNG/rejestracja.png)
 
+* Panel Główny
 Zalogowany użytkownik widzi panel główny programu, po weryfikacji dostępne jest boczne menu z wyborem odpowiedznich zakladek aministrator ma dostęp do wszystkich zasobów.
 Poszczególne panele dostępne są dla pracowników z odpowidenim poziomem dostępu.
 
-![Panel Główny]()
+![Panel Główny](https://github.com/MS3u/project/blob/master/src/main/PodrecznikPNG/dashboard.png)
+
+* Zlecenia
+W tym oknie dokonujemy przyjecia zleceń,edycji,usuwania.
+
+![Zlecenia](https://github.com/MS3u/project/blob/master/src/main/PodrecznikPNG/Zlecenia.png)
+
+* Administracja
+
+Administrator sprawdza zarejestrowanych użytkowników, edytuje lub usuwa.
+
+![Administracja](https://github.com/MS3u/project/blob/master/src/main/PodrecznikPNG/Administracja.png)
+
+* Magazyn
+
+W magazynie wprowadzamy nowy towar sprawdzamy stan modifikujemy stan badź usuwamy przedmioty.
+![Magazyn](https://github.com/MS3u/project/blob/master/src/main/PodrecznikPNG/Magazyn.png)
+
+* Serwis
+Serwisant przegląda zlecenia i wpisuje stan realizacji zlecenia do odpowiedniego nr zlecenia podaje kto zajmuje się zleceniem.
+![Serwis](https://github.com/MS3u/project/blob/master/src/main/PodrecznikPNG/Serwis.png)
+
+
+
+
+
+
+
+
 
 
 
