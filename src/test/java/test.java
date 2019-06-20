@@ -26,11 +26,10 @@ public class test {
     public void contextLoads() {
     }
     @Test
-    public void loginIsNull(){
-        Users user = new Users("Mateusz", "Szuwarowski", "admin","admin" );
+    public void nazwiskoNull(){
+        Users user = new Users("Bartek", null, "admin","admin" );
 
         Set<ConstraintViolation<Users>> constraintViolations = validator.validate(user);
-
         Assert.assertEquals( 1, constraintViolations.size() );
         Assert.assertEquals(
                 "wymagane",
@@ -38,11 +37,32 @@ public class test {
         );
     }
 
+    @Test
+    public void hasloMniejniz5(){
+        Users user = new Users("Mateusz","Szuwarowski","magazynier","admi");
+
+        Set<ConstraintViolation<Users>> constraintViolations = validator.validate(user);
+
+        Assert.assertEquals( 1, constraintViolations.size() );
+        Assert.assertEquals(
+                "dlugosc hasla miedzy 5 a 255",
+                constraintViolations.iterator().next().getMessage()
+        );
+    }
+    @Test
+    public void passwordIsEmpty() {
+        Users user = new Users("Łukasz", "Kowalczyk", "admin", "");
+
+        Set<ConstraintViolation<Users>> constraintViolations = validator.validate(user);
+
+        Assert.assertEquals(1, constraintViolations.size());
+        Assert.assertEquals(
+                "dlugosc hasla miedzy 5 a 255",
+                constraintViolations.iterator().next().getMessage()
+        );
 
 
-
-
-
+    }
 
 
 

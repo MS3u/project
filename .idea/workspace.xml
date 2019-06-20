@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7f5ca1d0-4760-4de3-ba1e-47c5e0348ff8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/eSerwis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/eSerwis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controls/cStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controls/cStorage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entities/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Users.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entities/eSerwis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/eSerwis.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -79,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/entities/Users.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+            <state relative-caret-position="230">
+              <caret line="46" column="12" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,11 +85,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+            <state relative-caret-position="352">
+              <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://9f99cdd5-c94c-4916-a11b-da7da4879d81/schema/projekt1/table/users">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="569">
+              <caret line="100" column="21" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -161,16 +173,16 @@
         <option value="$PROJECT_DIR$/src/main/java/controls/Info.java" />
         <option value="$PROJECT_DIR$/src/main/java/controls/Serwis.java" />
         <option value="$PROJECT_DIR$/src/main/java/controls/MethodController.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/main/java/entities/Storage.java" />
         <option value="$PROJECT_DIR$/src/main/java/controls/AdminPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/controls/Registration.java" />
         <option value="$PROJECT_DIR$/src/main/java/controls/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/fxml/orders.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/controls/cStorage.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/entities/eSerwis.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/Users.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/test/java/test.java" />
       </list>
     </option>
@@ -344,7 +356,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561024863460" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561025594948" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
@@ -401,6 +413,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test.hasloMniejniz5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <option name="METHOD_NAME" value="hasloMniejniz5" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="test.loginIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project" />
       <option name="PACKAGE_NAME" value="" />
@@ -411,10 +433,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test.nazwiskoNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <option name="METHOD_NAME" value="nazwiskoNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test.passwordIsEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <option name="METHOD_NAME" value="passwordIsEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.test.passwordIsEmpty" />
+        <item itemvalue="JUnit.test.nazwiskoNull" />
+        <item itemvalue="JUnit.test.hasloMniejniz5" />
         <item itemvalue="JUnit.test.loginIsNull" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -448,7 +493,7 @@
       <workItem from="1560756038191" duration="183000" />
       <workItem from="1560799638853" duration="4030000" />
       <workItem from="1560846329915" duration="4458000" />
-      <workItem from="1560869517173" duration="30100000" />
+      <workItem from="1560869517173" duration="30934000" />
     </task>
     <task id="LOCAL-00001" summary="trzeba podpiac karte serwis do przycisku&#10;dodac w dashboard pole zalogowany : uzytkownik, stanowisko">
       <created>1560099017222</created>
@@ -475,12 +520,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_loginIsNull - 2019.06.20 at 11h 56m 57s.xml">
+    <history-entry file="test_loginIsNull - 2019.06.20 at 12h 00m 32s.xml">
       <configuration name="test.loginIsNull" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_loginIsNull - 2019.06.20 at 12h 00m 54s.xml">
+      <configuration name="test.loginIsNull" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_loginIsNull - 2019.06.20 at 12h 02m 11s.xml">
+      <configuration name="test.loginIsNull" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_loginIsNull - 2019.06.20 at 12h 03m 28s.xml">
+      <configuration name="test.loginIsNull" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_loginIsNull - 2019.06.20 at 12h 04m 03s.xml">
+      <configuration name="test.loginIsNull" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_loginIsNull - 2019.06.20 at 12h 06m 00s.xml">
+      <configuration name="test.loginIsNull" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_hasloMniejniz5 - 2019.06.20 at 12h 08m 40s.xml">
+      <configuration name="test.hasloMniejniz5" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_hasloMniejniz5 - 2019.06.20 at 12h 09m 22s.xml">
+      <configuration name="test.hasloMniejniz5" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_hasloMniejniz5 - 2019.06.20 at 12h 09m 37s.xml">
+      <configuration name="test.hasloMniejniz5" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_nazwiskoNull - 2019.06.20 at 12h 10m 21s.xml">
+      <configuration name="test.nazwiskoNull" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227853000" />
+    <option name="totallyTimeSpent" value="228687000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -502,11 +574,11 @@
       <window_info id="Favorites" order="4" sideWeight="0.14715719" side_tool="true" weight="0.16471216" />
       <window_info id="Web" order="5" sideWeight="0.09598604" side_tool="true" weight="0.24040511" />
       <window_info id="Learn" order="6" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.8786982" visible="true" weight="0.16471216" />
-      <window_info id="Structure" order="8" sideWeight="0.12130178" side_tool="true" visible="true" weight="0.16471216" />
+      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.8768769" visible="true" weight="0.16471216" />
+      <window_info id="Structure" order="8" sideWeight="0.123123124" side_tool="true" visible="true" weight="0.16471216" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32552955" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8880597" visible="true" weight="0.24637681" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8880597" weight="0.24637681" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3984064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -515,7 +587,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32998884" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.1119403" side_tool="true" weight="0.29501915" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49573562" weight="0.2575251" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" sideWeight="0.49573562" visible="true" weight="0.2575251" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32998884" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32887402" />
@@ -912,13 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://9f99cdd5-c94c-4916-a11b-da7da4879d81/schema/projekt1/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controls/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
@@ -949,13 +1014,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="356">
           <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="105" column="21" selection-start-line="105" selection-start-column="21" selection-end-line="105" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -999,10 +1057,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="100" column="21" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9f99cdd5-c94c-4916-a11b-da7da4879d81/schema/projekt1/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entities/Users.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="69" column="34" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+        <state relative-caret-position="230">
+          <caret line="46" column="12" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1011,8 +1083,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        <state relative-caret-position="352">
+          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
