@@ -79,7 +79,7 @@ Poszczególne panele dostępne są dla pracowników z odpowidenim poziomem dost�
 ![Panel Główny](https://github.com/MS3u/project/blob/master/src/main/PodrecznikPNG/dashboard.png)
 
 * Zlecenia
-W tym oknie dokonujemy przyjecia zleceń,edycji,usuwania.
+W tym oknie dokonujemy przyjecia zleceń,edycji,usuwania a także możemy wygenerować dokument pdf z zestawieniem zleceń.
 
 ![Zlecenia](https://github.com/MS3u/project/blob/master/src/main/PodrecznikPNG/Zlecenia.png)
 
