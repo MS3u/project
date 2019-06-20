@@ -17,6 +17,9 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * Klasa odpowiedzialna za magazyn
+ */
 
 public class cStorage implements Initializable {
 
@@ -64,7 +67,9 @@ public class cStorage implements Initializable {
 
     }
 
-
+    /**
+     * Metoda wyslwietla dane z bazy w tabeli
+     */
     @FXML
     private void loadDataToTable(ActionEvent event) {
         Transaction transaction = methodController.session.beginTransaction();
@@ -81,7 +86,9 @@ public class cStorage implements Initializable {
 
 
     }
-
+    /**
+     * odwieze liste z bazy danych
+     */
     @FXML
     private void refreshItemsList() {
         Transaction transaction = methodController.session.beginTransaction();
@@ -94,7 +101,9 @@ public class cStorage implements Initializable {
 
 
     /**
+     * Dodawnie nowego towaru do magazynu
      * @param event
+     *
      */
     public void addItem(javafx.event.ActionEvent event) {
 
@@ -123,6 +132,9 @@ public class cStorage implements Initializable {
 
     }
 
+    /**
+     * Czyszczenie pol tekstowych formularza
+     */
     public void clearItemForm() {
         tfNazwa.clear();
         tfCenaN.clear();
@@ -143,7 +155,10 @@ public class cStorage implements Initializable {
 //
 //    }
 
-
+    /**
+     * Modifikacja zawartosci magazyny
+     * @param event
+     */
     public void changeItem(javafx.event.ActionEvent event) {
 
 
@@ -160,7 +175,9 @@ public class cStorage implements Initializable {
 
 
     }
-
+    /**
+     * Usuwanie przedmiotu z bazy
+     */
     public void deleteItem(javafx.event.ActionEvent event) {
         Storage storage = table.getSelectionModel().getSelectedItem();
         methodController.deleteFromDb(storage);

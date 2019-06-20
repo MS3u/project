@@ -15,7 +15,13 @@ public class Storage {
     private float cenaBrutto;
     private int stan;
 
-
+    /**
+     * Konstrukror klasy
+     * @param nazwa
+     * @param cenaNetto
+     * @param cenaBrutto
+     * @param stan
+     */
     public Storage(String nazwa, float cenaNetto, float cenaBrutto, int stan) {
         this.nazwa = nazwa;
         this.cenaNetto = cenaNetto;
@@ -38,6 +44,10 @@ public class Storage {
     public Storage() {
     }
 
+    /**
+     * Getters and Setters
+     * @return
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id", unique = true)

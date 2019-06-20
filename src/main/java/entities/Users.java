@@ -14,6 +14,7 @@ public class Users {
     private String stanowisko;
     private String haslo;
 
+
     public Users() {
     }
     public Users(String s){
@@ -21,6 +22,10 @@ public class Users {
 
     }
 
+    /**
+     * Getters and Setters
+     * @return
+     */
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -78,7 +83,14 @@ public class Users {
         this.haslo = haslo;
     }
 
-
+    /**
+     * Konstruktor klasy
+     * @param id
+     * @param imie
+     * @param nazwisko
+     * @param stanowisko
+     * @param haslo
+     */
     public Users(int id, String imie, String nazwisko, String stanowisko, String haslo) {
         this.id = id;
         this.imie = imie;

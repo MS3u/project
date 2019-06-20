@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 
 
+
 @Entity
 @Table(name="Orders")
 
@@ -22,6 +23,11 @@ public class Orders {
     private String opis;
     private String serwisant;
     private Orders orders;
+
+    /**
+     * Getters and Setters
+     * @return
+     */
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id", unique = true)
@@ -133,7 +139,20 @@ public class Orders {
         this.serwisant = serwisant;
     }
 
-
+    /**
+     * Kostruktor klasy
+     * @param dataPrzyjecia
+     * @param nrZlecenia
+     * @param imie
+     * @param nazwisko
+     * @param miasto
+     * @param ulica
+     * @param nrDomu
+     * @param nrLokalu
+     * @param nip
+     * @param opis
+     * @param serwisant
+     */
 
 
     public Orders(String dataPrzyjecia, String nrZlecenia, String imie, String nazwisko, String miasto, String ulica, String nrDomu, String nrLokalu, String nip, String opis, String serwisant) {

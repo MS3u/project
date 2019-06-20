@@ -12,10 +12,11 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 import org.hibernate.service.ServiceRegistry;
 
-import java.sql.ResultSet;
 import java.util.List;
 
-
+/**
+ * Klasa sterujaca Hibernate
+ */
 public class MethodController {
     public Session session;
     public SessionFactory sessionFactory;
@@ -28,6 +29,9 @@ public class MethodController {
         return sessionFactory;
     }
 
+    /**
+     * Inicjalizacja polaczania z baza
+     */
     public void initDb() {
         Configuration configuration = new Configuration().configure("hibernate.cfg.xml");
         configuration.addAnnotatedClass(Users.class);
@@ -89,17 +93,29 @@ public class MethodController {
         System.out.println(sewis);
         return sewis;
     }
+
+    /**
+     * rozpoczecie tranzakcji
+     */
     public void transactionStart() {
         Transaction transaction = session.beginTransaction();
         transaction.commit();
     }
 
+    /**
+     * Zapis do bazy
+     * @param object
+     */
     public void saveData(Object object) {
         transactionStart();
         session.save(object);
 
     }
 
+    /**
+     * Modifikacja w bazie danych
+     * @param object
+     */
     public void update(Object object) {
         transactionStart();
         session.merge(object);
@@ -172,6 +188,10 @@ public void updateOder(int id,
     tx.commit();
     }
 
+    /**
+     * Usuwanie z bazy
+     * @param object
+     */
     public void deleteFromDb(Object object) {
         transactionStart();
         session.delete(object);

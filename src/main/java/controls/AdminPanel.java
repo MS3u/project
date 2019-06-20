@@ -51,6 +51,10 @@ public class AdminPanel implements Initializable {
 
     public MethodController methodController = new MethodController();
 
+    /**
+     * Metoda wyslwietla dane z bazy w tabeli
+     * @param event
+     */
     private void loadDataToTable(ActionEvent event) {
         Transaction transaction = methodController.session.beginTransaction();
         List items = methodController.session.createCriteria(Users.class).list();
@@ -64,7 +68,9 @@ public class AdminPanel implements Initializable {
         tableUsers.setItems(itemlist);
     }
 
-
+    /**
+     * Dodawanie nowego uzytkownika
+     */
     public void addUser(javafx.event.ActionEvent event) {
         Users user = new Users(
                 tfImie.getText(),
@@ -77,14 +83,18 @@ public class AdminPanel implements Initializable {
         clear();
 
     }
-
+    /**
+     * Usuwanie uzytkownika
+     */
     public void deleteUser(ActionEvent event) {
         Users storage = tableUsers.getSelectionModel().getSelectedItem();
         methodController.deleteFromDb(storage);
         refreshItemsList();
         clear();
     }
-
+    /**
+     *  Edycja uzytkownika
+     */
     public void editUser(ActionEvent event) {
         int id = tableUsers.getSelectionModel().getSelectedItem().getId();
         String imie = tfImie.getText();
@@ -95,7 +105,9 @@ public class AdminPanel implements Initializable {
         methodController.update(updateUser);
         refreshItemsList();
     }
-
+    /**
+     * Czyszczenie pol textowych formularza
+     */
     public void clear() {
         tfStanowisko.clear();
         tfNazwisko.clear();
@@ -109,7 +121,9 @@ public class AdminPanel implements Initializable {
         loadDataToTable(null);
 
     }
-
+    /**
+     *  Wyswietlenie konkretnego wiersza tabeli po kliknieciu muszki
+     */
     public void tableClick(MouseEvent mouseEvent) {
 
         Users clicked = tableUsers.getSelectionModel().getSelectedItem();
@@ -119,6 +133,9 @@ public class AdminPanel implements Initializable {
         tfHaslo.setText(clicked.getHaslo());
     }
 
+    /**
+     *  Odswiezenie zawartosci tabeli po wykonaniu konretnej czynnosci
+     */
     private void refreshItemsList() {
         Transaction transaction = methodController.session.beginTransaction();
         List userList = methodController.session.createCriteria(Users.class).list();

@@ -17,6 +17,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Klasa obslugujaca rejestracje nowych uzytkownikow
+ */
+
 public class Registration implements Initializable {
 
 
@@ -37,7 +41,10 @@ private MethodController methodController = new MethodController();
     public Button btnBack;
 
 
-
+    /**
+     * rejestracja nowego uzytkownika
+     * @param event
+     */
     public void registerUser(ActionEvent event) {
 
         String imie= tfimie.getText();
@@ -62,7 +69,11 @@ public void clearData(){
     methodController.initDb();
     }
 
-
+    /**
+     * powrot do okna logowania
+     * @param event
+     * @throws IOException
+     */
     public void backToLogin(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("../MavenHibernate/main.fxml"));
         Scene scene = new Scene(pane);

@@ -19,6 +19,9 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
+/**
+ * Okno glowne logownia
+ */
 public class Login implements Initializable {
     @FXML
     private MethodController methodController = new MethodController();
@@ -43,7 +46,11 @@ public class Login implements Initializable {
     public static String lbzalogowany = "";
 
 
-
+    /**
+     * Weryfikcja wprowadzonych danych i logowanie do systemu z uwzglednieniem roli uzytkownika
+     * @param event
+     * @throws IOException
+     */
     public void login(ActionEvent event) throws IOException {
 
         Users userAuth = new Users(tfUser.getText(), pfPassword.getText()) ;
@@ -54,7 +61,7 @@ public class Login implements Initializable {
                 .collect(Collectors.toList());
 
 
-        if (!serAuth.isEmpty()) {
+        if (!serAuth.isEmpty()&&!tfUser.getText().isEmpty()&&!pfPassword.getText().isEmpty()) {
             b = true;
             stanowisko = methodController.getStanowisko(tfUser.getText(), pfPassword.getText());
             String imie="";
@@ -110,6 +117,11 @@ public class Login implements Initializable {
         alert.showAndWait();
     }
 
+    /**
+     * Otwieranie okna rejestracji uzytkownikow
+     * @param event
+     * @throws IOException
+     */
     public void register(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("../fxml/registration.fxml"));
         Scene scene = new Scene(pane);
@@ -120,6 +132,11 @@ public class Login implements Initializable {
 
     }
 
+    /**
+     * Iniciowanie bazy danych, pobieranie uzytkownikow
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         methodController.initDb();

@@ -22,7 +22,9 @@ import java.util.List;
 import java.util.ResourceBundle;
 import entities.Orders;
 
-
+/**
+ * Klasa obslugjaca zlecenia
+ */
 
 
 public class Order implements Initializable {
@@ -83,7 +85,10 @@ public class Order implements Initializable {
     public Button btnDeleteOrder;
     private Stage stage;
 
-
+    /**
+     * Ladownie danych do tabeli
+     * @param event
+     */
     @FXML
     private void loadDataToTable(ActionEvent event) {
         Transaction transaction = methodController.session.beginTransaction();
@@ -114,6 +119,9 @@ public class Order implements Initializable {
     private MethodController methodController = new MethodController();
     public ObservableList<Orders> ObservableListItems;
 
+    /**
+     * Dodawanie zlecenia
+     */
     public void addOrder() {
         String dataPrzyjeciaText = dataPrzyjecia.getText();
         String nrZleceniaText = tfNrZlecenia.getText();
@@ -152,6 +160,9 @@ public class Order implements Initializable {
        // tfSerwisant.clear();
     }
 
+    /**
+     * odswiezanie tabeli
+     */
     @FXML
     private void refreshItemsList() {
         Transaction transaction = methodController.session.beginTransaction();
@@ -209,6 +220,10 @@ public class Order implements Initializable {
 //        editOrder(event);
 //    }
 
+    /**
+     * usuwanie zlecenia
+     * @param event
+     */
     public void deleteOrder(javafx.event.ActionEvent event) {
         Orders orders = tableOrders.getSelectionModel().getSelectedItem();
         methodController.deleteFromDb(orders);
@@ -235,6 +250,10 @@ public class Order implements Initializable {
         refreshItemsList();
     }
 
+    /**
+     * edycja zlecenia
+     * @param event
+     */
     public void editOrder(javafx.event.ActionEvent event) {
 
         if(btnEdit.getText().equals("Edycja Zlecenia")) {
@@ -277,7 +296,13 @@ public class Order implements Initializable {
         }
     }
 
-
+    /**
+     * generowaenie pdf zlecen
+     * @param event
+     * @throws FileNotFoundException
+     * @throws DocumentException
+     * @throws SQLException
+     */
     public void generateRaport(javafx.event.ActionEvent event) throws FileNotFoundException, DocumentException, SQLException {
 
         GeneratePdf generatePdf = new GeneratePdf();

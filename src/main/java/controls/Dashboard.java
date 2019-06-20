@@ -117,6 +117,7 @@ public class Dashboard implements Initializable {
     }
 
     /**
+     * Otwiera okno panuelu administracyjnego
      * @param event
      * @throws IOException
      */
@@ -145,7 +146,9 @@ public class Dashboard implements Initializable {
             }
 
     }
-
+    /**
+     * Otwieranie panelu magazyn
+     */
         public void openMagazyn (ActionEvent event) throws IOException {
                 Parent noweOkno = FXMLLoader.load(getClass().getResource("/fxml/storage.fxml"));
                 borderPane.setCenter(noweOkno);

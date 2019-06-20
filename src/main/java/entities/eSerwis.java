@@ -2,6 +2,9 @@ package entities;
 
 import javax.persistence.*;
 
+/**
+ *  klasa osblugi mapowania serwisu
+ */
 @Entity
 @Table(name = "serwis")
 public class eSerwis {
@@ -53,7 +56,12 @@ public class eSerwis {
     }
 
 
-
+    /**
+     * Konstruktor serwisu
+     * @param nrZlecenia
+     * @param status
+     * @param serwisant
+     */
     public eSerwis(String nrZlecenia, String status, String serwisant) {
         this.nrZlecenia = nrZlecenia;
         this.status = status;
