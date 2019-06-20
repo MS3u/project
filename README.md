@@ -1,6 +1,6 @@
 System Zarządzania Serwisem
 
-Jest to system skierowany do firmy zajmujących się serwisowaniem sprzętu komputerowego. Wdrożenie tego systemu pozwoli usprawnić procesy przyjmowania zlecenia od klienta, naprawy, fakturowania i wydawania naprawionego sprzętu
+Jest to system skierowany do firmy zajmujących się serwisowaniem sprzętu komputerowego. Wdrożenie tego systemu pozwoli usprawnić procesy przyjmowania zlecenia od klienta, naprawy i wydawania naprawionego sprzętu
 Moduły z rozbiciem na funkcjonalności:
 
 1. Zlecenia
