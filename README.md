@@ -55,3 +55,11 @@ Autorzy:
     Grzegorz Jagodziński
     Mateusz Szuwarowski
     Tomasz Kapuściński
+    
+## Omówienie aplikacji
+
+Program do obługi serwisu komputerowego. 
+Pierwsze okno to ekran logowania, wpisujemu tutaj odpowiednie dane według opisu pol tekstowych, domyslny użytkownik to admin i haslo admin,
+posiada on uprawnienia do przegladania całości
+![Logowanie](https://github.com/mateusz-siwiec/Library-managament---Inf-III-zaoczne-2019/blob/master/images/logowanie.PNG)
+
