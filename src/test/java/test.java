@@ -1,4 +1,5 @@
 import entities.Storage;
+import entities.Users;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -23,6 +24,18 @@ public class test {
 
     @Test
     public void contextLoads() {
+    }
+    @Test
+    public void loginIsNull(){
+        Users user = new Users("Mateusz", "Szuwarowski", "admin","admin" );
+
+        Set<ConstraintViolation<Users>> constraintViolations = validator.validate(user);
+
+        Assert.assertEquals( 1, constraintViolations.size() );
+        Assert.assertEquals(
+                "wymagane",
+                constraintViolations.iterator().next().getMessage()
+        );
     }
 
 

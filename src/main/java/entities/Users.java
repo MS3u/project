@@ -1,6 +1,9 @@
 package entities;
 
+import javax.validation.constraints.NotNull;
+
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Users {
@@ -30,6 +33,8 @@ public class Users {
 
 
     @Column(name = "Imie")
+    @NotNull(message ="wymagane")
+    @Size(min = 2, max= 20)
     public String getImie() {
         return imie;
     }
@@ -39,6 +44,8 @@ public class Users {
 
 
     @Column(name = "Nazwisko")
+    @NotNull(message ="wymagane")
+    @Size(min = 2, max= 20)
     public String getNazwisko() {
         return nazwisko;
     }
@@ -48,6 +55,8 @@ public class Users {
 
 
     @Column(name = "Stanowisko")
+    @NotNull(message ="wymagane")
+    @Size(min = 2, max= 10)
     public String getStanowisko() {
         return stanowisko;
     }
@@ -56,7 +65,10 @@ public class Users {
     }
 
 
+
     @Column(name = "Haslo")
+    @NotNull(message = "wymagane")
+    @Size(min = 5 , max = 255)
     public String getHaslo() {
         return haslo;
     }

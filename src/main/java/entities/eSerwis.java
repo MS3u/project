@@ -60,6 +60,12 @@ public class eSerwis {
         this.serwisant = serwisant;
     }
 
+    /**
+     * @param id
+     * @param nrZlecenia
+     * @param status
+     * @param serwisant
+     */
     public eSerwis(int id, String nrZlecenia, String status, String serwisant) {
         this.id = id;
         this.nrZlecenia = nrZlecenia;
