@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -9,24 +10,44 @@
    <children>
       <VBox alignment="CENTER" layoutX="175.0" layoutY="21.0" prefHeight="346.0" prefWidth="251.0" AnchorPane.topAnchor="20.0">
          <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Imię">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Text>
             <TextField fx:id="tfimie" promptText="Imię">
                <VBox.margin>
-                  <Insets top="30.0" />
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </VBox.margin>
             </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Text>
             <TextField fx:id="tfnazwisko" promptText="Nazwisko">
                <VBox.margin>
-                  <Insets top="30.0" />
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </VBox.margin>
             </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stanowisko">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Text>
             <TextField fx:id="tfstanowisko" promptText="Stanowisko">
                <VBox.margin>
-                  <Insets top="30.0" />
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </VBox.margin>
             </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hasło">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Text>
             <PasswordField fx:id="tfhaslo" promptText="Hasło">
                <VBox.margin>
-                  <Insets top="30.0" />
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </VBox.margin>
             </PasswordField>
             <Button fx:id="btnRegistration" alignment="CENTER" mnemonicParsing="false" onAction="#registerUser" prefHeight="25.0" prefWidth="110.0" text="Rejestracja">

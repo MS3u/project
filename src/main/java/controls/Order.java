@@ -230,25 +230,7 @@ public class Order implements Initializable {
         clearData();
         refreshItemsList();
     }
-    public void update(javafx.event.ActionEvent event){
-        String dataPrzyjeciaText = dataPrzyjecia.getText();
-        String nrZleceniaText = tfNrZlecenia.getText();
-        String imieText = tfImie.getText();
-        String nazwiskoTextskoT = tfNazwisko.getText();
-        String nipText = tfNip.getText();
-        String miastoTexttoT = tfMiasto.getText();
-        String ulicaTextcaT = tfUlica.getText();
-        String nrDomuText = tfNrDomu.getText();
-        String nrLokauText = tfNrLokalu.getText();
-        String opiStext = tfOpis.getText();
-        String serwisantText = tfSerwisant.getText();
-        int id = tableOrders.getSelectionModel().getSelectedItem().getId();
-        Orders updateOrders = new Orders(id,dataPrzyjeciaText, nrZleceniaText,
-                imieText, nazwiskoTextskoT, miastoTexttoT, ulicaTextcaT, nrDomuText, nrLokauText, nipText, opiStext, serwisantText);
 
-        //methodController.update(updateOrders);
-        refreshItemsList();
-    }
 
     /**
      * edycja zlecenia
@@ -271,7 +253,7 @@ public class Order implements Initializable {
             tfNrDomu.setText(orders.getNrDomu());
             tfNrLokalu.setText(orders.getNrLokalu());
             tfOpis.setText(orders.getOpis());
-
+            refreshItemsList();
 //            tfSerwisant.setText(orders.getSerwisant());
         }else {
             btnEdit.setText("Edycja Zlecenia");
@@ -308,6 +290,10 @@ public class Order implements Initializable {
         GeneratePdf generatePdf = new GeneratePdf();
         generatePdf.generateRaport(event, stage);
 
+    }
+
+    public void clear(javafx.event.ActionEvent event) {
+        clearData();
     }
 }
 

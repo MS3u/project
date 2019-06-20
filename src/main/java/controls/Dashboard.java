@@ -123,9 +123,9 @@ public class Dashboard implements Initializable {
      */
     public void openAdministracja(ActionEvent event) throws IOException {
             TextInputDialog dialog = new TextInputDialog("");
-            dialog.setTitle("Text Input Dialog");
-            dialog.setHeaderText("Look, a Text Input Dialog");
-            dialog.setContentText("Please enter your name:");
+            dialog.setTitle("Alert");
+            dialog.setHeaderText("Dodatkowe zabezpieczenie");
+            dialog.setContentText("Wpisz haslo:");
 
 // Traditional way to get the response value.
             Optional<String> result = dialog.showAndWait();

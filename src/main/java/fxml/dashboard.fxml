@@ -22,27 +22,42 @@
                <children>
                   <Button fx:id="btnZlecenia" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openZlecenia" prefHeight="92.0" prefWidth="112.0" styleClass="style.css" text="Zlecenia">
                      <VBox.margin>
-                        <Insets top="15.0" />
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
-                  </Button>
-                  <Button fx:id="btnFaktury" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="200.0" mnemonicParsing="false" onAction="#openFaktury" prefHeight="88.0" prefWidth="112.0" styleClass="style.css" text="Generuj raport">
-                     <VBox.margin>
-                        <Insets top="15.0" />
-                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
                   </Button>
                   <Button fx:id="btnAdministracja" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="220.0" mnemonicParsing="false" onAction="#openAdministracja" prefHeight="100.0" prefWidth="112.0" styleClass="style.css" text="Administracja">
                      <VBox.margin>
-                        <Insets top="15.0" />
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
                   </Button>
                   <Button fx:id="btnMagazyn" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="241.0" mnemonicParsing="false" onAction="#openMagazyn" prefHeight="105.0" prefWidth="112.0" styleClass="style.css" text="Magazyn">
                      <VBox.margin>
-                        <Insets top="15.0" />
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
                   </Button>
                   <Button fx:id="btnSerwis" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="350.0" mnemonicParsing="false" onAction="#openSerwis" prefHeight="105.0" prefWidth="112.0" styleClass="style.css" text="Serwis">
                      <VBox.margin>
-                        <Insets top="15.0" />
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnWyloguj" mnemonicParsing="false" onAction="#wyloguj" prefHeight="109.0" prefWidth="110.0" text="Wyloguj">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
                   </Button>
                </children>
@@ -57,7 +72,7 @@
                   <Insets bottom="1.0" left="10.0" right="1.0" top="1.0" />
                </BorderPane.margin>
                <children>
-                  <Text layoutX="113.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="System Zarządzania Serwisem" wrappingWidth="647.681640625">
+                  <Text layoutX="113.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="System Zarządzania Serwisem" wrappingWidth="647.681640625">
                      <font>
                         <Font name="Verdana" size="40.0" />
                      </font>
@@ -76,6 +91,5 @@
             </Text>
          </bottom>
       </BorderPane>
-      <Button fx:id="btnWyloguj" layoutX="172.0" layoutY="630.0" mnemonicParsing="false" onAction="#wyloguj" text="Wyloguj" />
    </children>
 </AnchorPane>
