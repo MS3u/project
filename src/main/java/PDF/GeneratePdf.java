@@ -30,7 +30,7 @@ public class GeneratePdf {
 
     @FXML
     public void generateRaport(ActionEvent event , Stage stage) throws FileNotFoundException, DocumentException, SQLException {
-        String fileName = takePath(stage) + "\\reports.pdf";
+        String fileName = takePath(stage) + "\\zlecenia.pdf";
         Document document = new Document(PageSize.A4.rotate());
         PdfWriter.getInstance(document, new FileOutputStream(fileName));
         document.open();
