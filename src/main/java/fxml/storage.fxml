@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.cStorage">
+   <children>
+      <TableView fx:id="table" prefHeight="201.0" prefWidth="600.0" AnchorPane.bottomAnchor="249.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="30.0" text="Id" />
+          <TableColumn fx:id="colNazwa" prefWidth="330.0" text="Nazwa" />
+            <TableColumn fx:id="colCena" text="Cena" />
+            <TableColumn fx:id="colStan" minWidth="0.0" prefWidth="74.0" text="Stan" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tfCena" layoutX="226.0" layoutY="286.0" prefHeight="25.0" prefWidth="149.0" promptText="Cena Netto" />
+      <TextField fx:id="tfNazwa" layoutX="226.0" layoutY="248.0" promptText="Nazwa" />
+      <Text layoutX="226.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dodawanie,Edycja,Usuwanie" />
+      <TextField fx:id="tfStan" layoutX="226.0" layoutY="324.0" promptText="Stan" />
+      <Button fx:id="addItem" layoutX="202.0" layoutY="396.0" mnemonicParsing="false" onAction="#addItem" text="Dodaj" />
+      <Button fx:id="btnChange" layoutX="275.0" layoutY="396.0" mnemonicParsing="false" onAction="#changeItem" text="Zmień" />
+      <Button fx:id="btnDelete" layoutX="350.0" layoutY="396.0" mnemonicParsing="false" onAction="#deleteItem" prefHeight="25.0" prefWidth="50.0" text="Usuń" />
+   </children>
+</AnchorPane>

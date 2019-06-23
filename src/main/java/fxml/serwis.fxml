@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="btnPrzypisz" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.Serwis">
+
+    <children>
+       
+        <TableView fx:id="tableOrders" layoutX="9.0" layoutY="8.0" onMouseClicked="#tableClick" prefHeight="152.0" prefWidth="858.0">
+            <columns>
+                <TableColumn fx:id="tNr" prefWidth="55.0" text="Nr" />
+                <TableColumn fx:id="tData" prefWidth="48.0" text="Data" />
+                <TableColumn fx:id="tImie" prefWidth="62.0" text="Imie" />
+                <TableColumn fx:id="tNazwisko" prefWidth="75.0" text="Nazwisko" />
+                <TableColumn fx:id="tMiasto" prefWidth="75.0" text="Miasto" />
+                <TableColumn fx:id="tUlica" prefWidth="75.0" text="Ulica" />
+                <TableColumn fx:id="tnDomu" prefWidth="58.0" text="nr Domu" />
+                <TableColumn fx:id="tNLokalu" prefWidth="61.0" text="nr Lokalu" />
+                <TableColumn fx:id="tNip" prefWidth="112.0" text="NIP" />
+                <TableColumn fx:id="tOpis" prefWidth="102.0" text="Opis" />
+               
+                <TableColumn fx:id="id" prefWidth="62.0" text="Id" />
+            </columns>
+        </TableView>
+      <Label fx:id="lblOpis" layoutX="12.0" layoutY="160.0" prefHeight="17.0" prefWidth="852.0" text="Label" />
+      <Button layoutX="682.0" layoutY="303.0" mnemonicParsing="false" onAction="#addStatus" text="Przyjmij zlecenie" />
+      <TableView fx:id="serwisTable" layoutX="10.0" layoutY="179.0" onMouseClicked="#tableSerwisClicked" prefHeight="200.0" prefWidth="372.0">
+        <columns>
+          <TableColumn fx:id="tNrZlecenia" prefWidth="85.0" text="Nr Zlecenia" />
+          <TableColumn fx:id="tStatus" prefWidth="65.0" text="Status" />
+            <TableColumn fx:id="tSerwisant" prefWidth="75.0" text="Serwisant" />
+            <TableColumn fx:id="tPodzespoly" prefWidth="75.0" text="Podzespoły" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tfNr" layoutX="399.0" layoutY="179.0" />
+      <TextField fx:id="tfStatus" layoutX="399.0" layoutY="228.0" />
+      <TextField fx:id="tfSerwisant" layoutX="399.0" layoutY="267.0" />
+      <Button layoutX="422.0" layoutY="335.0" mnemonicParsing="false" onAction="#editStatus" prefHeight="25.0" prefWidth="103.0" text="Edycja statusu" />
+      <Text layoutX="584.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nr Zlecenia" />
+      <Text layoutX="598.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
+      <Text layoutX="589.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Serwisant" />
+      <ComboBox fx:id="cBox" layoutX="682.0" layoutY="179.0" prefWidth="150.0" />
+      <ComboBox fx:id="cBox1" layoutX="682.0" layoutY="215.0" prefWidth="150.0" />
+      <ComboBox fx:id="statusBox" layoutX="682.0" layoutY="255.0" prefWidth="150.0" />
+
+    </children>
+    <padding>
+        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+    </padding>
+    <opaqueInsets>
+        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+    </opaqueInsets>
+
+</AnchorPane>
