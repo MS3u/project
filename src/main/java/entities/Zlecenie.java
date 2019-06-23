@@ -49,8 +49,6 @@ public class Zlecenie {
 
     /**
      * Class constructor
-     * @param login
-     * @param password
 
      */
     public Zlecenie(String nr, String imie, String nazwisko, String pesel, String telefon, String opis, String data) {

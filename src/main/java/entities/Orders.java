@@ -76,8 +76,9 @@ public class Orders {
         return serwisant;
     }
 
-    public void setSerwisant(String serwisant) {
+    public String setSerwisant(String serwisant) {
         this.serwisant = serwisant;
+        return serwisant;
     }
 
     public Zlecenie getUser() {

@@ -30,7 +30,7 @@ import entities.Orders;
 
 public class Order implements Initializable {
 
-
+    @FXML
     public TableColumn<Zlecenie, String> tNr;
     @FXML
     public TableColumn<Zlecenie, String> tImie;
