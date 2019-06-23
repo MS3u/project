@@ -58,14 +58,42 @@ public class Serwis implements Initializable {
         List allOrders = methodController.session.createCriteria(Orders.class).list();
         transaction.commit();
 
-        tNrZlecenia.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Orders, String>, ObservableValue<String>>() {
+        serwisant.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Orders, String>, ObservableValue<String>>() {
             @Override
             public ObservableValue<String> call(TableColumn.CellDataFeatures<Orders, String> param) {
-                String readerLogin = param.getValue().setSerwisant("Mirek");
-                return new SimpleStringProperty(readerLogin);
+
+                String serwisant = param.getValue().setSerwisant("Mirek");
+                return new SimpleStringProperty(serwisant);
             }
         });
-    }
+
+    tNrZlecenia.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Orders, String>, ObservableValue<String>>() {
+        @Override
+        public ObservableValue<String> call(TableColumn.CellDataFeatures<Orders, String> param) {
+
+            String nrlzecenia = param.getValue().getUser().getNr();
+            return new SimpleStringProperty(nrlzecenia);
+        }
+    });
+        tStatus.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Orders, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<Orders, String> param) {
+
+                String status = param.getValue().getStatus();
+                return new SimpleStringProperty(status);
+            }
+        });
+        tPodzespoly.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Orders, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TableColumn.CellDataFeatures<Orders, String> param) {
+
+                String podzespoly = param.getValue().getStatus();
+                return new SimpleStringProperty(podzespoly);
+            }
+        });
+        ObservableList orderList = FXCollections.observableArrayList(allOrders);
+        serwisTable.setItems(orderList);
+}
 
     private MethodController methodController = new MethodController();
 

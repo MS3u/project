@@ -12,10 +12,10 @@ public class Orders {
     @Column(name = "id", unique = true)
     private int id;
     @ManyToOne
-    @JoinColumn(name = "user_Id")
+    @JoinColumn(name = "book_id")
     private Zlecenie user;
     @OneToOne
-    @JoinColumn(name = "book_id")
+    @JoinColumn(name = "user_Id")
     private Magazyn book;
     @Column(name = "serwisant")
     private String serwisant;
