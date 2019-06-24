@@ -1,16 +1,10 @@
 package entities;
 
 import javax.persistence.*;
-import java.util.Objects;
-import java.util.Set;
 
 @Entity
 @Table(name = "serwis")
 public class Serwis {
-
-private Magazyn magazyn;
-private Zlecenie zlecenie;
-
 
 
     @Id
@@ -18,35 +12,30 @@ private Zlecenie zlecenie;
     @Column(name = "id", unique = true)
     private int id;
 
-
-    @Column(name ="magazyn_id")
-    public Magazyn getMagazyn(){
-        return magazyn;
-    }
-    private int zlecenie_id;
-
-
-    @Column(name = "zlecenie_id")
-    public Zlecenie getZlecenie(){
-        return zlecenie;
-    }
-    private int magazyn_id;
+    @ManyToOne
+    @JoinColumn(name = "magazyn_id")
+    public Magazyn magazyn;
 
     @Column(name = "status", nullable = false, length = 30)
     private String status;
 
-    @Column(name = "serwisant", nullable = false, length = 30)
-    private String serwisant;
 
 
-    public void setMagazyn(Magazyn magazyn) {
+
+    @Column(name = "zlecenie_id")
+    private int zlecenie_id;
+
+    @ManyToOne
+    @JoinColumn(name = "serwisant_id")
+    private Users users;
+
+
+
+    public Serwis(Magazyn magazyn, String status, int zlecenie_id, Users users) {
         this.magazyn = magazyn;
-    }
-
-
-
-    public void setZlecenie(Zlecenie zlecenie) {
-        this.zlecenie = zlecenie;
+        this.status = status;
+        this.zlecenie_id = zlecenie_id;
+        this.users = users;
     }
 
     public int getZlecenie_id() {
@@ -57,17 +46,17 @@ private Zlecenie zlecenie;
         this.zlecenie_id = zlecenie_id;
     }
 
-    public int getMagazyn_id() {
-        return magazyn_id;
+    public Magazyn getMagazyn() {
+        return magazyn;
     }
 
-    public void setMagazyn_id(int magazyn_id) {
-        this.magazyn_id = magazyn_id;
+    public void setMagazyn(Magazyn magazyn) {
+        this.magazyn = magazyn;
     }
 
-    public Serwis(int zlecenie_id, int magazyn_id) {
+    public Serwis(int zlecenie_id, Magazyn magazyn) {
         this.zlecenie_id = zlecenie_id;
-        this.magazyn_id = magazyn_id;
+        this.magazyn = magazyn;
     }
 
     public Serwis() {
@@ -89,11 +78,11 @@ private Zlecenie zlecenie;
         this.status = status;
     }
 
-    public String getSerwisant() {
-        return serwisant;
+    public Users getUsers() {
+        return users;
     }
 
-    public void setSerwisant(String serwisant) {
-        this.serwisant = serwisant;
+    public void setUsers(Users users) {
+        this.users = users;
     }
 }
