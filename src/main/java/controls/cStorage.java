@@ -99,10 +99,10 @@ public class cStorage implements Initializable {
 
         try{
             String nazwa = tfNazwa.getText();
-            String cenN = tfCena.getText();
+            String cena = tfCena.getText();
 
             int stan = Integer.parseInt(tfStan.getText());
-          Magazyn storage = new Magazyn(nazwa, cenN, stan);
+          Magazyn storage = new Magazyn(nazwa, cena);
            methodController.saveData(storage);
         }catch (NumberFormatException e){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="btnPrzypisz" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.Serwis">
+<AnchorPane fx:id="btnPrzypisz" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.cSerwis">
 
     <children>
       <Label fx:id="lblOpis" layoutX="12.0" layoutY="160.0" prefHeight="17.0" prefWidth="852.0" text="Label" />

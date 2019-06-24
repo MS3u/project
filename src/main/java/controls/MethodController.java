@@ -3,7 +3,6 @@ package controls;
 import entities.Magazyn;
 import entities.Zlecenie;
 import entities.Users;
-import entities.Orders;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -13,7 +12,6 @@ import org.hibernate.query.Query;
 import org.hibernate.service.ServiceRegistry;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Klasa sterujaca Hibernate
@@ -36,7 +34,7 @@ public class MethodController {
     public void initDb() {
         Configuration configuration = new Configuration().configure("hibernate.cfg.xml");
         configuration.addAnnotatedClass(Users.class);
-        configuration.addAnnotatedClass(Orders.class);
+        configuration.addAnnotatedClass(cSerwis.class);
         configuration.addAnnotatedClass(Magazyn.class);
         configuration.addAnnotatedClass(Zlecenie.class);
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
@@ -83,8 +81,8 @@ public class MethodController {
         return imie;
     }
 
-    List<Orders> getOrders() {
-        List<Orders> orders = session.createQuery("from Orders ").getResultList();
+    List<Zlecenie> getZlecenie() {
+        List<Zlecenie> orders = session.createQuery("from Zlecenie ").getResultList();
         System.out.println(orders);
         return orders;
     }
@@ -92,17 +90,20 @@ public class MethodController {
         List<Magazyn> books = session.createQuery("from Magazyn").getResultList();
         return books;
     }
-    public List<Zlecenie> getAllUsers() {
+   /// public Set<Zlecenie> getZlecenie() {
+         ///   Set<Zlecenie> zlecenie = (Set<Zlecenie>) session.createQuery("from Zlecenie").getResultList();
+       /// return zlecenie;
+   // }
 
-            List<Zlecenie> users = session.createQuery("from Zlecenie nr").getResultList();
 
-        return users;
-    }
-    public List<Integer> getAllBookIds() {
-        List<Orders> orders = (List<Orders>) session.createQuery("from Orders").getResultList();
-        return orders.stream().map(order -> order.getBook().getId())
-                .collect(Collectors.toList());
-    }    public void transactionStart() {
+
+    //public List<Integer> getAllBookIds() {
+      //  List<Orders> orders = (List<Orders>) session.createQuery("from Orders").getResultList();
+      //  return orders.stream().map(order -> order.getBook();
+      //          .collect(Collectors.toList());
+//
+ //   }
+     public void transactionStart() {
         Transaction transaction = session.beginTransaction();
         transaction.commit();
     }

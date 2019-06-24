@@ -21,7 +21,6 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
-import entities.Orders;
 
 /**
  * Klasa obslugjaca zlecenia
@@ -113,7 +112,7 @@ public class Order implements Initializable {
         String telefonText = tfTelefon.getText();
         String opisText = tfOpis.getText();
 
-Zlecenie user= new Zlecenie(nrZleceniaText, imieText, nazwiskoTextskoT, peselText, telefonText, opisText, dataPrzyjeciaText);
+Zlecenie user= new Zlecenie(nrZleceniaText, imieText, nazwiskoTextskoT, peselText, telefonText, opisText);
 
         methodController.saveData(user);
         clearData();

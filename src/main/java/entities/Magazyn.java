@@ -1,51 +1,34 @@
 package entities;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import java.util.List;
 
 @Entity
 @Table(name = "magazyn")
 public class Magazyn {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true)
     private int id;
 
-    @Column(name = "nazwa")
-    @NotNull
-    @Size(min = 2 , max = 40)
+    @Column(name = "nazwa", nullable = false, length = 30)
     private String nazwa;
 
-    @Column(name = "cena")
-    @NotNull
-    @Size(min = 2 , max = 40)
+    @Column(name = "cena", nullable = false, length = 30)
     private String cena;
 
-    @NotNull
-    @Column(name = "stan")
-    private int stan;
 
-    @OneToOne(mappedBy = "book")
-    private Orders orders;
 
-    public Magazyn(String nazwa, String cena, int stan) {
+
+
+
+
+
+    public Magazyn(String nazwa, String cena) {
         this.nazwa = nazwa;
         this.cena = cena;
-        this.stan = stan;
     }
-
-    /**
-     * Class constructor
-     * @param
-     * @param
-     * @param
-     */
-
-
-
-
-
 
     public Magazyn() {
     }
@@ -74,26 +57,6 @@ public class Magazyn {
         this.cena = cena;
     }
 
-    public int getStan() {
-        return stan;
-    }
-
-    public void setStan(int stan) {
-        this.stan = stan;
-    }
-
-    public Orders getOrders() {
-        return orders;
-    }
-
-    public void setOrders(Orders orders) {
-        this.orders = orders;
-    }
-
-    /**
-     * Getters and setters
-     * @return
-     */
 
 
     @Override

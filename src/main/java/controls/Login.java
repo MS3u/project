@@ -25,8 +25,7 @@ import java.util.stream.Collectors;
 public class Login implements Initializable {
     @FXML
     private MethodController methodController = new MethodController();
-    private List<Users> users;
-
+    
     @FXML
     private Dashboard dashboard ;
 
@@ -44,6 +43,7 @@ public class Login implements Initializable {
 
     public static String stanowisko = "";
     public static String lbzalogowany = "";
+    private List<Users> users;
 
 
     /**
