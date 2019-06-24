@@ -53,7 +53,7 @@ public class Login implements Initializable {
      */
     public void login(ActionEvent event) throws IOException {
 
-        Users userAuth = new Users(tfUser.getText(), pfPassword.getText()) ;
+        Users userAuth = new Users(tfUser.getText(), methodController.get_SHA_512_SecurePassword(pfPassword.getText().toString(),"zakodowane"));
 
         List<Users> serAuth = users.stream()
                 .filter(u -> u.getNazwisko().equals(userAuth.getNazwisko()))
@@ -63,10 +63,11 @@ public class Login implements Initializable {
 
         if (!serAuth.isEmpty()&&!tfUser.getText().isEmpty()&&!pfPassword.getText().isEmpty()) {
             b = true;
-            stanowisko = methodController.getStanowisko(tfUser.getText(), pfPassword.getText());
+            stanowisko = methodController.getStanowisko(tfUser.getText(),
+                    methodController.get_SHA_512_SecurePassword(pfPassword.getText().toString(),"zakodowane"));
             String imie="";
             System.out.println(stanowisko);
-            imie =methodController.getRodo(tfUser.getText(), pfPassword.getText());
+            imie =methodController.getRodo(tfUser.getText(), methodController.get_SHA_512_SecurePassword(pfPassword.getText().toString(),"zakodowane"));
             System.out.println("imie: "+imie);
             System.out.println("login: "+tfUser.getText());
             lbZalogowany=(imie+" "+tfUser.getText());

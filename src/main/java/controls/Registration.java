@@ -50,7 +50,7 @@ private MethodController methodController = new MethodController();
         String imie= tfimie.getText();
        String nazwisko = tfnazwisko.getText();
        String stanowisko =tfstanowisko.getText();
-       String haslo =tfhaslo.getText();
+       String haslo =methodController.get_SHA_512_SecurePassword(tfhaslo.getText(),"zakodowane");
        Users users = new Users(imie,nazwisko,stanowisko,haslo);
         methodController.saveData(users);
        //clearData();
@@ -67,6 +67,7 @@ public void clearData(){
 
     public void initialize(URL location, ResourceBundle resources) {
     methodController.initDb();
+    clearData();
     }
 
     /**
