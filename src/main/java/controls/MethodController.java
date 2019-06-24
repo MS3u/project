@@ -1,6 +1,7 @@
 package controls;
 
 import entities.Magazyn;
+import entities.Serwis;
 import entities.Zlecenie;
 import entities.Users;
 import org.hibernate.Session;
@@ -37,7 +38,7 @@ public class MethodController {
     public void initDb() {
         Configuration configuration = new Configuration().configure("hibernate.cfg.xml");
         configuration.addAnnotatedClass(Users.class);
-        configuration.addAnnotatedClass(cSerwis.class);
+        configuration.addAnnotatedClass(Serwis.class);
         configuration.addAnnotatedClass(Magazyn.class);
         configuration.addAnnotatedClass(Zlecenie.class);
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();

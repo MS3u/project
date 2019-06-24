@@ -13,6 +13,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -25,9 +26,9 @@ import java.util.stream.Collectors;
 public class Login implements Initializable {
     @FXML
     private MethodController methodController = new MethodController();
-    
+
     @FXML
-    private Dashboard dashboard ;
+    private Dashboard dashboard;
 
     @FXML
     public TextField tfUser;
@@ -39,7 +40,7 @@ public class Login implements Initializable {
     public String lbZalogowany;
 
 
-    boolean b=false;
+    boolean b = false;
 
     public static String stanowisko = "";
     public static String lbzalogowany = "";
@@ -48,12 +49,13 @@ public class Login implements Initializable {
 
     /**
      * Weryfikcja wprowadzonych danych i logowanie do systemu z uwzglednieniem roli uzytkownika
+     *
      * @param event
      * @throws IOException
      */
     public void login(ActionEvent event) throws IOException {
 
-        Users userAuth = new Users(tfUser.getText(), methodController.get_SHA_512_SecurePassword(pfPassword.getText().toString(),"zakodowane"));
+        Users userAuth = new Users(tfUser.getText(), methodController.get_SHA_512_SecurePassword(pfPassword.getText().toString(), "zakodowane"));
 
         List<Users> serAuth = users.stream()
                 .filter(u -> u.getNazwisko().equals(userAuth.getNazwisko()))
@@ -61,24 +63,24 @@ public class Login implements Initializable {
                 .collect(Collectors.toList());
 
 
-        if (!serAuth.isEmpty()&&!tfUser.getText().isEmpty()&&!pfPassword.getText().isEmpty()) {
+        if (!serAuth.isEmpty() && !tfUser.getText().isEmpty() && !pfPassword.getText().isEmpty()) {
             b = true;
             stanowisko = methodController.getStanowisko(tfUser.getText(),
-                    methodController.get_SHA_512_SecurePassword(pfPassword.getText().toString(),"zakodowane"));
-            String imie="";
+                    methodController.get_SHA_512_SecurePassword(pfPassword.getText().toString(), "zakodowane"));
+            String imie = "";
             System.out.println(stanowisko);
-            imie =methodController.getRodo(tfUser.getText(), methodController.get_SHA_512_SecurePassword(pfPassword.getText().toString(),"zakodowane"));
-            System.out.println("imie: "+imie);
-            System.out.println("login: "+tfUser.getText());
-            lbZalogowany=(imie+" "+tfUser.getText());
-            System.out.println("lblzalogowany: "+lbZalogowany);
+            imie = methodController.getRodo(tfUser.getText(), methodController.get_SHA_512_SecurePassword(pfPassword.getText().toString(), "zakodowane"));
+            System.out.println("imie: " + imie);
+            System.out.println("login: " + tfUser.getText());
+            lbZalogowany = (imie + " " + tfUser.getText());
+            System.out.println("lblzalogowany: " + lbZalogowany);
 
             //dashboard.uprawnienia(stanowisko,lbZalogowany);
 
-            System.out.println(stanowisko+"   "+lbZalogowany);
+            System.out.println(stanowisko + "   " + lbZalogowany);
             log(b, event, lbZalogowany);
 
-        }else{
+        } else {
             alert();
         }
 
@@ -86,8 +88,7 @@ public class Login implements Initializable {
     }
 
 
-
-    public void log(boolean b, ActionEvent event,String lbZalogowany ) {
+    public void log(boolean b, ActionEvent event, String lbZalogowany) {
         if (b) {
             Parent root = null;
             try {
@@ -96,7 +97,7 @@ public class Login implements Initializable {
                 Stage stage = (Stage) node.getScene().getWindow();
                 stage.setScene(new Scene(root));
 
-              //  dashboard.uprawnienia(stanowisko, lbZalogowany);
+                //  dashboard.uprawnienia(stanowisko, lbZalogowany);
 
 
             } catch (IOException e) {
@@ -107,10 +108,7 @@ public class Login implements Initializable {
     }
 
 
-
-
-
-    public void alert(){
+    public void alert() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error Dialog");
         alert.setHeaderText("Zobacz co źle zrobiłeś");
@@ -120,6 +118,7 @@ public class Login implements Initializable {
 
     /**
      * Otwieranie okna rejestracji uzytkownikow
+     *
      * @param event
      * @throws IOException
      */
@@ -135,6 +134,7 @@ public class Login implements Initializable {
 
     /**
      * Iniciowanie bazy danych, pobieranie uzytkownikow
+     *
      * @param location
      * @param resources
      */
