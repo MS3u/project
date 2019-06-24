@@ -28,12 +28,9 @@
             <TableColumn fx:id="tPodzespoly" prefWidth="75.0" text="Podzespoły" />
         </columns>
       </TableView>
-      <TextField fx:id="tfNr" layoutX="399.0" layoutY="179.0" />
-      <TextField fx:id="tfStatus" layoutX="399.0" layoutY="228.0" />
-      <TextField fx:id="tfSerwisant" layoutX="399.0" layoutY="267.0" />
       <Button layoutX="422.0" layoutY="335.0" mnemonicParsing="false" onAction="#editStatus" prefHeight="25.0" prefWidth="103.0" text="Edycja statusu" />
       <Text layoutX="584.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nr Zlecenia" />
-      <Text layoutX="598.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
+      <Text layoutX="598.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sprzęt" />
       <Text layoutX="589.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Serwisant" />
       <ComboBox fx:id="cBox" layoutX="682.0" layoutY="179.0" prefWidth="150.0" />
       <ComboBox fx:id="cBox1" layoutX="682.0" layoutY="215.0" prefWidth="150.0" />

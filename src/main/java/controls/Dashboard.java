@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
@@ -28,6 +29,8 @@ public class Dashboard implements Initializable {
     @FXML  javafx.scene.control.Button btnMagazyn = new Button();
     @FXML  javafx.scene.control.Button btnSerwis = new Button();
     @FXML javafx.scene.text.Text lbZalogowany = new Text();
+    @FXML
+    private Label labelZalogowany;
 
     @FXML
     private Login login;
@@ -65,8 +68,10 @@ public class Dashboard implements Initializable {
         btnAdministracja.setDisable(true);
         btnMagazyn.setDisable(true);
         btnFaktury.setDisable(true);
+//        Login.lbzalogowany;
        // lbZalogowany.setText("zalogowany: "+Login.lbzalogowany.toString());
     //    System.out.println(strstanowisko);
+        labelZalogowany.setText(Login.lbzalogowany);
         if (Login.stanowisko.equals("serwis"))btnSerwis.setDisable(false);
         else if (Login.stanowisko.equals("ksiegowa"))btnFaktury.setDisable(false);
         else if (Login.stanowisko.equals("magazyn"))btnMagazyn.setDisable(false);

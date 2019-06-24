@@ -31,14 +31,14 @@ SET time_zone = "+00:00";
 CREATE TABLE `magazyn` (
   `id` int(11) NOT NULL,
   `nazwa` varchar(30) NOT NULL,
-  `cena` varchar(30) NOT NULL
+  `stan` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Zrzut danych tabeli `magazyn`
 --
 
-INSERT INTO `magazyn` (`id`, `nazwa`, `cena`) VALUES
+INSERT INTO `magazyn` (`id`, `nazwa`, `stan`) VALUES
 (1, 'gpu', '12');
 
 -- --------------------------------------------------------

@@ -28,9 +28,9 @@ MethodController methodController = new MethodController();
     @FXML
     public Label lblOpis;
 
-    public ComboBox cBox;
+    public ComboBox<Zlecenie> cBox;
     @FXML
-    public ComboBox cBox1;
+    public ComboBox<Magazyn> cBox1;
     @FXML
     public TextField tfNr;
     @FXML
@@ -39,6 +39,8 @@ MethodController methodController = new MethodController();
     public ComboBox statusBox;
     private Object magazyn;
     private Object zlecenie;
+
+
 
 
     @Override
@@ -72,11 +74,12 @@ MethodController methodController = new MethodController();
      * @param event
      */
     public void addStatus(ActionEvent event) {
-        magazyn =cBox.getSelectionModel().getSelectedItem();
-        zlecenie = cBox1.getSelectionModel().getSelectedItem();
+         Magazyn magazyn =cBox1.getSelectionModel().getSelectedItem();
+        int zlecenie = cBox.getSelectionModel().getSelectedItem().getId();
 
+        Serwis serwis = new Serwis(magazyn,"djasokdjl",zlecenie, Login.lbzalogowany  );
 
-
+        methodController.saveData(serwis);
 
     }
 }

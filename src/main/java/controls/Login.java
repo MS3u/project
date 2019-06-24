@@ -36,14 +36,10 @@ public class Login implements Initializable {
     @FXML
     public PasswordField pfPassword;
 
-    @FXML
-    public String lbZalogowany;
-
-
     boolean b = false;
 
-    public static String stanowisko = "";
-    public static String lbzalogowany = "";
+    public static String stanowisko;
+    public static String lbzalogowany;
     private List<Users> users;
 
 
@@ -72,13 +68,13 @@ public class Login implements Initializable {
             imie = methodController.getRodo(tfUser.getText(), methodController.get_SHA_512_SecurePassword(pfPassword.getText().toString(), "zakodowane"));
             System.out.println("imie: " + imie);
             System.out.println("login: " + tfUser.getText());
-            lbZalogowany = (imie + " " + tfUser.getText());
-            System.out.println("lblzalogowany: " + lbZalogowany);
+            lbzalogowany = (imie + " " + tfUser.getText());
+            System.out.println("lblzalogowany: " + lbzalogowany);
 
             //dashboard.uprawnienia(stanowisko,lbZalogowany);
 
-            System.out.println(stanowisko + "   " + lbZalogowany);
-            log(b, event, lbZalogowany);
+            System.out.println(stanowisko + "   " + lbzalogowany);
+            log(b, event, lbzalogowany);
 
         } else {
             alert();

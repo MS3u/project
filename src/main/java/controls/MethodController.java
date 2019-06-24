@@ -107,18 +107,16 @@ public class MethodController {
       //          .collect(Collectors.toList());
 //
  //   }
-     public void transactionStart() {
-        Transaction transaction = session.beginTransaction();
-        transaction.commit();
-    }
+
 
     /**
      * Zapis do bazy
      * @param object
      */
     public void saveData(Object object) {
-        transactionStart();
+        Transaction transaction = session.beginTransaction();
         session.save(object);
+        transaction.commit();
 
     }
 
@@ -127,8 +125,9 @@ public class MethodController {
      * @param object
      */
     public void update(Object object) {
-        transactionStart();
+        Transaction transaction = session.beginTransaction();
         session.merge(object);
+        transaction.commit();
     }
 
 

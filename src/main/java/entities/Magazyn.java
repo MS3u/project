@@ -1,7 +1,6 @@
 package entities;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "magazyn")
@@ -15,20 +14,16 @@ public class Magazyn {
     @Column(name = "nazwa", nullable = false, length = 30)
     private String nazwa;
 
-    @Column(name = "cena", nullable = false, length = 30)
-    private String cena;
+    @Column(name = "stan", nullable = false, length = 30)
+    private int stan;
 
 
 
-
-
-
-
-
-    public Magazyn(String nazwa, String cena) {
+    public Magazyn(String nazwa, int stan) {
         this.nazwa = nazwa;
-        this.cena = cena;
+        this.stan = stan;
     }
+
 
     public Magazyn() {
     }
@@ -49,14 +44,13 @@ public class Magazyn {
         this.nazwa = nazwa;
     }
 
-    public String getCena() {
-        return cena;
+    public int getStan() {
+        return stan;
     }
 
-    public void setCena(String cena) {
-        this.cena = cena;
+    public void setStan(int stan) {
+        this.stan = stan;
     }
-
 
 
     @Override
