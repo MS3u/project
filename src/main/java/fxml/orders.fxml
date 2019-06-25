@@ -22,23 +22,21 @@
         <TextField fx:id="tfPesel" layoutX="84.0" layoutY="165.0" prefHeight="25.0" prefWidth="149.0" promptText="Pesel" />
         <Separator layoutX="20.0" layoutY="94.0" prefHeight="3.0" prefWidth="600.0" />
         <Text layoutX="24.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klient:" />
-        <TextField fx:id="tfNrZlecenia" layoutX="84.0" layoutY="56.0" minWidth="-Infinity" prefHeight="25.0" prefWidth="149.0" promptText="nr zlecenia" />
         <Text layoutX="24.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zlecenie: " wrappingWidth="58.13671875" />
         <TextField fx:id="tfImie" layoutX="82.0" layoutY="120.0" prefHeight="25.0" prefWidth="149.0" promptText="Imię" />
         <TextField fx:id="tfNazwisko" layoutX="245.0" layoutY="122.0" prefHeight="25.0" prefWidth="174.0" promptText="Nazwisko" />
         <TextField fx:id="tfTelefon" layoutX="245.0" layoutY="165.0" prefHeight="25.0" prefWidth="174.0" promptText="telefon" />
         <TextField fx:id="tfOpis" layoutX="104.0" layoutY="212.0" prefHeight="25.0" prefWidth="487.0" />
         <TextField fx:id="dataPrzyjecia" layoutX="261.0" layoutY="56.0" prefHeight="25.0" prefWidth="174.0" promptText="dd/mm/rrrr" />
-      <TableView fx:id="tableOrders" layoutX="9.0" layoutY="255.0" prefHeight="263.0" prefWidth="858.0">
+      <TableView fx:id="tableOrders" layoutX="9.0" layoutY="255.0" onMouseClicked="#tableClick" prefHeight="263.0" prefWidth="858.0">
         <columns>
-            <TableColumn fx:id="tNr" prefWidth="34.0" text="Nr" />
+            <TableColumn fx:id="tId" prefWidth="75.0" text="Id" />
             <TableColumn fx:id="tImie" prefWidth="62.0" text="Imie" />
             <TableColumn fx:id="tNazwisko" prefWidth="75.0" text="Nazwisko" />
             <TableColumn fx:id="tPesel" prefWidth="75.0" text="Pesel" />
             <TableColumn fx:id="tTelefon" prefWidth="75.0" text="Telefon" />
             <TableColumn fx:id="tOpis" prefWidth="58.0" text="Opis" />
             <TableColumn fx:id="tData" prefWidth="61.0" text="Data" />
-            <TableColumn fx:id="tId" prefWidth="75.0" text="Id" />
         </columns>
       </TableView>
       <Button fx:id="btnDeleteOrder" layoutX="661.0" layoutY="177.0" mnemonicParsing="false" onAction="#deleteOrder" prefHeight="25.0" prefWidth="97.0" text="Usuń Zlecenie" textFill="RED" />
@@ -50,7 +48,6 @@
       <Text layoutX="245.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefon" />
       <Text layoutX="81.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imię" />
       <Text layoutX="245.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko" />
-      <Text layoutX="84.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nr Zlecenia" />
       <Text layoutX="261.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data dd/mm/rr" />
 
     </children>

@@ -1,81 +1,66 @@
 package entities;
 
 import javax.persistence.*;
-import java.util.Objects;
-import java.util.Set;
 
 @Entity
 @Table(name = "serwis")
 public class Serwis {
 
-private Magazyn magazyn;
-private Zlecenie zlecenie;
 
-
-
+    @ManyToOne
+    @JoinColumn(name = "magazyn_id")
+    public Magazyn magazyn;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true)
     private int id;
-
-
-    @Column(name ="magazyn_id")
-    public Magazyn getMagazyn(){
-        return magazyn;
-    }
-    private int zlecenie_id;
-
-
-    @Column(name = "zlecenie_id")
-    public Zlecenie getZlecenie(){
-        return zlecenie;
-    }
-    private int magazyn_id;
-
     @Column(name = "status", nullable = false, length = 30)
     private String status;
 
-    @Column(name = "serwisant", nullable = false, length = 30)
-    private String serwisant;
+    @ManyToOne
+    @JoinColumn(name = "zlecenie_id")
+    private Zlecenie zlecenie;
+
+    @ManyToOne
+    @JoinColumn(name = "serwisant_id")
+    private Users users;
 
 
-    public void setMagazyn(Magazyn magazyn) {
+    public Serwis(Magazyn magazyn, String status, Zlecenie zlecenie, Users users) {
         this.magazyn = magazyn;
-    }
-
-
-
-    public void setZlecenie(Zlecenie zlecenie) {
+        this.status = status;
         this.zlecenie = zlecenie;
+        this.users = users;
     }
 
-    public int getZlecenie_id() {
-        return zlecenie_id;
-    }
-
-    public void setZlecenie_id(int zlecenie_id) {
-        this.zlecenie_id = zlecenie_id;
-    }
-
-    public int getMagazyn_id() {
-        return magazyn_id;
-    }
-
-    public void setMagazyn_id(int magazyn_id) {
-        this.magazyn_id = magazyn_id;
-    }
-
-    public Serwis(int zlecenie_id, int magazyn_id) {
-        this.zlecenie_id = zlecenie_id;
-        this.magazyn_id = magazyn_id;
+    public Serwis(Zlecenie zlecenie, Magazyn magazyn) {
+        this.zlecenie = zlecenie;
+        this.magazyn = magazyn;
     }
 
     public Serwis() {
     }
 
+    public Zlecenie getZlecenie() {
+        return zlecenie;
+    }
+
+    public void setZlecenie(Zlecenie zlecenie) {
+        this.zlecenie = zlecenie;
+    }
+
+    public Magazyn getMagazyn() {
+        return magazyn;
+    }
+
+    public void setMagazyn(Magazyn magazyn) {
+        this.magazyn = magazyn;
+    }
+
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -89,11 +74,11 @@ private Zlecenie zlecenie;
         this.status = status;
     }
 
-    public String getSerwisant() {
-        return serwisant;
+    public Users getUsers() {
+        return users;
     }
 
-    public void setSerwisant(String serwisant) {
-        this.serwisant = serwisant;
+    public void setUsers(Users users) {
+        this.users = users;
     }
 }

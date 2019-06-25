@@ -16,8 +16,7 @@ public class Zlecenie {
     @Column(name = "id", unique = true)
     private int id;
 
-    @Column(name = "nr", nullable = false, length = 30)
-    private String nr;
+
 
     @Column(name = "imie", nullable = false, length = 30)
     private String imie;
@@ -41,13 +40,7 @@ public class Zlecenie {
         this.id = id;
     }
 
-    public String getNr() {
-        return nr;
-    }
 
-    public void setNr(String nr) {
-        this.nr = nr;
-    }
 
     public String getImie() {
         return imie;
@@ -104,8 +97,8 @@ public class Zlecenie {
         this.opis = opis;
     }
 
-    public Zlecenie(String nr, String imie, String nazwisko, String pesel, String telefon, String opis) {
-        this.nr = nr;
+    public Zlecenie(String dataPrzyjeciaText, String imie, String nazwisko, String pesel, String telefon, String opis) {
+        this.data = dataPrzyjeciaText;
         this.imie = imie;
         this.nazwisko = nazwisko;
         this.pesel = pesel;
@@ -116,8 +109,5 @@ public class Zlecenie {
     public Zlecenie() {
     }
 
-    @Override
-    public String toString() {
-        return nr;
-    }
+
 }

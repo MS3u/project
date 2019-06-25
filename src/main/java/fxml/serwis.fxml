@@ -19,7 +19,7 @@
 
     <children>
       <Label fx:id="lblOpis" layoutX="12.0" layoutY="160.0" prefHeight="17.0" prefWidth="852.0" text="Label" />
-      <Button layoutX="682.0" layoutY="303.0" mnemonicParsing="false" onAction="#addStatus" text="Przyjmij zlecenie" />
+      <Button layoutX="706.0" layoutY="93.0" mnemonicParsing="false" onAction="#addStatus" text="Przyjmij zlecenie" />
       <TableView fx:id="serwisTable" layoutX="10.0" layoutY="179.0" onMouseClicked="#tableSerwisClicked" prefHeight="200.0" prefWidth="372.0">
         <columns>
           <TableColumn fx:id="tNrZlecenia" prefWidth="85.0" text="Nr Zlecenia" />
@@ -28,16 +28,21 @@
             <TableColumn fx:id="tPodzespoly" prefWidth="75.0" text="Podzespoły" />
         </columns>
       </TableView>
-      <TextField fx:id="tfNr" layoutX="399.0" layoutY="179.0" />
-      <TextField fx:id="tfStatus" layoutX="399.0" layoutY="228.0" />
-      <TextField fx:id="tfSerwisant" layoutX="399.0" layoutY="267.0" />
-      <Button layoutX="422.0" layoutY="335.0" mnemonicParsing="false" onAction="#editStatus" prefHeight="25.0" prefWidth="103.0" text="Edycja statusu" />
-      <Text layoutX="584.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nr Zlecenia" />
-      <Text layoutX="598.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
-      <Text layoutX="589.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Serwisant" />
-      <ComboBox fx:id="cBox" layoutX="682.0" layoutY="179.0" prefWidth="150.0" />
-      <ComboBox fx:id="cBox1" layoutX="682.0" layoutY="215.0" prefWidth="150.0" />
-      <ComboBox fx:id="statusBox" layoutX="682.0" layoutY="255.0" prefWidth="150.0" />
+      <Button layoutX="422.0" layoutY="335.0" mnemonicParsing="false" onAction="#edytujSerwis" prefHeight="25.0" prefWidth="103.0" text="Edycja statusu" />
+      <Text layoutX="597.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sprzęt" />
+      <ComboBox fx:id="cBox1" layoutX="682.0" layoutY="49.0" prefWidth="150.0" />
+      <TableView fx:id="tableOrders" layoutX="9.0" layoutY="8.0" prefHeight="132.0" prefWidth="535.0">
+         <columns>
+            <TableColumn fx:id="tId" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="tImie" prefWidth="51.0" text="Imie" />
+            <TableColumn fx:id="tNazwisko" prefWidth="75.0" text="Nazwisko" />
+            <TableColumn fx:id="tPesel" prefWidth="75.0" text="Pesel" />
+            <TableColumn fx:id="tTelefon" prefWidth="75.0" text="Telefon" />
+            <TableColumn fx:id="tOpis" prefWidth="58.0" text="Opis" />
+            <TableColumn fx:id="tData" prefWidth="61.0" text="Data" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="edytujStatus" layoutX="415.0" layoutY="188.0" prefWidth="150.0" />
     </children>
     <padding>
         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />

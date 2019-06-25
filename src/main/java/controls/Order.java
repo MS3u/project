@@ -45,8 +45,6 @@ public class Order implements Initializable {
     public TableColumn<Zlecenie, String> tData;
     @FXML
     public TableColumn<Zlecenie, String> tId;
-   // @FXML
-   // public TableColumn<Orders, String> tSerwisant;
     @FXML
     public TableView<Zlecenie> tableOrders;
     @FXML
@@ -61,8 +59,6 @@ public class Order implements Initializable {
     public TextField tfTelefon;
     @FXML
     public TextField tfOpis;
-    @FXML
-    public TextField tfNrZlecenia;
     @FXML
     public Button addOrder;
     @FXML
@@ -83,7 +79,7 @@ public class Order implements Initializable {
         transaction.commit();
 
       tId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        tNr.setCellValueFactory(new PropertyValueFactory<>("nr"));
+
         tImie.setCellValueFactory(new PropertyValueFactory<>("imie"));
         tNazwisko.setCellValueFactory(new PropertyValueFactory<>("nazwisko"));
         tPesel.setCellValueFactory(new PropertyValueFactory<>("pesel"));
@@ -105,14 +101,13 @@ public class Order implements Initializable {
      */
     public void addOrder() {
         String dataPrzyjeciaText = dataPrzyjecia.getText();
-        String nrZleceniaText = tfNrZlecenia.getText();
         String imieText = tfImie.getText();
         String nazwiskoTextskoT = tfNazwisko.getText();
         String peselText = tfPesel.getText();
         String telefonText = tfTelefon.getText();
         String opisText = tfOpis.getText();
 
-Zlecenie user= new Zlecenie(nrZleceniaText, imieText, nazwiskoTextskoT, peselText, telefonText, opisText);
+Zlecenie user= new Zlecenie(dataPrzyjeciaText, imieText, nazwiskoTextskoT, peselText, telefonText, opisText);
 
         methodController.saveData(user);
         clearData();
@@ -125,7 +120,6 @@ Zlecenie user= new Zlecenie(nrZleceniaText, imieText, nazwiskoTextskoT, peselTex
         tfImie.clear();
         tfNazwisko.clear();
         tfOpis.clear();
-        tfNrZlecenia.clear();
         tfPesel.clear();
         tfTelefon.clear();
        // tfSerwisant.clear();
@@ -169,35 +163,24 @@ Zlecenie user= new Zlecenie(nrZleceniaText, imieText, nazwiskoTextskoT, peselTex
 
 
     }
+    public void tableClick() {
+        Zlecenie clicked = tableOrders.getSelectionModel().getSelectedItem();
+        dataPrzyjecia.setText(clicked.getData());
+        tfImie.setText(clicked.getImie());
+        tfNazwisko.setText(clicked.getNazwisko());
+        tfOpis.setText(clicked.getOpis());
+        tfTelefon.setText(clicked.getTelefon());
+        tfPesel.setText(clicked.getPesel());
+    }
 
-
-  @FXML
-   public void tableClick(MouseEvent mouseEvent) {
-   //    Orders clicked = tableOrders.getSelectionModel().getSelectedItem();
-   //   tfNrZlecenia.setText(clicked.getNrZlecenia());
-    //  dataPrzyjecia.setText(clicked.getDataPrzyjecia());
-//        tfImie.setText(clicked.getImie());
-//        tfNazwisko.setText(clicked.getNazwisko());
-//        tfNip.setText(clicked.getNip());
-//        tfMiasto.setText(clicked.getMiasto());
-//        tfUlica.setText(clicked.getUlica());
-//        tfNrDomu.setText(clicked.getNrDomu());
-//        tfNrLokalu.setText(clicked.getNrLokalu());
-//        tfOpis.setText(clicked.getOpis());
-//        tfSerwisant.setText(clicked.getSerwisant());
-//    }
-//    @FXML
-//    public void tableClick(javafx.event.ActionEvent event) {
-//        editOrder(event);
-   }
 
     /**
      * usuwanie zlecenia
      * @param event
      */
-    public void deleteOrder(javafx.event.ActionEvent event) {
-        Zlecenie user = tableOrders.getSelectionModel().getSelectedItem();
-        //methodController.deleteFromDb(orders);
+    public void deleteOrder() {
+        Zlecenie zlecenie = tableOrders.getSelectionModel().getSelectedItem();
+        methodController.deleteFromDb(zlecenie);
         clearData();
         refreshItemsList();
     }
@@ -269,5 +252,7 @@ Zlecenie user= new Zlecenie(nrZleceniaText, imieText, nazwiskoTextskoT, peselTex
 
     public void editOrder(javafx.event.ActionEvent event) {
     }
+
+
 }
 

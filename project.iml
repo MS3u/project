@@ -4,7 +4,7 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" value="582e1156-1ebc-4f66-9450-eefed467b65f" />
+          <unit-entry name="hibernate.cfg.xml" value="6088be67-2cb7-4545-947e-21821d6304de" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
@@ -14,7 +14,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
-          <factory-entry name="noname-persistence.xml@118" value="a11ae22a-5a85-4086-b0b1-3fddf2a9f00b" />
+          <factory-entry name="noname-persistence.xml@118" />
         </datasource-mapping>
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/META-INF/persistence.xml" />

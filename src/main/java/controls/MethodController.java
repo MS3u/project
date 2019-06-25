@@ -16,6 +16,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Klasa sterujaca Hibernate
@@ -94,6 +95,18 @@ public class MethodController {
         List<Magazyn> books = session.createQuery("from Magazyn").getResultList();
         return books;
     }
+
+    public List<Serwis> getAllSerwis(){
+        List<Serwis> serwis = session.createQuery("from Serwis").getResultList();
+        return serwis;
+    }
+
+    public List<Integer> getPodezpolIds(){
+        List<Serwis> magazyns = session.createQuery("from Serwis").getResultList();
+        return magazyns.stream()
+                .map(serwis -> serwis.getMagazyn().getId())
+                .collect(Collectors.toList());
+    }
    /// public Set<Zlecenie> getZlecenie() {
          ///   Set<Zlecenie> zlecenie = (Set<Zlecenie>) session.createQuery("from Zlecenie").getResultList();
        /// return zlecenie;
@@ -107,18 +120,16 @@ public class MethodController {
       //          .collect(Collectors.toList());
 //
  //   }
-     public void transactionStart() {
-        Transaction transaction = session.beginTransaction();
-        transaction.commit();
-    }
+
 
     /**
      * Zapis do bazy
      * @param object
      */
     public void saveData(Object object) {
-        transactionStart();
+        Transaction transaction = session.beginTransaction();
         session.save(object);
+        transaction.commit();
 
     }
 
@@ -127,8 +138,9 @@ public class MethodController {
      * @param object
      */
     public void update(Object object) {
-        transactionStart();
+        Transaction transaction = session.beginTransaction();
         session.merge(object);
+        transaction.commit();
     }
 
 
@@ -212,7 +224,10 @@ public void updateOder(int id,
     }
 
 
-    public void deleteFromDb(Users storage) {
+    public void deleteFromDb(Object object) {
+        Transaction transaction = session.beginTransaction();
+        session.delete(object);
+        transaction.commit();
     }
 }
 
