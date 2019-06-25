@@ -129,22 +129,22 @@ public class Dashboard implements Initializable {
             dialog.setContentText("Wpisz haslo:");
 
 // Traditional way to get the response value.
-            Optional<String> result = dialog.showAndWait();
+          /**  Optional<String> result = dialog.showAndWait();
             if (result.isPresent()) {
                 Users userAuth = new Users(result.get());
 
                 List<Users> serAuth = users.stream()
                         .filter(u -> u.getStanowisko().equals(userAuth.getStanowisko()))
                         .collect(Collectors.toList());
-                if (!serAuth.isEmpty()) {
+                if (!serAuth.isEmpty()) {*/
                     Parent noweOkno = FXMLLoader.load(getClass().getResource("/fxml/administration.fxml"));
                     borderPane.setCenter(noweOkno);
-                } else {
+               /** } else {
                     Parent noweOkno = FXMLLoader.load(getClass().getResource("/fxml/info.fxml"));
                     borderPane.setCenter(noweOkno);
                 }
 
-            }
+            }*/
 
     }
     /**
