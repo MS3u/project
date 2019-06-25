@@ -1,3 +1,4 @@
+import entities.Magazyn;
 import entities.Users;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -63,11 +64,11 @@ public class test {
         );
 
     }
-   /** @Test
+   @Test
     public void stanmniejszy0() {
-       Storage storage = new Storage(-1);
+       Magazyn storage = new Magazyn(-1);
 
-        Set<ConstraintViolation<Storage>> constraintViolations = validator.validate(storage);
+        Set<ConstraintViolation<Magazyn>> constraintViolations = validator.validate(storage);
 
         Assert.assertEquals(1, constraintViolations.size());
         Assert.assertEquals(
@@ -75,6 +76,6 @@ public class test {
                 constraintViolations.iterator().next().getMessage()
         );
 
-    }*/
+    }
 
 }

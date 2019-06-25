@@ -3,13 +3,18 @@
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.AdminPanel">
+<AnchorPane prefHeight="472.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.AdminPanel">
    <children>
-      <TableView fx:id="tableUsers" layoutX="14.0" layoutY="14.0" onMouseClicked="#tableClick" prefHeight="200.0" prefWidth="387.0">
+      <TableView fx:id="tableUsers" layoutX="22.0" layoutY="67.0" onMouseClicked="#tableClick" prefHeight="200.0" prefWidth="374.0">
         <columns>
           <TableColumn fx:id="tId" prefWidth="75.0" text="Id" />
           <TableColumn fx:id="tImie" prefWidth="75.0" text="Imię" />
@@ -18,12 +23,21 @@
             <TableColumn fx:id="tHaslo" prefWidth="75.0" text="Hasło" />
         </columns>
       </TableView>
-      <Button layoutX="106.0" layoutY="259.0" mnemonicParsing="false" onAction="#addUser" text="Dodaj uzytkownika" />
-      <Button layoutX="452.0" layoutY="259.0" mnemonicParsing="false" onAction="#deleteUser" text="Usuń" />
-      <Button layoutX="261.0" layoutY="259.0" mnemonicParsing="false" onAction="#editUser" prefHeight="25.0" prefWidth="99.0" text="Edycja" />
-      <TextField fx:id="tfImie" layoutX="421.0" layoutY="22.0" />
-      <TextField fx:id="tfNazwisko" layoutX="421.0" layoutY="64.0" />
-      <TextField fx:id="tfStanowisko" layoutX="421.0" layoutY="114.0" />
-      <TextField fx:id="tfHaslo" layoutX="421.0" layoutY="162.0" />
+      <Button layoutX="338.0" layoutY="288.0" mnemonicParsing="false" onAction="#addUser" text="Dodaj uzytkownika" />
+      <Button layoutX="338.0" layoutY="369.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="117.0" text="Usuń" />
+      <Button layoutX="338.0" layoutY="328.0" mnemonicParsing="false" onAction="#editUser" prefHeight="25.0" prefWidth="117.0" text="Edycja" />
+      <TextField fx:id="tfImie" layoutX="134.0" layoutY="288.0" promptText="imię" />
+      <TextField fx:id="tfNazwisko" layoutX="134.0" layoutY="319.0" promptText="nazwisko" />
+      <TextField fx:id="tfStanowisko" layoutX="134.0" layoutY="348.0" promptText="stanowisko" />
+      <TextField fx:id="tfHaslo" layoutX="134.0" layoutY="377.0" promptText="hasło" />
+      <Label layoutX="51.0" layoutY="292.0" text="Imie" />
+      <Label layoutX="51.0" layoutY="323.0" text="Nazwisko" />
+      <Label layoutX="52.0" layoutY="352.0" text="Stanowisko" />
+      <Label layoutX="51.0" layoutY="381.0" text="Hasło" />
+      <Label layoutX="102.0" layoutY="25.0" prefHeight="28.0" prefWidth="246.0" text="Zarządzanie użytkownikami">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

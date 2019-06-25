@@ -61,8 +61,11 @@ public class Magazyn {
     }
 
 
+
     @Override
     public String toString() {
         return nazwa;
     }
+
+
 }

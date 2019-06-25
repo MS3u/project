@@ -30,8 +30,6 @@ import java.util.ResourceBundle;
 public class Order implements Initializable {
 
     @FXML
-    public TableColumn<Zlecenie, String> tNr;
-    @FXML
     public TableColumn<Zlecenie, String> tImie;
     @FXML
     public TableColumn<Zlecenie, String> tNazwisko;
@@ -62,13 +60,10 @@ public class Order implements Initializable {
     @FXML
     public Button addOrder;
     @FXML
-    public Button btnClear;
-    @FXML
     public Button btnEdit;
     public Button btnDeleteOrder;
     private Stage stage;
-    @FXML
-    private Button edit;
+
     /**
      * Ladownie danych do tabeli
      * @param event
@@ -94,6 +89,9 @@ public class Order implements Initializable {
 
     }
 
+    /**
+     * methodController obsluguje czynnosci zwiazaen z obsluga bazy danych
+     */
     private MethodController methodController = new MethodController();
     public ObservableList<Zlecenie> ObservableListItems;
 
@@ -115,6 +113,10 @@ Zlecenie user= new Zlecenie(dataPrzyjeciaText, imieText, nazwiskoTextskoT, pesel
         refreshItemsList();
 
     }
+
+    /**
+     * metoda do usuwania warosci z pol tekstowych
+     */
     @FXML
     private void clearData() {
         dataPrzyjecia.clear();
@@ -141,8 +143,11 @@ Zlecenie user= new Zlecenie(dataPrzyjeciaText, imieText, nazwiskoTextskoT, pesel
     }
 
 
-
-
+    /**
+     * Inicjalizacja bazy danych oraz metod obslugujacych zawarosci tabel - odświeżanie danych
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         methodController.initDb();
@@ -153,9 +158,7 @@ Zlecenie user= new Zlecenie(dataPrzyjeciaText, imieText, nazwiskoTextskoT, pesel
 
     }
 
-   // public void tableClick() {
-        //Zlecenie clicked = tableOrders.getSelectionModel().getSelectedItem();
-                      //  }
+
    public void addToTextField(javafx.event.ActionEvent event) {
         Zlecenie clicked = tableOrders.getSelectionModel().getSelectedItem();
         dataPrzyjecia.setText(clicked.getData());
@@ -168,7 +171,6 @@ Zlecenie user= new Zlecenie(dataPrzyjeciaText, imieText, nazwiskoTextskoT, pesel
 
     /**
      * usuwanie zlecenia
-     * @param event
      */
     public void deleteOrder() {
         Zlecenie zlecenie = tableOrders.getSelectionModel().getSelectedItem();
@@ -199,9 +201,10 @@ Zlecenie user= new Zlecenie(dataPrzyjeciaText, imieText, nazwiskoTextskoT, pesel
 
     }
 
-    public void clear(javafx.event.ActionEvent event) {
-        clearData();
-    }
+    /**
+     * Edycja zlecenia
+     * @param event
+     */
 
     public void editOrder(javafx.event.ActionEvent event) {
 

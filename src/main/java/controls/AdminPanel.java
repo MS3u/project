@@ -74,7 +74,7 @@ public class AdminPanel implements Initializable {
     public void addUser(javafx.event.ActionEvent event) {
         Users user = new Users(
                 tfImie.getText(),
-                tfNazwisko.getText(),
+               methodController.get_SHA_512_SecurePassword(  tfNazwisko.getText(),"zakodowane"),
                 tfHaslo.getText(),
                 tfStanowisko.getText());
 
@@ -100,7 +100,7 @@ public class AdminPanel implements Initializable {
         String imie = tfImie.getText();
         String nazwisko = tfNazwisko.getText();
         String stanowisko = tfStanowisko.getText();
-        String haslo = tfHaslo.getText();
+        String haslo = methodController.get_SHA_512_SecurePassword(tfHaslo.getText(),"zakodowane");
         Users updateUser = new Users(id, imie, nazwisko, stanowisko, haslo);
         methodController.update(updateUser);
         refreshItemsList();
@@ -130,7 +130,7 @@ public class AdminPanel implements Initializable {
         tfImie.setText(clicked.getImie());
         tfNazwisko.setText(clicked.getNazwisko());
         tfStanowisko.setText(clicked.getStanowisko());
-        tfHaslo.setText(clicked.getHaslo());
+      tfHaslo.setText(clicked.getHaslo());
     }
 
     /**
