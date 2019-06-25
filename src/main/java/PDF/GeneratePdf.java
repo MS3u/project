@@ -20,7 +20,7 @@ public class GeneratePdf {
         Connection connection = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/projekt1?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/basa?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "");
 
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
@@ -40,7 +40,7 @@ public class GeneratePdf {
         PreparedStatement ps;
         ResultSet rs;
 
-        String orderQuery = "select nrZlecenia, dataPrzyjecia, imie, nazwisko ,nazwisko , NIP  ,opis from  orders ";
+        String orderQuery = "select id,imie, nazwisko, pesel, opis ,data  from  zlecenie ";
 
         ps = connection.prepareStatement(orderQuery);
         rs = ps.executeQuery();
@@ -49,12 +49,12 @@ public class GeneratePdf {
         table.setHeaderRows(1);
 
         while (rs.next()) {
-            table.addCell(rs.getString("nrZlecenia"));
-            table.addCell(rs.getString("dataPrzyjecia"));
+            table.addCell(rs.getString("id"));
             table.addCell(rs.getString("imie"));
             table.addCell(rs.getString("nazwisko"));
-            table.addCell(rs.getString("NIP"));
+            table.addCell(rs.getString("pesel"));
             table.addCell(rs.getString("opis"));
+            table.addCell(rs.getString("data"));
         }
         document.add(table);
         document.newPage();
@@ -66,7 +66,7 @@ public class GeneratePdf {
         createSingleCell(table, "Data Przyjęcia");
         createSingleCell(table, "Imie");
         createSingleCell(table, "Nazwisko");
-        createSingleCell(table, "NIP");
+        createSingleCell(table, "Pesel");
         createSingleCell(table, "Opis usterki");
     }
 

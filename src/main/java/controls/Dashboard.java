@@ -115,11 +115,7 @@ public class Dashboard implements Initializable {
         stage.show();
     }
 
-    public void openFaktury(ActionEvent event)  throws IOException {
-            Parent noweOkno = FXMLLoader.load(getClass().getResource("/fxml/fVat.fxml"));
-            borderPane.setCenter(noweOkno);
 
-    }
 
     /**
      * Otwiera okno panuelu administracyjnego

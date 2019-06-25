@@ -52,8 +52,7 @@ public class cSerwis implements Initializable {
     public TableColumn<Zlecenie, String> tId;
     @FXML
     public TableView<Zlecenie> tableOrders;
-    public ObservableList<Zlecenie> ObservableListItems;
-    MethodController methodController = new MethodController();
+
     @FXML
     private TableColumn<Serwis, String> tSerwisant;
     @FXML
@@ -66,9 +65,17 @@ public class cSerwis implements Initializable {
     private TableView<Serwis> serwisTable;
     @FXML
     private ComboBox<String> edytujStatus;
+    @FXML
+    private Button btnDelete;
+
     private Object magazyn;
     private Object zlecenie;
     private int id;
+
+
+    public ObservableList<Zlecenie> ObservableListItems;
+    MethodController methodController = new MethodController();
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -76,7 +83,7 @@ public class cSerwis implements Initializable {
         zaladujDaneDoTabeliSerwisu();
         refreshMagazyn();
         loadDataToTable();
-        edytujStatus.getItems().addAll("W realizacji" , "Zakończone");
+        edytujStatus.getItems().addAll("W realizacji", "Zakonczone");
     }
 
     private void refreshMagazyn() {
@@ -153,7 +160,7 @@ public class cSerwis implements Initializable {
         Transaction transaction = methodController.session.beginTransaction();
         methodController.session.merge(magazyn);
         transaction.commit();
-
+        refreshSerwisTable();
     }
 
     private Users zalogowanyUzytkownik() {
@@ -185,7 +192,7 @@ public class cSerwis implements Initializable {
     }
 
     @FXML
-    private void edytujSerwis(ActionEvent event){
+    private void edytujSerwis(ActionEvent event) {
         Serwis serwis = serwisTable.getSelectionModel().getSelectedItem();
         String selectedItem = edytujStatus.getSelectionModel().getSelectedItem();
         Magazyn magazyn = cBox1.getSelectionModel().getSelectedItem();
@@ -195,7 +202,34 @@ public class cSerwis implements Initializable {
         Transaction transaction = methodController.session.beginTransaction();
         methodController.session.merge(serwis);
         transaction.commit();
+        refreshSerwisTable();
+    }
+
+    /**
+     * Usuwanie serwisu
+     *
+     * @param event
+     */
+    public void deleteSerwisFromTable(ActionEvent event) {
+        Serwis serwis = serwisTable.getSelectionModel().getSelectedItem();
+        methodController.deleteFromDb(serwis);
+        refreshMagazyn();
+        refreshSerwisTable();
 
     }
+    @FXML
+    private void refreshSerwisTable() {
+        Transaction transaction = methodController.session.beginTransaction();
+        List serwis = methodController.session.createCriteria(Serwis.class).list();
+        transaction.commit();
+
+        ObservableList serwisList = FXCollections.observableArrayList(serwis);
+        serwisTable.setItems(serwisList);
+        serwisTable.refresh();
+
+    }
+
+
 }
+
 

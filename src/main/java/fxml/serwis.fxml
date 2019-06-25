@@ -15,34 +15,43 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="btnPrzypisz" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.cSerwis">
+<AnchorPane fx:id="btnPrzypisz" prefHeight="381.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.cSerwis">
 
     <children>
-      <Label fx:id="lblOpis" layoutX="12.0" layoutY="160.0" prefHeight="17.0" prefWidth="852.0" text="Label" />
-      <Button layoutX="706.0" layoutY="93.0" mnemonicParsing="false" onAction="#addStatus" text="Przyjmij zlecenie" />
-      <TableView fx:id="serwisTable" layoutX="10.0" layoutY="179.0" onMouseClicked="#tableSerwisClicked" prefHeight="200.0" prefWidth="372.0">
+      <Button layoutX="641.0" layoutY="177.0" mnemonicParsing="false" onAction="#addStatus" text="Przyjmij zlecenie" />
+      <TableView fx:id="serwisTable" layoutX="9.0" layoutY="239.0" onMouseClicked="#tableSerwisClicked" prefHeight="228.0" prefWidth="302.0">
         <columns>
           <TableColumn fx:id="tNrZlecenia" prefWidth="85.0" text="Nr Zlecenia" />
           <TableColumn fx:id="tStatus" prefWidth="65.0" text="Status" />
             <TableColumn fx:id="tSerwisant" prefWidth="75.0" text="Serwisant" />
-            <TableColumn fx:id="tPodzespoly" prefWidth="75.0" text="Podzespoły" />
+            <TableColumn fx:id="tPodzespoly" prefWidth="75.0" text="Użyta część" />
         </columns>
       </TableView>
-      <Button layoutX="422.0" layoutY="335.0" mnemonicParsing="false" onAction="#edytujSerwis" prefHeight="25.0" prefWidth="103.0" text="Edycja statusu" />
-      <Text layoutX="597.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sprzęt" />
-      <ComboBox fx:id="cBox1" layoutX="682.0" layoutY="49.0" prefWidth="150.0" />
-      <TableView fx:id="tableOrders" layoutX="9.0" layoutY="8.0" prefHeight="132.0" prefWidth="535.0">
+      <Button layoutX="331.0" layoutY="294.0" mnemonicParsing="false" onAction="#edytujSerwis" prefHeight="25.0" prefWidth="103.0" text="Zmiana statusu" />
+      <Text layoutX="513.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dodaj do zlecenia" />
+      <ComboBox fx:id="cBox1" layoutX="624.0" layoutY="86.0" prefWidth="150.0" />
+      <TableView fx:id="tableOrders" layoutX="9.0" layoutY="29.0" prefHeight="179.0" prefWidth="481.0">
          <columns>
-            <TableColumn fx:id="tId" prefWidth="75.0" text="Id" />
-            <TableColumn fx:id="tImie" prefWidth="51.0" text="Imie" />
-            <TableColumn fx:id="tNazwisko" prefWidth="75.0" text="Nazwisko" />
-            <TableColumn fx:id="tPesel" prefWidth="75.0" text="Pesel" />
+            <TableColumn fx:id="tId" prefWidth="53.0" text="Id" />
+            <TableColumn fx:id="tImie" prefWidth="56.0" text="Imie" />
+            <TableColumn fx:id="tNazwisko" prefWidth="77.0" text="Nazwisko" />
+            <TableColumn fx:id="tPesel" prefWidth="90.0" text="Pesel" />
             <TableColumn fx:id="tTelefon" prefWidth="75.0" text="Telefon" />
             <TableColumn fx:id="tOpis" prefWidth="58.0" text="Opis" />
-            <TableColumn fx:id="tData" prefWidth="61.0" text="Data" />
+            <TableColumn fx:id="tData" prefWidth="71.0" text="Data" />
          </columns>
       </TableView>
-      <ComboBox fx:id="edytujStatus" layoutX="415.0" layoutY="188.0" prefWidth="150.0" />
+      <ComboBox fx:id="edytujStatus" layoutX="624.0" layoutY="139.0" prefWidth="150.0" />
+      <Label layoutX="640.0" layoutY="63.0" text="Części w magazynie" />
+      <Label layoutX="653.0" layoutY="115.0" text="Statusy zlecenia" />
+      <Label layoutX="504.0" layoutY="143.0" text="Dodaj status zleceniu" />
+      <Button fx:id="btnDelete" layoutX="331.0" layoutY="368.0" mnemonicParsing="false" onAction="#deleteSerwisFromTable" prefHeight="25.0" prefWidth="103.0" text="Usuń " />
+      <Label layoutX="343.0" layoutY="226.0" text="Edycja Serwisu" />
+      <Label layoutX="615.0" layoutY="21.0" text="Przyjmij serwis" />
+      <Label layoutX="326.0" layoutY="270.0" text="Zmień status zlecenia" />
+      <Label layoutX="350.0" layoutY="344.0" text="Usuń Serwis" />
+      <Label layoutX="45.0" layoutY="219.0" text="Wyświetlanie Aktualnych serwisów " />
+      <Label layoutX="140.0" layoutY="6.0" text="Informacja o przyjętych zleceniach" />
     </children>
     <padding>
         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />

@@ -12,10 +12,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import org.hibernate.Transaction;
 import java.awt.event.ActionEvent;
-import java.awt.event.MouseEvent;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -67,7 +67,8 @@ public class Order implements Initializable {
     public Button btnEdit;
     public Button btnDeleteOrder;
     private Stage stage;
-
+    @FXML
+    private Button edit;
     /**
      * Ladownie danych do tabeli
      * @param event
@@ -122,7 +123,6 @@ Zlecenie user= new Zlecenie(dataPrzyjeciaText, imieText, nazwiskoTextskoT, pesel
         tfOpis.clear();
         tfPesel.clear();
         tfTelefon.clear();
-       // tfSerwisant.clear();
     }
 
     /**
@@ -141,19 +141,7 @@ Zlecenie user= new Zlecenie(dataPrzyjeciaText, imieText, nazwiskoTextskoT, pesel
     }
 
 
-//    public void clearData(javafx.event.ActionEvent event) {
-//        dataPrzyjecia.clear();
-//        tfImie.clear();
-//        tfNazwisko.clear();
-//        tfMiasto.clear();
-//        tfNrDomu.clear();
-//        tfNrLokalu.clear();
-//        tfOpis.clear();
-//        tfNrZlecenia.clear();
-//        tfUlica.clear();
-//        tfNip.clear();
-//        tfSerwisant.clear();
-//    }
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -162,8 +150,13 @@ Zlecenie user= new Zlecenie(dataPrzyjeciaText, imieText, nazwiskoTextskoT, pesel
         refreshItemsList();
 
 
+
     }
-    public void tableClick() {
+
+   // public void tableClick() {
+        //Zlecenie clicked = tableOrders.getSelectionModel().getSelectedItem();
+                      //  }
+   public void addToTextField(javafx.event.ActionEvent event) {
         Zlecenie clicked = tableOrders.getSelectionModel().getSelectedItem();
         dataPrzyjecia.setText(clicked.getData());
         tfImie.setText(clicked.getImie());
@@ -172,7 +165,6 @@ Zlecenie user= new Zlecenie(dataPrzyjeciaText, imieText, nazwiskoTextskoT, pesel
         tfTelefon.setText(clicked.getTelefon());
         tfPesel.setText(clicked.getPesel());
     }
-
 
     /**
      * usuwanie zlecenia
@@ -192,45 +184,6 @@ Zlecenie user= new Zlecenie(dataPrzyjeciaText, imieText, nazwiskoTextskoT, pesel
      */
   /**  public void editOrder(javafx.event.ActionEvent event) {
 
-        if(btnEdit.getText().equals("Edycja Zlecenia")) {
-
-            btnEdit.setText("Zapisz");
-
-            User orders = tableOrders.getSelectionModel().getSelectedItem();
-            tfNrZlecenia.setText(orders.());
-            dataPrzyjecia.setText(orders.ge());
-            tfImie.setText(orders.getImie());
-            tfNazwisko.setText(orders.getNazwisko());
-            tfNip.setText(orders.getNip());
-            tfMiasto.setText(orders.getMiasto());
-            tfUlica.setText(orders.getUlica());
-            tfNrDomu.setText(orders.getNrDomu());
-            tfNrLokalu.setText(orders.getNrLokalu());
-            tfOpis.setText(orders.getOpis());
-            refreshItemsList();
-//            tfSerwisant.setText(orders.getSerwisant());
-        }else {
-            btnEdit.setText("Edycja Zlecenia");
-
-            String dataPrzyjeciaText = dataPrzyjecia.getText();
-            String nrZleceniaText = tfNrZlecenia.getText();
-            String imieText = tfImie.getText();
-            String nazwiskoTextskoT = tfNazwisko.getText();
-            String nipText = tfNip.getText();
-            String miastoTexttoT = tfMiasto.getText();
-            String ulicaTextcaT = tfUlica.getText();
-            String nrDomuText = tfNrDomu.getText();
-            String nrLokauText = tfNrLokalu.getText();
-            String opiStext = tfOpis.getText();
-            String serwisantText = "";
-            int id = tableOrders.getSelectionModel().getSelectedItem().getId();
-            methodController.updateOder(id, dataPrzyjeciaText, nrZleceniaText,
-                    imieText, nazwiskoTextskoT, miastoTexttoT, ulicaTextcaT, nrDomuText, nrLokauText, nipText, serwisantText, opiStext);
-
-           // methodController.update(updateOrders);
-            refreshItemsList();
-        }
-    }*/
 
     /**
      * generowaenie pdf zlecen
@@ -251,6 +204,7 @@ Zlecenie user= new Zlecenie(dataPrzyjeciaText, imieText, nazwiskoTextskoT, pesel
     }
 
     public void editOrder(javafx.event.ActionEvent event) {
+
         String data = dataPrzyjecia.getText();
         String imie = tfImie.getText();
         String nazwisko = tfNazwisko.getText();
@@ -263,9 +217,11 @@ Zlecenie user= new Zlecenie(dataPrzyjeciaText, imieText, nazwiskoTextskoT, pesel
         methodController.update(edycjaZlecenia);
         clearData();
         refreshItemsList();
-        
+
     }
 
 
+    public void tableClick(MouseEvent mouseEvent) {
+    }
 }
 
