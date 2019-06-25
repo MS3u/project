@@ -1,6 +1,7 @@
 package entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 
 @Entity
 @Table(name = "magazyn")
@@ -15,6 +16,7 @@ public class Magazyn {
     private String nazwa;
 
     @Column(name = "stan", nullable = false, length = 30)
+    @Min(0)
     private int stan;
 
 

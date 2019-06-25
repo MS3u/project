@@ -50,17 +50,15 @@ public class Dashboard implements Initializable {
 
 
 
-//    @FXML
-//    public void  uprawnienia(String Stanowisko, String lbZalogowany) {
-//
-//
-//        btnSerwis.setText("test");
-//        strstanowisko = Stanowisko;
-//        strzalogowany = lbZalogowany;
-//        System.out.println("stanowiskoupr:  "+strstanowisko+",   lblzalogowany: "+strzalogowany);
-//
-//
-//    }
+private Users zalogowanyUzytkownik() {
+    List<Users> users = methodController.getUsers();
+
+    List<Users> collect = users.stream()
+            .filter(users1 -> users1.getId() == Login.id)
+            .collect(Collectors.toList());
+
+    return collect.get(0);
+}
     @FXML
     private void uprawnienia(){
         btnSerwis.setDisable(true);
@@ -123,28 +121,27 @@ public class Dashboard implements Initializable {
      * @throws IOException
      */
     public void openAdministracja(ActionEvent event) throws IOException {
-            TextInputDialog dialog = new TextInputDialog("");
-            dialog.setTitle("Alert");
-            dialog.setHeaderText("Dodatkowe zabezpieczenie");
-            dialog.setContentText("Wpisz haslo:");
+        TextInputDialog dialog = new TextInputDialog("");
+        dialog.setTitle("Alert");
+        dialog.setHeaderText("Dodatkowe zabezpieczenie");
+        dialog.setContentText("Wpisz haslo:");
 
-// Traditional way to get the response value.
-          /**  Optional<String> result = dialog.showAndWait();
-            if (result.isPresent()) {
-                Users userAuth = new Users(result.get());
+        Optional<String> result = dialog.showAndWait();
+        if (result.isPresent()) {
+            String haslo = zalogowanyUzytkownik().getHaslo();
 
-                List<Users> serAuth = users.stream()
-                        .filter(u -> u.getStanowisko().equals(userAuth.getStanowisko()))
-                        .collect(Collectors.toList());
-                if (!serAuth.isEmpty()) {*/
-                    Parent noweOkno = FXMLLoader.load(getClass().getResource("/fxml/administration.fxml"));
-                    borderPane.setCenter(noweOkno);
-               /** } else {
-                    Parent noweOkno = FXMLLoader.load(getClass().getResource("/fxml/info.fxml"));
-                    borderPane.setCenter(noweOkno);
-                }
+            List<Users> serAuth = users.stream()
+                    .filter(u -> u.getHaslo().equals(haslo))
+                    .collect(Collectors.toList());
+            if (!serAuth.isEmpty()) {
+                Parent noweOkno = FXMLLoader.load(getClass().getResource("/fxml/administration.fxml"));
+                borderPane.setCenter(noweOkno);
+            } else {
+                Parent noweOkno = FXMLLoader.load(getClass().getResource("/fxml/info.fxml"));
+                borderPane.setCenter(noweOkno);
+            }
 
-            }*/
+        }
 
     }
     /**

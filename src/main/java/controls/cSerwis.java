@@ -147,20 +147,25 @@ public class cSerwis implements Initializable {
         Magazyn magazyn = cBox1.getSelectionModel().getSelectedItem();
 
         Zlecenie zlecenie = tableOrders.getSelectionModel().getSelectedItem();
-
+        String selectedItem = edytujStatus.getSelectionModel().getSelectedItem();
         Users users1 = zalogowanyUzytkownik();
 
 
-        Serwis serwis = new Serwis(magazyn, "Nie rozpoczęte", zlecenie, users1);
+        Serwis serwis = new Serwis(magazyn, selectedItem, zlecenie, users1);
 
         int stan = magazyn.getStan();
-        methodController.saveData(serwis);
-        int result = stan - 1;
-        magazyn.setStan(result);
-        Transaction transaction = methodController.session.beginTransaction();
-        methodController.session.merge(magazyn);
-        transaction.commit();
-        refreshSerwisTable();
+        if(stan >0) {
+            int result = stan - 1;
+            magazyn.setStan(result);
+            Transaction transaction = methodController.session.beginTransaction();
+            methodController.session.merge(magazyn);
+            transaction.commit();
+            refreshSerwisTable();
+            methodController.saveData(serwis);
+        }else { Alert alert = new Alert(Alert.AlertType.ERROR , "Brak wybranej części");
+            alert.show();
+
+        }
     }
 
     private Users zalogowanyUzytkownik() {
@@ -196,9 +201,13 @@ public class cSerwis implements Initializable {
         Serwis serwis = serwisTable.getSelectionModel().getSelectedItem();
         String selectedItem = edytujStatus.getSelectionModel().getSelectedItem();
         Magazyn magazyn = cBox1.getSelectionModel().getSelectedItem();
-        int magazynId = cBox1.getSelectionModel().getSelectedItem().getId();
-        serwis.setStatus(selectedItem);
-        serwis.setMagazyn(magazyn);
+
+        if (cBox1.getSelectionModel().getSelectedItem() != null) {
+            serwis.setMagazyn(magazyn);
+        }
+        if(edytujStatus.getSelectionModel().getSelectedItem() != null){
+            serwis.setStatus(selectedItem);
+        }
         Transaction transaction = methodController.session.beginTransaction();
         methodController.session.merge(serwis);
         transaction.commit();
