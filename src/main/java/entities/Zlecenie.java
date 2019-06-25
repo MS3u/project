@@ -109,5 +109,13 @@ public class Zlecenie {
     public Zlecenie() {
     }
 
-
+    public Zlecenie(int id,String imie,String nazwisko, String pesel, String telefon, String opis, String data) {
+        this.id =id;
+        this.imie= imie;
+        this.nazwisko = nazwisko;
+        this.pesel = pesel;
+        this.telefon = telefon;
+        this.opis = opis;
+        this.data = data;
+    }
 }

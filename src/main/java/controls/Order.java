@@ -251,6 +251,19 @@ Zlecenie user= new Zlecenie(dataPrzyjeciaText, imieText, nazwiskoTextskoT, pesel
     }
 
     public void editOrder(javafx.event.ActionEvent event) {
+        String data = dataPrzyjecia.getText();
+        String imie = tfImie.getText();
+        String nazwisko = tfNazwisko.getText();
+        String pesel = tfPesel.getText();
+        String telefon = tfTelefon.getText();
+        String opis = tfOpis.getText();
+        int id = tableOrders.getSelectionModel().getSelectedItem().getId();
+
+        Zlecenie edycjaZlecenia = new Zlecenie(id,imie,nazwisko,pesel,telefon,opis,data);
+        methodController.update(edycjaZlecenia);
+        clearData();
+        refreshItemsList();
+        
     }
 
 
