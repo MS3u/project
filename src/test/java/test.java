@@ -32,7 +32,7 @@ public class test {
         Set<ConstraintViolation<Users>> constraintViolations = validator.validate(user);
         Assert.assertEquals(1, constraintViolations.size());
         Assert.assertEquals(
-                "wymagane",
+                "required",
                 constraintViolations.iterator().next().getMessage()
         );
     }

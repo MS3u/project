@@ -31,6 +31,11 @@ public class Magazyn {
     public Magazyn() {
     }
 
+    public Magazyn(int id,String nazwa, int stan) {
+        this.id = id;
+        this.nazwa = nazwa;
+        this.stan = stan;
+    }
     public int getId() {
         return id;
     }

@@ -1,6 +1,7 @@
 package controls;
 
 import entities.Magazyn;
+import entities.Zlecenie;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -10,6 +11,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import org.hibernate.Transaction;
 
 import java.awt.event.ActionEvent;
@@ -94,12 +96,9 @@ public class cStorage implements Initializable {
      *
      */
     public void addItem(javafx.event.ActionEvent event) {
-
-
-
         try{
             String nazwa = tfNazwa.getText();
-            String stan = tfCena.getText();
+            String stan = tfStan.getText();
             int intStan = Integer.parseInt(stan);
 
           Magazyn storage = new Magazyn(nazwa, intStan);
@@ -108,7 +107,7 @@ public class cStorage implements Initializable {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Błąd");
             alert.setHeaderText("Zobacz co źle zrobileś");
-            alert.setContentText("Złe wypełnienie pól teksotwych");
+            alert.setContentText("Nieprawidłowy format wprowadzonych wartości");
 
             alert.showAndWait();
         }
@@ -129,48 +128,44 @@ public class cStorage implements Initializable {
         tfStan.clear();
     }
 
-//    public void tableClick(MouseEvent mouseEvent) {
-//       Storage clicked = table.getSelectionModel().getSelectedItem();
-//            String cenaB = String.valueOf(clicked.getCenaBrutto());
-//        String cenaN = String.valueOf(clicked.getCenaNetto());
-//        String stan = String.valueOf(clicked.getStan());
-//
-//            tfNazwa.setText(clicked.getNazwa());
-//            tfCenaB.setText(cenaB);
-//            tfCenaN.setText(cenaN);
-//            tfStan.setText(stan);
-//
-//    }
-
     /**
      * Modifikacja zawartosci magazyny
      * @param event
      */
-    /**public void changeItem(javafx.event.ActionEvent event) {
+    public void changeItem(javafx.event.ActionEvent event) {
 
 
         String nazwa = tfNazwa.getText();
-        float cenaN = Float.parseFloat(tfCena.getText());
+      //  float cenaN = Float.parseFloat(tfCena.getText());
         int stan = Integer.parseInt(tfStan.getText());
-      //  int id = table.getSelectionModel().getSelectedItem().get();
+      int id = table.getSelectionModel().getSelectedItem().getId();
 
-       // Storage updateStorage = new Storage(id, nazwa, cenaN, cenaB, stan);
-      //  methodController.update(updateStorage);
+       Magazyn updateStorage = new Magazyn(id, nazwa,stan);
+        methodController.update(updateStorage);
         refreshItemsList();
         clearItemForm();
 
 
-    }*/
-    /**
+    }
+
+    /* *
      * Usuwanie przedmiotu z bazy
      */
+
+
+    
     public void deleteItem(javafx.event.ActionEvent event) {
-       // Storage storage = table.getSelectionModel().getSelectedItem();
-      //  methodController.deleteFromDb(storage);
+       Magazyn magazyn = table.getSelectionModel().getSelectedItem();
+      methodController.deleteFromDb(magazyn);
         clearItemForm();
         refreshItemsList();
     }
 
-    public void changeItem(javafx.event.ActionEvent event) {
+public void editMagazin(){
+    Magazyn clicked = table.getSelectionModel().getSelectedItem();
+    tfNazwa.setText(clicked.getNazwa());
+    tfStan.setText((Integer.toString( clicked.getStan())));
+}
+    public void tableClick(MouseEvent mouseEvent) {
     }
 }

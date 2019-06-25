@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -52,9 +53,9 @@
       <Text layoutX="5.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko" />
       <Text layoutX="18.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data" />
       <Button fx:id="edit" layoutX="520.0" layoutY="327.0" mnemonicParsing="false" onAction="#addToTextField" prefHeight="25.0" prefWidth="97.0" text="Edycja Zlecenia" />
-      <Label layoutX="40.0" layoutY="14.0" prefHeight="28.0" prefWidth="240.0" text="Złoszenie zlecenia Klienta">
+      <Label layoutX="251.0" layoutY="65.0" prefHeight="101.0" prefWidth="360.0" text="Przyjmowanie Zlecenia od Klienta">
          <font>
-            <Font size="19.0" />
+            <Font size="23.0" />
          </font>
       </Label>
       <Label layoutX="530.0" layoutY="299.0" text="Opcje zlecenia" />

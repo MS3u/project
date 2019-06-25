@@ -4,6 +4,8 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Objects;
 
 @Entity
@@ -37,10 +39,13 @@ public class Users {
         this.imie = imie;
     }
 
+    @NotNull
+    @Size(min = 2 , max = 30)
     @Column(name = "nazwisko", nullable = false, length = 30)
     public String getNazwisko() {
         return nazwisko;
     }
+
 
     public void setNazwisko(String nazwisko) {
         this.nazwisko = nazwisko;
@@ -55,6 +60,8 @@ public class Users {
         this.stanowisko = stanowisko;
     }
 
+    @NotNull(message = "required")
+    @Size(min = 5 , max = 255)
     @Column(name = "haslo", nullable = false, length = 30)
     public String getHaslo() {
         return haslo;
