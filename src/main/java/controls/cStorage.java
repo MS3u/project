@@ -121,7 +121,6 @@ public class cStorage implements Initializable {
      */
     public void clearItemForm() {
         tfNazwa.clear();
-        tfCena.clear();
         tfStan.clear();
     }
 

@@ -39,8 +39,7 @@ public class Users {
         this.imie = imie;
     }
 
-    @NotNull
-    @Size(min = 2 , max = 30)
+
     @Column(name = "nazwisko", nullable = false, length = 30)
     public String getNazwisko() {
         return nazwisko;
