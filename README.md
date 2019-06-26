@@ -95,7 +95,7 @@ W magazynie wprowadzamy nowy towar sprawdzamy stan modifikujemy stan badź usuwa
 ![Magazyn](https://github.com/MS3u/project/blob/new/src/main/PodrecznikPNG/Magazyn.png)
 
 * Serwis
-Serwisant przegląda zlecenia i wpisuje stan realizacji zlecenia do odpowiedniego nr zlecenia podaje kto zajmuje się zleceniem.
+Serwisant przypisuje do zlecenia odpowiedni sprzet z magazynu ustawia status dla danego zlecenia.
 ![Serwis](https://github.com/MS3u/project/blob/new/src/main/PodrecznikPNG/Serwis.png)
 
 
