@@ -158,7 +158,10 @@ Zlecenie user= new Zlecenie(dataPrzyjeciaText, imieText, nazwiskoTextskoT, pesel
 
     }
 
-
+    /**
+     * zwraca wartosci z tabeli do pol teksotywch
+     * @param event
+     */
    public void addToTextField(javafx.event.ActionEvent event) {
         Zlecenie clicked = tableOrders.getSelectionModel().getSelectedItem();
         dataPrzyjecia.setText(clicked.getData());
