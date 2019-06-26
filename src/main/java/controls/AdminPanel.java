@@ -72,13 +72,12 @@ public class AdminPanel implements Initializable {
      * Dodawanie nowego uzytkownika
      */
     public void addUser(javafx.event.ActionEvent event) {
-        Users user = new Users(
-                tfImie.getText(),
-               methodController.get_SHA_512_SecurePassword(  tfNazwisko.getText(),"zakodowane"),
-                tfHaslo.getText(),
-                tfStanowisko.getText());
-
-        methodController.saveData(user);
+        String imie = tfImie.getText();
+        String nazwisko = tfNazwisko.getText();
+        String stanowisko = tfStanowisko.getText();
+        String haslo = methodController.get_SHA_512_SecurePassword(tfHaslo.getText(), "zakodowane");
+        Users users = new Users(imie, nazwisko, stanowisko, haslo);
+        methodController.saveData(users);
         refreshItemsList();
         clear();
 
