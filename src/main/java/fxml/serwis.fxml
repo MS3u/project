@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="btnPrzypisz" prefHeight="381.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.cSerwis">
+<AnchorPane fx:id="btnPrzypisz" prefHeight="381.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.cSerwis">
 
     <children>
       <Button layoutX="641.0" layoutY="177.0" mnemonicParsing="false" onAction="#addStatus" text="Przyjmij zlecenie" />
-      <TableView fx:id="serwisTable" layoutX="9.0" layoutY="239.0" onMouseClicked="#tableSerwisClicked" prefHeight="228.0" prefWidth="302.0">
+      <TableView fx:id="serwisTable" layoutX="9.0" layoutY="239.0" onMouseClicked="#tableSerwisClicked" prefHeight="228.0" prefWidth="371.0">
         <columns>
-          <TableColumn fx:id="tNrZlecenia" prefWidth="85.0" text="Nr Zlecenia" />
-          <TableColumn fx:id="tStatus" prefWidth="65.0" text="Status" />
-            <TableColumn fx:id="tSerwisant" prefWidth="75.0" text="Serwisant" />
-            <TableColumn fx:id="tPodzespoly" prefWidth="75.0" text="Użyta część" />
+          <TableColumn fx:id="tNrZlecenia" prefWidth="71.99998474121094" text="Nr Zlecenia" />
+          <TableColumn fx:id="tStatus" prefWidth="86.0" text="Status" />
+            <TableColumn fx:id="tSerwisant" prefWidth="67.0" text="Serwisant" />
+            <TableColumn fx:id="tPodzespoly" prefWidth="143.0" text="Użyta część" />
         </columns>
       </TableView>
-      <Button layoutX="331.0" layoutY="294.0" mnemonicParsing="false" onAction="#edytujSerwis" prefHeight="25.0" prefWidth="103.0" text="Zmiana statusu" />
+      <Button layoutX="438.0" layoutY="303.0" mnemonicParsing="false" onAction="#edytujSerwis" prefHeight="25.0" prefWidth="103.0" text="Zmiana statusu" />
       <Text layoutX="513.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dodaj do zlecenia" />
       <ComboBox fx:id="cBox1" layoutX="624.0" layoutY="86.0" prefWidth="150.0" />
       <TableView fx:id="tableOrders" layoutX="9.0" layoutY="29.0" prefHeight="179.0" prefWidth="481.0">
@@ -45,11 +39,11 @@
       <Label layoutX="640.0" layoutY="63.0" text="Części w magazynie" />
       <Label layoutX="653.0" layoutY="115.0" text="Statusy zlecenia" />
       <Label layoutX="504.0" layoutY="143.0" text="Dodaj status zleceniu" />
-      <Button fx:id="btnDelete" layoutX="331.0" layoutY="368.0" mnemonicParsing="false" onAction="#deleteSerwisFromTable" prefHeight="25.0" prefWidth="103.0" text="Usuń " />
-      <Label layoutX="343.0" layoutY="226.0" text="Edycja Serwisu" />
+      <Button fx:id="btnDelete" layoutX="438.0" layoutY="377.0" mnemonicParsing="false" onAction="#deleteSerwisFromTable" prefHeight="25.0" prefWidth="103.0" text="Usuń " />
+      <Label layoutX="450.0" layoutY="235.0" text="Edycja Serwisu" />
       <Label layoutX="615.0" layoutY="21.0" text="Przyjmij serwis" />
-      <Label layoutX="326.0" layoutY="270.0" text="Zmień status zlecenia" />
-      <Label layoutX="350.0" layoutY="344.0" text="Usuń Serwis" />
+      <Label layoutX="433.0" layoutY="279.0" text="Zmień status zlecenia" />
+      <Label layoutX="457.0" layoutY="353.0" text="Usuń Serwis" />
       <Label layoutX="45.0" layoutY="219.0" text="Wyświetlanie Aktualnych serwisów " />
       <Label layoutX="140.0" layoutY="6.0" text="Informacja o przyjętych zleceniach" />
     </children>
