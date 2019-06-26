@@ -30,8 +30,6 @@ public class cStorage implements Initializable {
     @FXML
     public TableColumn<Magazyn, String> colNazwa;
 
-    @FXML
-    public TableColumn<Magazyn, String> colCena;
 
     @FXML
     public TableColumn<Magazyn, String> colStan;
@@ -70,7 +68,6 @@ public class cStorage implements Initializable {
         transaction.commit();
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colNazwa.setCellValueFactory(new PropertyValueFactory<>("nazwa"));
-        colCena.setCellValueFactory(new PropertyValueFactory<>("cena"));
         colStan.setCellValueFactory(new PropertyValueFactory<>("stan"));
         table.setItems(ObservableListItems);
         ObservableList itemlist = FXCollections.observableArrayList(items);
