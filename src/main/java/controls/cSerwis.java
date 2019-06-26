@@ -165,7 +165,7 @@ public class cSerwis implements Initializable {
         }else { Alert alert = new Alert(Alert.AlertType.ERROR , "Brak wybranej części");
             alert.show();
 
-        }
+        }refreshSerwisTable();
     }
 
     private Users zalogowanyUzytkownik() {
