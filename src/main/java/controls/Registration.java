@@ -54,7 +54,7 @@ public class Registration implements Initializable {
         String haslo = methodController.get_SHA_512_SecurePassword(tfhaslo.getText(), "zakodowane");
         Users users = new Users(imie, nazwisko, stanowisko, haslo);
         methodController.saveData(users);
-        //clearData();
+        clearData();
         System.out.println("zapisano" + tfhaslo + tfstanowisko);
     }
 
